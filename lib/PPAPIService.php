@@ -28,7 +28,7 @@ class PPAPIService
 
 	public function makeRequest($apiMethod, $params, $apiUsername = null, $accessToken = null, $tokenSecret = null)
 	{
-
+		
 		$authentication = new PPAuthenticationManager();
 		$connectionMgr = PPConnectionManager::getInstance();
 		$connection = $connectionMgr->getConnection();
@@ -42,11 +42,14 @@ class PPAPIService
 			$url = $this->endpoint;
 			if(isset($accessToken)&& isset($tokenSecret))
 			{
-				$headers = $authentication->getSOAPHeaders($apIPPCredential, $connection , $accessToken, $tokenSecret, $url);
+				$headers = $authentication->getPayPalHeaders( $apIPPCredential, $connection , $accessToken, $tokenSecret, $url);
 
 			}
 			else
+			{
 			$headers = null;
+			$params = $authentication->appendSoapHeader($params, $apIPPCredential, $connection, $accessToken, $tokenSecret, $url);
+			}
 		}
 		else {
 			$url = $this->endpoint . $this->serviceName . '/' . $apiMethod;
@@ -55,7 +58,7 @@ class PPAPIService
 		}
 
 
-		$params = $this->marshall($params);
+		
 
 
 		$this->logger->info("Request: $params");
@@ -64,10 +67,6 @@ class PPAPIService
 		return $response;
 	}
 
-	private function marshall($object)
-	{
-		$transformer = new PPObjectTransformer();
-		return $transformer->toString($object);
-	}
+	
 
 }
