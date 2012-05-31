@@ -94,7 +94,7 @@ try {
 		$businssinfo->averagePrice = $_REQUEST['averagePrice'];
 		$businssinfo->averageMonthlyVolume = $_REQUEST['averageMonthlyVolume'];
 		$businssinfo->percentageRevenueFromOnline = $_REQUEST['percentageRevenueFromOnline'];
-		$businssinfo->salesVenue = $_REQUEST['salesVenue'];
+		$businssinfo->salesVenue = array($_REQUEST['salesVenue']);
 		$businssinfo->salesVenueDesc = $_REQUEST['salesVenueDesc'];
 		$businssinfo->vatId = $_REQUEST['vatId'];
 		$businssinfo->vatCountryCode = $_REQUEST['vatCountryCode'];
