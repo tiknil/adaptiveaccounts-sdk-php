@@ -38,6 +38,11 @@ class PPAuthenticationManager
 		$headers_arr[] = "X-PAYPAL-RESPONSE-DATA-FORMAT: "  . $config->get('service.Binding');
 		$headers_arr[] = "X-PAYPAL-DEVICE-IPADDRESS: " . PPUtils::getLocalIPAddress();
 		$headers_arr[] = "X-PAYPAL-REQUEST-SOURCE: " . PPUtils::getRequestSource();
+		$endPoint = $config->get('service.EndPoint');
+		if (strpos($endPoint, 'sandbox') !== false)
+		{
+			$headers_arr[] = "X-PAYPAL-SANDBOX-EMAIL-ADDRESS: " . $config->get('service.SandboxEmailAddress');
+		}
 		return $headers_arr;
 	}
 	public function appendSoapHeader($payLoad, $apiCred,  $connection,  $accessToken = null, $tokenSecret = null ,$url = null)
