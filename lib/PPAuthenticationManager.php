@@ -77,6 +77,7 @@ class PPAuthenticationManager
 			$soapHeader .="</ebl:Credentials>";
 			$soapHeader .="</urn:RequesterCredentials>";
 			$soapHeader .="</soapenv:Header>";
+            $connection->setSSLCert($apiCred->getCertificatePath());
 		}
 		$soapHeader .="<soapenv:Body>";
 		$soapHeader .= $payLoad;
