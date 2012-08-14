@@ -103,5 +103,19 @@ class AdaptiveAccountsService extends PPBaseService {
 		return $ret;
 	}
 	 
+
+	/**
+	 * Service Call: CheckComplianceStatus
+	 * @param CheckComplianceStatusRequest $checkComplianceStatusRequest
+	 * @return CheckComplianceStatusResponse
+	 * @throws APIException
+	 */
+	public function CheckComplianceStatus($checkComplianceStatusRequest, $apiUsername = null) {
+		$ret = new CheckComplianceStatusResponse();
+		$resp = $this->call("CheckComplianceStatus", $checkComplianceStatusRequest, $apiUsername);
+		$ret->init(PPUtils::nvpToMap($resp));
+		return $ret;
+	}
+	 
 }
 ?>

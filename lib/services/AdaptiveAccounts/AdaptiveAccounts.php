@@ -11,56 +11,56 @@
 class ErrorData  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var integer
 	 */ 
 	public $errorId;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $domain;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $subdomain;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var ErrorSeverity
 	 */ 
 	public $severity;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var ErrorCategory
 	 */ 
 	public $category;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $message;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $exceptionId;
 
 	/**
-	 * No Document Comments
+	 * 
      *@array
 	 *@access public
 	 *@var ErrorParameter
@@ -119,19 +119,19 @@ class ErrorData  {
 
 
 /**
- * No Document Comments
+ * 
  */
 class ErrorParameter  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $name;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
@@ -209,7 +209,7 @@ class RequestEnvelope  {
 class ResponseEnvelope  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var dateTime
 	 */ 
@@ -223,14 +223,14 @@ class ResponseEnvelope  {
 	public $ack;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $correlationId;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
@@ -271,56 +271,56 @@ class ResponseEnvelope  {
 class ClientDetailsType  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $ipAddress;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $deviceId;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $applicationId;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $model;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $geoLocation;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $customerType;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $partnerName;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
@@ -377,14 +377,14 @@ class ClientDetailsType  {
 class FaultMessage  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var ResponseEnvelope
 	 */ 
 	public $responseEnvelope;
 
 	/**
-	 * No Document Comments
+	 * 
      *@array
 	 *@access public
 	 *@var ErrorData
@@ -427,14 +427,14 @@ class FaultMessage  {
 class CreateAccountRequest  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var RequestEnvelope
 	 */ 
 	public $requestEnvelope;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var ClientDetailsType
 	 */ 
@@ -450,21 +450,21 @@ class CreateAccountRequest  {
 	public $accountType;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var NameType
 	 */ 
 	public $name;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var date
 	 */ 
 	public $dateOfBirth;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var AddressType
 	 */ 
@@ -495,35 +495,35 @@ class CreateAccountRequest  {
 	public $mobilePhoneNumber;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $currencyCode;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $citizenshipCountryCode;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $preferredLanguageCode;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $notificationURL;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
@@ -539,14 +539,14 @@ class CreateAccountRequest  {
 	public $registrationType;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var CreateAccountWebOptionsType
 	 */ 
 	public $createAccountWebOptions;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var boolean
 	 */ 
@@ -568,35 +568,35 @@ class CreateAccountRequest  {
 	public $taxId;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $partnerField1;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $partnerField2;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $partnerField3;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $partnerField4;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
@@ -744,14 +744,14 @@ class CreateAccountRequest  {
 class CreateAccountResponse  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var ResponseEnvelope
 	 */ 
 	public $responseEnvelope;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
@@ -766,7 +766,7 @@ class CreateAccountResponse  {
 	public $execStatus;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
@@ -781,7 +781,7 @@ class CreateAccountResponse  {
 	public $accountId;
 
 	/**
-	 * No Document Comments
+	 * 
      *@array
 	 *@access public
 	 *@var ErrorData
@@ -833,33 +833,33 @@ class CreateAccountResponse  {
 
 
 /**
- * No Document Comments
+ * 
  */
 class GetUserAgreementRequest  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var RequestEnvelope
 	 */ 
 	public $requestEnvelope;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $createAccountKey;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $countryCode;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
@@ -902,26 +902,26 @@ class GetUserAgreementRequest  {
 
 
 /**
- * No Document Comments
+ * 
  */
 class GetUserAgreementResponse  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var ResponseEnvelope
 	 */ 
 	public $responseEnvelope;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $agreement;
 
 	/**
-	 * No Document Comments
+	 * 
      *@array
 	 *@access public
 	 *@var ErrorData
@@ -968,14 +968,14 @@ class GetUserAgreementResponse  {
 class GetVerifiedStatusRequest  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var RequestEnvelope
 	 */ 
 	public $requestEnvelope;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
@@ -1054,7 +1054,7 @@ class GetVerifiedStatusRequest  {
 class GetVerifiedStatusResponse  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var ResponseEnvelope
 	 */ 
@@ -1083,7 +1083,7 @@ class GetVerifiedStatusResponse  {
 	public $userInfo;
 
 	/**
-	 * No Document Comments
+	 * 
      *@array
 	 *@access public
 	 *@var ErrorData
@@ -1139,7 +1139,7 @@ class GetVerifiedStatusResponse  {
 class AddBankAccountRequest  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var RequestEnvelope
 	 */ 
@@ -1164,7 +1164,7 @@ class AddBankAccountRequest  {
 	public $accountId;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
@@ -1192,7 +1192,7 @@ class AddBankAccountRequest  {
 	public $routingNumber;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var BankAccountType
 	 */ 
@@ -1312,14 +1312,14 @@ class AddBankAccountRequest  {
 	public $accountHolderDateOfBirth;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var ConfirmationType
 	 */ 
 	public $confirmationType;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var WebOptionsType
 	 */ 
@@ -1459,7 +1459,7 @@ class AddBankAccountRequest  {
 class AddBankAccountResponse  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var ResponseEnvelope
 	 */ 
@@ -1474,21 +1474,21 @@ class AddBankAccountResponse  {
 	public $execStatus;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $redirectURL;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $fundingSourceKey;
 
 	/**
-	 * No Document Comments
+	 * 
      *@array
 	 *@access public
 	 *@var ErrorData
@@ -1543,7 +1543,7 @@ class AddBankAccountResponse  {
 class AddPaymentCardRequest  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var RequestEnvelope
 	 */ 
@@ -1568,49 +1568,49 @@ class AddPaymentCardRequest  {
 	public $accountId;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $createAccountKey;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var NameType
 	 */ 
 	public $nameOnCard;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var AddressType
 	 */ 
 	public $billingAddress;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var date
 	 */ 
 	public $cardOwnerDateOfBirth;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $cardNumber;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var CardTypeType
 	 */ 
 	public $cardType;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var CardDateType
 	 */ 
@@ -1625,7 +1625,7 @@ class AddPaymentCardRequest  {
 	public $cardVerificationNumber;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var CardDateType
 	 */ 
@@ -1639,14 +1639,14 @@ class AddPaymentCardRequest  {
 	public $issueNumber;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var ConfirmationType
 	 */ 
 	public $confirmationType;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var WebOptionsType
 	 */ 
@@ -1749,7 +1749,7 @@ class AddPaymentCardRequest  {
 class AddPaymentCardResponse  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var ResponseEnvelope
 	 */ 
@@ -1764,21 +1764,21 @@ class AddPaymentCardResponse  {
 	public $execStatus;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $redirectURL;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $fundingSourceKey;
 
 	/**
-	 * No Document Comments
+	 * 
      *@array
 	 *@access public
 	 *@var ErrorData
@@ -1833,7 +1833,7 @@ class AddPaymentCardResponse  {
 class SetFundingSourceConfirmedRequest  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var RequestEnvelope
 	 */ 
@@ -1858,7 +1858,7 @@ class SetFundingSourceConfirmedRequest  {
 	public $accountId;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
@@ -1902,19 +1902,19 @@ class SetFundingSourceConfirmedRequest  {
 
 
 /**
- * No Document Comments
+ * 
  */
 class SetFundingSourceConfirmedResponse  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var ResponseEnvelope
 	 */ 
 	public $responseEnvelope;
 
 	/**
-	 * No Document Comments
+	 * 
      *@array
 	 *@access public
 	 *@var ErrorData
@@ -1950,40 +1950,226 @@ class SetFundingSourceConfirmedResponse  {
 
 
 /**
- * No Document Comments
+ * Identifies a PayPal account to which this request is
+ * targeted. Caller of this API has to provide ONLY one of
+ * these inputs: emailAddress, accountId or phoneNumber. 
+ */
+class AccountIdentifierType  {
+
+	/**
+	 * Identifies the PayPal account based on the emailAddress. 
+	 *@access public
+	 *@var string
+	 */ 
+	public $emailAddress;
+
+	/**
+	 * Identifies the PayPal account based on the phoneNumber. 
+	 *@access public
+	 *@var string
+	 */ 
+	public $phoneNumber;
+
+	/**
+	 * Identifies the PayPal account based on the accountId. 
+	 *@access public
+	 *@var string
+	 */ 
+	public $accountId;
+
+	/**
+	 * Constructor with arguments
+	 */
+	public function __construct($emailAddress = null, $phoneNumber = null, $accountId = null) {
+		$this->emailAddress = $emailAddress;
+		$this->phoneNumber = $phoneNumber;
+		$this->accountId = $accountId;
+	}
+
+
+	public function toNVPString($prefix = '') {
+		$str = '';
+		$delim = '';
+		if($this->emailAddress != null) {
+			$str .= $delim .  $prefix . 'emailAddress=' . urlencode($this->emailAddress);
+			$delim = '&';
+		}
+		if($this->phoneNumber != null) {
+			$str .= $delim .  $prefix . 'phoneNumber=' . urlencode($this->phoneNumber);
+			$delim = '&';
+		}
+		if($this->accountId != null) {
+			$str .= $delim .  $prefix . 'accountId=' . urlencode($this->accountId);
+			$delim = '&';
+		}
+		return $str;
+	}
+
+
+} 
+
+
+
+/**
+ * Identifies a PayPal account to which this request is
+ * targeted. Caller of this API has to provide ONLY one of
+ * these inputs: emailAddress, accountId or phoneNumber. 
+ */
+class CheckComplianceStatusRequest  {
+
+	/**
+	 * 
+	 *@access public
+	 *@var RequestEnvelope
+	 */ 
+	public $requestEnvelope;
+
+	/**
+	 * Identifies a PayPal account to which this request is
+	 * targeted. Caller of this API has to provide ONLY one of
+	 * these inputs: emailAddress, accountId or phoneNumber. 
+	 *@access public
+	 *@var AccountIdentifierType
+	 */ 
+	public $accountIdentifier;
+
+	/**
+	 * Constructor with arguments
+	 */
+	public function __construct($requestEnvelope = null, $accountIdentifier = null) {
+		$this->requestEnvelope = $requestEnvelope;
+		$this->accountIdentifier = $accountIdentifier;
+	}
+
+
+	public function toNVPString($prefix = '') {
+		$str = '';
+		$delim = '';
+		if($this->requestEnvelope != null) {
+			$newPrefix = $prefix . 'requestEnvelope.';
+			$str .= $delim . call_user_func(array($this->requestEnvelope, 'toNVPString'), $newPrefix);
+			$delim = '&';
+		}
+		if($this->accountIdentifier != null) {
+			$newPrefix = $prefix . 'accountIdentifier.';
+			$str .= $delim . call_user_func(array($this->accountIdentifier, 'toNVPString'), $newPrefix);
+			$delim = '&';
+		}
+		return $str;
+	}
+
+
+} 
+
+
+
+/**
+ * Returned values are: ALLOW|DENY 
+ */
+class CheckComplianceStatusResponse  {
+
+	/**
+	 * 
+	 *@access public
+	 *@var ResponseEnvelope
+	 */ 
+	public $responseEnvelope;
+
+	/**
+	 * Returned values are: ALLOW|DENY 
+	 *@access public
+	 *@var string
+	 */ 
+	public $execStatus;
+
+	/**
+	 * Returned values are: CLIENT_NOT_SUPPORTED,
+	 * COUNTRY_NOT_SUPPORTED, VERIFICATION_NOT_COMPLETED,
+	 * DOCUMENTS_UNDER_REVIEW, DENIED 
+	 *@access public
+	 *@var string
+	 */ 
+	public $denialReason;
+
+	/**
+	 * 
+     *@array
+	 *@access public
+	 *@var ErrorData
+	 */ 
+	public $error;
+
+
+
+
+	public function init($map = null, $prefix = '') {
+		if($map != null) {
+			if (PPUtils::array_match_key($map, $prefix . "responseEnvelope.")) {
+				$newPrefix = $prefix . "responseEnvelope.";
+				$this->responseEnvelope = new ResponseEnvelope();
+				$this->responseEnvelope->init($map, $newPrefix);
+			}
+			$mapKeyName =  $prefix . 'execStatus';
+			if($map != null && array_key_exists($mapKeyName, $map)) {
+				$this->execStatus = $map[$mapKeyName];
+			}
+			$mapKeyName =  $prefix . 'denialReason';
+			if($map != null && array_key_exists($mapKeyName, $map)) {
+				$this->denialReason = $map[$mapKeyName];
+			}
+			$i = 0;
+			while(true) {
+				if (PPUtils::array_match_key($map, $prefix . "error($i)")) {
+					$newPrefix = $prefix . "error($i).";
+					$this->error[$i] = new ErrorData();
+					$this->error[$i]->init($map, $newPrefix);
+				} else {
+					break;
+				}
+				$i++;
+			}
+			
+		}
+	}
+} 
+
+
+
+/**
+ * 
  */
 class NameType  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $salutation;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $firstName;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $middleName;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $lastName;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
@@ -2055,47 +2241,47 @@ class NameType  {
 
 
 /**
- * No Document Comments
+ * 
  */
 class AddressType  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $line1;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $line2;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $city;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $state;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $postalCode;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
@@ -2153,14 +2339,14 @@ class AddressType  {
 class CreateAccountWebOptionsType  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $returnUrl;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var boolean
 	 */ 
@@ -2176,7 +2362,7 @@ class CreateAccountWebOptionsType  {
 	public $showMobileConfirm;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
@@ -2229,21 +2415,21 @@ class CreateAccountWebOptionsType  {
 class BusinessInfoType  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $businessName;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var AddressType
 	 */ 
 	public $businessAddress;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
@@ -2274,35 +2460,35 @@ class BusinessInfoType  {
 	public $merchantCategoryCode;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $doingBusinessAs;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $customerServicePhone;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $customerServiceEmail;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $disputeEmail;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
@@ -2316,28 +2502,28 @@ class BusinessInfoType  {
 	public $companyId;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var date
 	 */ 
 	public $dateOfEstablishment;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var BusinessType
 	 */ 
 	public $businessType;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var BusinessSubtypeType
 	 */ 
 	public $businessSubtype;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
@@ -2366,7 +2552,7 @@ class BusinessInfoType  {
 	public $percentageRevenueFromOnline;
 
 	/**
-	 * No Document Comments
+	 * 
      *@array
 	 *@access public
 	 *@var SalesVenueType
@@ -2403,28 +2589,28 @@ class BusinessInfoType  {
 	public $commercialRegistrationLocation;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var AddressType
 	 */ 
 	public $principalPlaceOfBusinessAddress;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var AddressType
 	 */ 
 	public $registeredOfficeAddress;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $establishmentCountryCode;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
@@ -2586,35 +2772,35 @@ class BusinessInfoType  {
 class BusinessStakeholderType  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var StakeholderRoleType
 	 */ 
 	public $role;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var NameType
 	 */ 
 	public $name;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $fullLegalName;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var AddressType
 	 */ 
 	public $address;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var date
 	 */ 
@@ -2738,33 +2924,33 @@ class UserInfoType  {
 
 
 /**
- * No Document Comments
+ * 
  */
 class WebOptionsType  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $returnUrl;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $cancelUrl;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $returnUrlDescription;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
