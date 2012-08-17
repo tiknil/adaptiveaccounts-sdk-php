@@ -46,7 +46,7 @@ try {
 	$addPaymentCard->issueNumber = $_REQUEST['issueNumber'];
 	$addPaymentCard->startDate  = $startDate;
 	$addPaymentCard->expirationDate  = $expDate;
-	$addPaymentCard->billingAddress = $_REQUEST['branchLocation'];
+    $addPaymentCard->billingAddress = $billingAddress;
 	$addPaymentCard->confirmationType = $_REQUEST['confirmationType'];
 
 	if($addPaymentCard->confirmationType == 'WEB')

@@ -31,8 +31,8 @@
 				<div class="params">
 					<div class="param_name">
 						Funding Source Key * (Get FundingSourceKey via <a
-							href='AddBankAccount'>AddBankAccount</a> or <a
-							href='AddPaymentCard'>AddPaymentCard</a>)
+							href='AddBankAccount.html.php'>AddBankAccount</a> or <a
+							href='AddPaymentCard.html.php'>AddPaymentCard</a>)
 					</div>
 					<div class="param_value">
 						<input type="text" name="fundingSourceKey" value="" />
