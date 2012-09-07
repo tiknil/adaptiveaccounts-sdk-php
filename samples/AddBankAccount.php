@@ -82,8 +82,15 @@ try {
 		echo "<pre>";
 		print_r($response);
 		echo "</pre>";
+		$fundingSrcKey = $response->fundingSourceKey;
 		$payPalURL = $response->redirectURL;
-		echo" <a href=$payPalURL><b>* Redirect URL to Add Bank Account </b></a><br>";
+		
+		echo "<table>";
+		echo "<tr><td>Ack :</td><td><div id='Ack'>$ack</div> </td></tr>";
+		echo "<tr><td>FundingSrcKey :</td><td><div id='FundingSrcKey'>$fundingSrcKey</div> </td></tr>";
+		echo "<tr><td>Redirect URL :</td><td> <div id='Redirect URL'><a href=$payPalURL><b>Redirect To PayPal</b></a><br></div></td></tr>";
+		echo "</table>";
+		//echo" <a href=$payPalURL><b>* Redirect URL to Add Bank Account </b></a><br>";
 		require_once 'Common/Response.php';
 
 	}

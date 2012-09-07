@@ -134,9 +134,11 @@ try {
 	$service  = new AdaptiveAccountsService();
 	$response = $service->CreateAccount($createAccountRequest);
 	//$logger->log("Received CreateAccount Response:");
-
+	
 	$ack = strtoupper($response->responseEnvelope->ack);
-
+	
+	
+	
 	if($ack != "SUCCESS"){
 		Echo "<b>Error </b>";
 		echo "<pre>";
@@ -149,9 +151,15 @@ try {
 		echo "<pre>";
 		print_r($response);
 		echo "</pre>";
-
+		$createAccountKey = strtoupper($response->createAccountKey);
 		$payPalURL = $response->redirectURL;
-		echo" <a href=$payPalURL><b>* Redirect URL to Complete Account Creation </b></a><br>";
+		
+		echo "<table>";
+		echo "<tr><td>Ack :</td><td><div id='Ack'>$ack</div> </td></tr>";
+		echo "<tr><td>CreateAccountKey :</td><td> <div id='createAccountKey'>$createAccountKey</div></td></tr>";
+		echo "<tr><td>Redirect URL :</td><td> <div id='Redirect URL'><a href=$payPalURL><b>Redirect To PayPal</b></a><br></div></td></tr>";
+		echo "</table>";
+		//echo "<a href=$payPalURL><b>* Redirect URL to Complete Account Creation </b></a><br>";
 		require_once 'Common/Response.php';
 	}
 }
