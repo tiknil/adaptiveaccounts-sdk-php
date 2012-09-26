@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-<title>Adaptive Accounts - Add Payment Card</title>
+<title>PayPal Adaptive Accounts - Add Payment Card</title>
 <link href="Common/style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="sdk.css" />
 <script type="text/javascript" src="sdk.js"></script>
@@ -53,7 +53,7 @@
 						<td><input type="text" name="lastName" value="Simore" /></td>
 						<td><input type="text" name="suffix" value="" /></td>
 					</tr>
-				</table>			
+				</table>
 				<div class="section_header">Card Details</div>
 				<table class="params">
 					<tr>
@@ -154,14 +154,14 @@
 						<th class="param_name">CountryCode*</th>
 					</tr>
 					<tr>
-						<td class="param_value"><input type="text"
-							name="billingStreet" value="1,Main St" /></td>
-						<td class="param_value"><input type="text"
-							name="billingLine2" value="" /></td>
+						<td class="param_value"><input type="text" name="billingStreet"
+							value="1,Main St" /></td>
+						<td class="param_value"><input type="text" name="billingLine2"
+							value="" /></td>
 						<td class="param_value"><input type="text" name="billingCity"
 							value="Austin" /></td>
-						<td class="param_value"><input type="text"
-							name="billingState" value="TX" />
+						<td class="param_value"><input type="text" name="billingState"
+							value="TX" />
 						</td>
 						<td class="param_value"><input type="text"
 							name="billingPostalCode" value="78750" /></td>
@@ -169,10 +169,10 @@
 							name="billingCountryCode" value="US" /></td>
 					</tr>
 				</table>
-				
+
 				<div class="params">
-					<div class="param_name">ConfirmationType * (ConfirmationType
-						NONE requires advanced permission levels. You must pass the
+					<div class="param_name">ConfirmationType * (ConfirmationType NONE
+						requires advanced permission levels. You must pass the
 						createAccount key.)</div>
 					<div class="param_value">
 						<select name="confirmationType">
@@ -203,9 +203,9 @@
 					</tr>
 				</table>
 				<div class="submit">
-					<input type="submit" name="submit"
-						value="Submit" /><br />
-				</div>			
+					<input type="submit" name="submit" value="Submit" /><br />
+				</div>
+				<a href="index.php">Home</a>
 			</div>
 		</form>
 	</div>

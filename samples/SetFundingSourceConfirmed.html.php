@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-<title>Adaptive Accounts - Set Funding Source Confirmed</title>
+<title>PayPal Adaptive Accounts - Set Funding Source Confirmed</title>
 <link href="Common/style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="sdk.css" />
 <script type="text/javascript" src="sdk.js"></script>
@@ -11,13 +11,14 @@
 	<div id="wrapper">
 		<div id="header">
 			<h3>Set Funding Source Confirmed</h3>
-			<div id="apidetails">Allows your application to mark a funding source as confirmed, after
-				it is added successfully with AddPaymentCard or AddBankAccount.</div>
+			<div id="apidetails">Allows your application to mark a funding source
+				as confirmed, after it is added successfully with AddPaymentCard or
+				AddBankAccount.</div>
 		</div>
 		<form method="post" action="SetFundingSourceConfirmed.php">
 			<div id="request_form">
-				<div class="input_header">Account Id or email address of the account to which the funding source is to be added.
-				</div>
+				<div class="input_header">Account Id or email address of the account
+					to which the funding source is to be added.</div>
 				<table class="params">
 					<tr>
 						<th>Account ID</th>
@@ -42,9 +43,9 @@
 				<div class="submit">
 					<input type="submit" name="submit" value="Submit" /><br />
 				</div>
+				<a href="index.php">Home</a>
 			</div>
 		</form>
-		<a href="index.php">Home</a>
 	</div>
 </body>
 </html>

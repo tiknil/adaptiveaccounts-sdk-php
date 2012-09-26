@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-<title>Adaptive Accounts - Add Bank Account</title>
+<title>PayPal Adaptive Accounts - Add Bank Account</title>
 <link href="Common/style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="sdk.css" />
 <script type="text/javascript" src="sdk.js"></script>
@@ -16,7 +16,7 @@
 		</div>
 		<form method="post" action="AddBankAccount.php">
 			<div id="request_form">
-				<div class="input_header">Account ID or email Address of your paypal
+					<div class="input_header">Account ID or email Address of your paypal
 					account *</div>
 				<table class="params">
 					<tr>
@@ -159,7 +159,8 @@
 						<input type="text" name="taxIdNumber" value="" />
 					</div>
 				</div>
-			-->	<div class="params">
+			-->
+				<div class="params">
 					<div class="param_name">Account holder date of birth</div>
 					<div class="param_value">
 						<input type="text" name="accountHolderDateOfBirth" value="" />
@@ -200,6 +201,7 @@
 				<div class="submit">
 					<input type="submit" name="submit" value="Submit" /><br />
 				</div>
+				<a href="index.php">Home</a>
 			</div>
 		</form>
 	</div>

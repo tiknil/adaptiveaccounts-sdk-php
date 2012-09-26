@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-<title>Adaptive Accounts - Get User Agreement</title>
+<title>PayPal Adaptive Accounts - Get User Agreement</title>
 <link href="Common/style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="sdk.css" />
 <script type="text/javascript" src="sdk.js"></script>
@@ -19,7 +19,8 @@
 					country code or language code. Doing so will result in an error.</div>
 				<div class="params">
 					<div class="param_name">
-						CreateAccountKey (<a href="CreateAccount.php">Get CreateAccountKey</a>)</div>
+						CreateAccountKey (<a href="CreateAccount.php">Get CreateAccountKey</a>)
+					</div>
 					<div class="param_value">
 						<input type="text" name="createAccountKey" value="" />
 					</div>
@@ -50,7 +51,7 @@
 							<option value="SG">SG - Singapore</option>
 							<option value="ZA">ZA - South Africa</option>
 							<option value="ES">ES - Spain</option>
-							<option value="CH">CH - Switzerland</option>							
+							<option value="CH">CH - Switzerland</option>
 						</select>
 					</div>
 				</div>
@@ -64,6 +65,7 @@
 				<div class="submit">
 					<input type="submit" name="submit" value="Submit" /><br />
 				</div>
+				<a href="index.php">Home</a>
 			</div>
 		</form>
 	</div>

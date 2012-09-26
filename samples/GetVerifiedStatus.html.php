@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-<title>Adaptive Accounts - Get Verified Status</title>
+<title>PayPal Adaptive Accounts - Get Verified Status</title>
 <link href="Common/style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="sdk.css" />
 <script type="text/javascript" src="sdk.js"></script>
@@ -11,8 +11,11 @@
 	<div id="wrapper">
 		<div id="header">
 			<h3>Get Verified Status</h3>
-			<div id="apidetails">Check if a PayPal account status is verified. A PayPal account gains verified status under a variety of circumstances, such as when an
-				account is linked to a verified funding source. Verified status serves to indicate a trust relationship.</div>
+			<div id="apidetails">Check if a PayPal account status is verified. A
+				PayPal account gains verified status under a variety of
+				circumstances, such as when an account is linked to a verified
+				funding source. Verified status serves to indicate a trust
+				relationship.</div>
 		</div>
 		<form method="post" action="GetVerifiedStatus.php">
 			<div id="request_form">
@@ -23,7 +26,7 @@
 							<input type="text" name="emailAddress" value="platfo@paypal.com" />
 						</div>
 					</div>
-					
+
 					<div class="params">
 						<div class="param_name">Match Criteria</div>
 						<div class="param_value">
@@ -34,7 +37,7 @@
 							</select>
 						</div>
 						<span class="note">NOTE: To use Match criteria NONE you must
-						request and be granted advanced permission levels.</span>
+							request and be granted advanced permission levels.</span>
 					</div>
 					<div class="params">
 						<div class="param_name">First Name (Required if matchCriteria is
@@ -53,9 +56,9 @@
 
 					<input type="submit" name="submit" value="Submit" /><br />
 				</div>
+				<a href="index.php">Home</a>
 			</div>
 		</form>
-		<a href="index.php">Home</a>
 	</div>
 </body>
 </html>
