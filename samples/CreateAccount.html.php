@@ -26,7 +26,7 @@
 					<div class="param_value">
 						<select name="accountType">
 							<option>- Select a value -</option>
-							<option>Personal</option>
+							<option selected="selected">Personal</option>
 							<option>Premier</option>
 							<option>Business</option>
 						</select>

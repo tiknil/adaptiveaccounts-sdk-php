@@ -4,16 +4,21 @@
   * Auto generated code 
   * 
   */
-require_once('PPUtils.php');
+require_once 'PPUtils.php';
+require_once 'PPMessage.php';	
 /**
  * This type contains the detailed error information resulting
  * from the service operation. 
  */
-class ErrorData  {
+ 
+class ErrorData  
+  extends PPMessage   {
 
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var integer
 	 */ 
 	public $errorId;
@@ -21,6 +26,8 @@ class ErrorData  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $domain;
@@ -28,6 +35,8 @@ class ErrorData  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $subdomain;
@@ -35,6 +44,8 @@ class ErrorData  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var ErrorSeverity
 	 */ 
 	public $severity;
@@ -42,6 +53,8 @@ class ErrorData  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var ErrorCategory
 	 */ 
 	public $category;
@@ -49,6 +62,8 @@ class ErrorData  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $message;
@@ -56,6 +71,8 @@ class ErrorData  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $exceptionId;
@@ -64,68 +81,31 @@ class ErrorData  {
 	 * 
      * @array
 	 * @access public
+	 
+	 
 	 * @var ErrorParameter
 	 */ 
 	public $parameter;
 
 
-
-	public function init($map = NULL, $prefix = '') {
-		if($map != NULL) {
-			$mapKeyName =  $prefix . 'errorId';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->errorId = $map[$mapKeyName];
-			}
-			$mapKeyName =  $prefix . 'domain';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->domain = $map[$mapKeyName];
-			}
-			$mapKeyName =  $prefix . 'subdomain';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->subdomain = $map[$mapKeyName];
-			}
-			$mapKeyName =  $prefix . 'severity';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->severity = $map[$mapKeyName];
-			}
-			$mapKeyName =  $prefix . 'category';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->category = $map[$mapKeyName];
-			}
-			$mapKeyName =  $prefix . 'message';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->message = $map[$mapKeyName];
-			}
-			$mapKeyName =  $prefix . 'exceptionId';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->exceptionId = $map[$mapKeyName];
-			}
-			$i = 0;
-			while(TRUE) {
-				if (PPUtils::array_match_key($map, $prefix . "parameter($i)")) {
-					$newPrefix = $prefix . "parameter($i).";
-					$this->parameter[$i] = new ErrorParameter();
-					$this->parameter[$i]->init($map, $newPrefix);
-				} else {
-					break;
-				}
-				$i++;
-			}
-			
-		}
-	}
-} 
+}
 
 
 
 /**
  * 
  */
-class ErrorParameter  {
+ 
+class ErrorParameter  
+  extends PPMessage   {
 
 	/**
 	 * 
 	 * @access public
+	 
+	 
+	 * @attribute 
+	 
 	 * @var string
 	 */ 
 	public $name;
@@ -133,26 +113,14 @@ class ErrorParameter  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $value;
 
 
-
-	public function init($map = NULL, $prefix = '') {
-		if($map != NULL) {
-			$mapKeyName =  $prefix . 'name';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->name = $map[$mapKeyName];
-			}
-			$mapKeyName =  $prefix . 'value';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->value = $map[$mapKeyName];
-			}
-			
-		}
-	}
-} 
+}
 
 
 
@@ -160,7 +128,9 @@ class ErrorParameter  {
  * This specifies the list of parameters with every request to
  * the service. 
  */
-class RequestEnvelope  {
+ 
+class RequestEnvelope  
+  extends PPMessage   {
 
 	/**
 	 * This specifies the required detail level that is needed by a
@@ -169,6 +139,8 @@ class RequestEnvelope  {
 	 * specified in the DetailLevelCodeType which has all the
 	 * enumerated values of the detail level for each component. 
 	 * @access public
+	 
+	 
 	 * @var DetailLevelCode
 	 */ 
 	public $detailLevel;
@@ -177,26 +149,14 @@ class RequestEnvelope  {
 	 * This should be the standard RFC 3066 language identification
 	 * tag, e.g., en_US. 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $errorLanguage;
 
 
-	public function toNVPString($prefix = '') {
-		$str = '';
-		$delim = '';
-		if($this->detailLevel != NULL) {
-			$str .= $delim .  $prefix . 'detailLevel=' . urlencode($this->detailLevel);
-			$delim = '&';
-		}
-		if($this->errorLanguage != NULL) {
-			$str .= $delim .  $prefix . 'errorLanguage=' . urlencode($this->errorLanguage);
-			$delim = '&';
-		}
-		return $str;
-	}
-
-} 
+}
 
 
 
@@ -204,11 +164,15 @@ class RequestEnvelope  {
  * This specifies a list of parameters with every response from
  * a service. 
  */
-class ResponseEnvelope  {
+ 
+class ResponseEnvelope  
+  extends PPMessage   {
 
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var dateTime
 	 */ 
 	public $timestamp;
@@ -216,6 +180,8 @@ class ResponseEnvelope  {
 	/**
 	 * Application level acknowledgement code. 
 	 * @access public
+	 
+	 
 	 * @var AckCode
 	 */ 
 	public $ack;
@@ -223,6 +189,8 @@ class ResponseEnvelope  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $correlationId;
@@ -230,34 +198,14 @@ class ResponseEnvelope  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $build;
 
 
-
-	public function init($map = NULL, $prefix = '') {
-		if($map != NULL) {
-			$mapKeyName =  $prefix . 'timestamp';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->timestamp = $map[$mapKeyName];
-			}
-			$mapKeyName =  $prefix . 'ack';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->ack = $map[$mapKeyName];
-			}
-			$mapKeyName =  $prefix . 'correlationId';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->correlationId = $map[$mapKeyName];
-			}
-			$mapKeyName =  $prefix . 'build';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->build = $map[$mapKeyName];
-			}
-			
-		}
-	}
-} 
+}
 
 
 
@@ -265,11 +213,15 @@ class ResponseEnvelope  {
  * This elements in this type refers to the end user of the
  * application invoking this service. 
  */
-class ClientDetailsType  {
+ 
+class ClientDetailsType  
+  extends PPMessage   {
 
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $ipAddress;
@@ -277,6 +229,8 @@ class ClientDetailsType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $deviceId;
@@ -284,6 +238,8 @@ class ClientDetailsType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $applicationId;
@@ -291,6 +247,8 @@ class ClientDetailsType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $model;
@@ -298,6 +256,8 @@ class ClientDetailsType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $geoLocation;
@@ -305,6 +265,8 @@ class ClientDetailsType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $customerType;
@@ -312,6 +274,8 @@ class ClientDetailsType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $partnerName;
@@ -319,50 +283,14 @@ class ClientDetailsType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $customerId;
 
 
-	public function toNVPString($prefix = '') {
-		$str = '';
-		$delim = '';
-		if($this->ipAddress != NULL) {
-			$str .= $delim .  $prefix . 'ipAddress=' . urlencode($this->ipAddress);
-			$delim = '&';
-		}
-		if($this->deviceId != NULL) {
-			$str .= $delim .  $prefix . 'deviceId=' . urlencode($this->deviceId);
-			$delim = '&';
-		}
-		if($this->applicationId != NULL) {
-			$str .= $delim .  $prefix . 'applicationId=' . urlencode($this->applicationId);
-			$delim = '&';
-		}
-		if($this->model != NULL) {
-			$str .= $delim .  $prefix . 'model=' . urlencode($this->model);
-			$delim = '&';
-		}
-		if($this->geoLocation != NULL) {
-			$str .= $delim .  $prefix . 'geoLocation=' . urlencode($this->geoLocation);
-			$delim = '&';
-		}
-		if($this->customerType != NULL) {
-			$str .= $delim .  $prefix . 'customerType=' . urlencode($this->customerType);
-			$delim = '&';
-		}
-		if($this->partnerName != NULL) {
-			$str .= $delim .  $prefix . 'partnerName=' . urlencode($this->partnerName);
-			$delim = '&';
-		}
-		if($this->customerId != NULL) {
-			$str .= $delim .  $prefix . 'customerId=' . urlencode($this->customerId);
-			$delim = '&';
-		}
-		return $str;
-	}
-
-} 
+}
 
 
 
@@ -370,11 +298,15 @@ class ClientDetailsType  {
  * This specifies a fault, encapsulating error data, with
  * specific error codes. 
  */
-class FaultMessage  {
+ 
+class FaultMessage  
+  extends PPMessage   {
 
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var ResponseEnvelope
 	 */ 
 	public $responseEnvelope;
@@ -383,34 +315,14 @@ class FaultMessage  {
 	 * 
      * @array
 	 * @access public
+	 
+	 
 	 * @var ErrorData
 	 */ 
 	public $error;
 
 
-
-	public function init($map = NULL, $prefix = '') {
-		if($map != NULL) {
-			if (PPUtils::array_match_key($map, $prefix . "responseEnvelope.")) {
-				$newPrefix = $prefix . "responseEnvelope.";
-				$this->responseEnvelope = new ResponseEnvelope();
-				$this->responseEnvelope->init($map, $newPrefix);
-			}
-			$i = 0;
-			while(TRUE) {
-				if (PPUtils::array_match_key($map, $prefix . "error($i)")) {
-					$newPrefix = $prefix . "error($i).";
-					$this->error[$i] = new ErrorData();
-					$this->error[$i]->init($map, $newPrefix);
-				} else {
-					break;
-				}
-				$i++;
-			}
-			
-		}
-	}
-} 
+}
 
 
 
@@ -419,11 +331,15 @@ class FaultMessage  {
  * targeted. Caller of this API has to provide ONLY one of
  * these inputs: emailAddress, accountId or phoneNumber. 
  */
-class AccountIdentifierType  {
+ 
+class AccountIdentifierType  
+  extends PPMessage   {
 
 	/**
 	 * Identifies the PayPal account based on the emailAddress. 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $emailAddress;
@@ -431,6 +347,8 @@ class AccountIdentifierType  {
 	/**
 	 * Identifies the PayPal account based on the phoneNumber. 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $phoneNumber;
@@ -438,6 +356,8 @@ class AccountIdentifierType  {
 	/**
 	 * Identifies the PayPal account based on the accountId. 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $accountId;
@@ -452,25 +372,7 @@ class AccountIdentifierType  {
 	}
 
 
-	public function toNVPString($prefix = '') {
-		$str = '';
-		$delim = '';
-		if($this->emailAddress != NULL) {
-			$str .= $delim .  $prefix . 'emailAddress=' . urlencode($this->emailAddress);
-			$delim = '&';
-		}
-		if($this->phoneNumber != NULL) {
-			$str .= $delim .  $prefix . 'phoneNumber=' . urlencode($this->phoneNumber);
-			$delim = '&';
-		}
-		if($this->accountId != NULL) {
-			$str .= $delim .  $prefix . 'accountId=' . urlencode($this->accountId);
-			$delim = '&';
-		}
-		return $str;
-	}
-
-} 
+}
 
 
 
@@ -479,11 +381,15 @@ class AccountIdentifierType  {
  * corresponds to java.util.regex.Pattern.CASE_INSENSITIVE,
  * meaning the strings are not case-sensitive 
  */
-class CreateAccountRequest  {
+ 
+class CreateAccountRequest  
+  extends PPMessage   {
 
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var RequestEnvelope
 	 */ 
 	public $requestEnvelope;
@@ -491,6 +397,8 @@ class CreateAccountRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var ClientDetailsType
 	 */ 
 	public $clientDetails;
@@ -500,6 +408,8 @@ class CreateAccountRequest  {
 	 * corresponds to java.util.regex.Pattern.CASE_INSENSITIVE,
 	 * meaning the strings are not case-sensitive 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $accountType;
@@ -507,6 +417,8 @@ class CreateAccountRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var NameType
 	 */ 
 	public $name;
@@ -514,6 +426,8 @@ class CreateAccountRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var date
 	 */ 
 	public $dateOfBirth;
@@ -521,6 +435,8 @@ class CreateAccountRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var AddressType
 	 */ 
 	public $address;
@@ -529,6 +445,8 @@ class CreateAccountRequest  {
 	 * Must provide at least one of contactPhoneNumber,
 	 * homePhoneNumber, or mobilePhoneNumber 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $contactPhoneNumber;
@@ -537,6 +455,8 @@ class CreateAccountRequest  {
 	 * Must provide at least one of contactPhoneNumber,
 	 * homePhoneNumber, or mobilePhoneNumber 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $homePhoneNumber;
@@ -545,6 +465,8 @@ class CreateAccountRequest  {
 	 * Must provide at least one of contactPhoneNumber,
 	 * homePhoneNumber, or mobilePhoneNumber 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $mobilePhoneNumber;
@@ -552,6 +474,8 @@ class CreateAccountRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $currencyCode;
@@ -559,6 +483,8 @@ class CreateAccountRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $citizenshipCountryCode;
@@ -566,6 +492,8 @@ class CreateAccountRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $preferredLanguageCode;
@@ -573,6 +501,8 @@ class CreateAccountRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $notificationURL;
@@ -580,6 +510,8 @@ class CreateAccountRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $emailAddress;
@@ -589,6 +521,8 @@ class CreateAccountRequest  {
 	 * complete the registration. Web: Returns a URL to complete
 	 * the registration. 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $registrationType;
@@ -596,6 +530,8 @@ class CreateAccountRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var CreateAccountWebOptionsType
 	 */ 
 	public $createAccountWebOptions;
@@ -603,6 +539,8 @@ class CreateAccountRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var boolean
 	 */ 
 	public $suppressWelcomeEmail;
@@ -611,6 +549,8 @@ class CreateAccountRequest  {
 	 * Set to true if you want this account to undergo extra
 	 * vetting by PayPal before becoming usable. 
 	 * @access public
+	 
+	 
 	 * @var boolean
 	 */ 
 	public $performExtraVettingOnThisAccount;
@@ -618,6 +558,8 @@ class CreateAccountRequest  {
 	/**
 	 * tax id, ssn, itin, pan, cpf, acn, abn, etc. 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $taxId;
@@ -625,6 +567,8 @@ class CreateAccountRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $partnerField1;
@@ -632,6 +576,8 @@ class CreateAccountRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $partnerField2;
@@ -639,6 +585,8 @@ class CreateAccountRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $partnerField3;
@@ -646,6 +594,8 @@ class CreateAccountRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $partnerField4;
@@ -653,6 +603,8 @@ class CreateAccountRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $partnerField5;
@@ -660,6 +612,8 @@ class CreateAccountRequest  {
 	/**
 	 * Required for business account creation 
 	 * @access public
+	 
+	 
 	 * @var BusinessInfoType
 	 */ 
 	public $businessInfo;
@@ -675,130 +629,22 @@ class CreateAccountRequest  {
 	}
 
 
-	public function toNVPString($prefix = '') {
-		$str = '';
-		$delim = '';
-		if($this->requestEnvelope != NULL) {
-			$newPrefix = $prefix . 'requestEnvelope.';
-			$str .= $delim . call_user_func(array($this->requestEnvelope, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		if($this->clientDetails != NULL) {
-			$newPrefix = $prefix . 'clientDetails.';
-			$str .= $delim . call_user_func(array($this->clientDetails, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		if($this->accountType != NULL) {
-			$str .= $delim .  $prefix . 'accountType=' . urlencode($this->accountType);
-			$delim = '&';
-		}
-		if($this->name != NULL) {
-			$newPrefix = $prefix . 'name.';
-			$str .= $delim . call_user_func(array($this->name, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		if($this->dateOfBirth != NULL) {
-			$str .= $delim .  $prefix . 'dateOfBirth=' . urlencode($this->dateOfBirth);
-			$delim = '&';
-		}
-		if($this->address != NULL) {
-			$newPrefix = $prefix . 'address.';
-			$str .= $delim . call_user_func(array($this->address, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		if($this->contactPhoneNumber != NULL) {
-			$str .= $delim .  $prefix . 'contactPhoneNumber=' . urlencode($this->contactPhoneNumber);
-			$delim = '&';
-		}
-		if($this->homePhoneNumber != NULL) {
-			$str .= $delim .  $prefix . 'homePhoneNumber=' . urlencode($this->homePhoneNumber);
-			$delim = '&';
-		}
-		if($this->mobilePhoneNumber != NULL) {
-			$str .= $delim .  $prefix . 'mobilePhoneNumber=' . urlencode($this->mobilePhoneNumber);
-			$delim = '&';
-		}
-		if($this->currencyCode != NULL) {
-			$str .= $delim .  $prefix . 'currencyCode=' . urlencode($this->currencyCode);
-			$delim = '&';
-		}
-		if($this->citizenshipCountryCode != NULL) {
-			$str .= $delim .  $prefix . 'citizenshipCountryCode=' . urlencode($this->citizenshipCountryCode);
-			$delim = '&';
-		}
-		if($this->preferredLanguageCode != NULL) {
-			$str .= $delim .  $prefix . 'preferredLanguageCode=' . urlencode($this->preferredLanguageCode);
-			$delim = '&';
-		}
-		if($this->notificationURL != NULL) {
-			$str .= $delim .  $prefix . 'notificationURL=' . urlencode($this->notificationURL);
-			$delim = '&';
-		}
-		if($this->emailAddress != NULL) {
-			$str .= $delim .  $prefix . 'emailAddress=' . urlencode($this->emailAddress);
-			$delim = '&';
-		}
-		if($this->registrationType != NULL) {
-			$str .= $delim .  $prefix . 'registrationType=' . urlencode($this->registrationType);
-			$delim = '&';
-		}
-		if($this->createAccountWebOptions != NULL) {
-			$newPrefix = $prefix . 'createAccountWebOptions.';
-			$str .= $delim . call_user_func(array($this->createAccountWebOptions, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		if($this->suppressWelcomeEmail != NULL) {
-			$str .= $delim .  $prefix . 'suppressWelcomeEmail=' . urlencode($this->suppressWelcomeEmail);
-			$delim = '&';
-		}
-		if($this->performExtraVettingOnThisAccount != NULL) {
-			$str .= $delim .  $prefix . 'performExtraVettingOnThisAccount=' . urlencode($this->performExtraVettingOnThisAccount);
-			$delim = '&';
-		}
-		if($this->taxId != NULL) {
-			$str .= $delim .  $prefix . 'taxId=' . urlencode($this->taxId);
-			$delim = '&';
-		}
-		if($this->partnerField1 != NULL) {
-			$str .= $delim .  $prefix . 'partnerField1=' . urlencode($this->partnerField1);
-			$delim = '&';
-		}
-		if($this->partnerField2 != NULL) {
-			$str .= $delim .  $prefix . 'partnerField2=' . urlencode($this->partnerField2);
-			$delim = '&';
-		}
-		if($this->partnerField3 != NULL) {
-			$str .= $delim .  $prefix . 'partnerField3=' . urlencode($this->partnerField3);
-			$delim = '&';
-		}
-		if($this->partnerField4 != NULL) {
-			$str .= $delim .  $prefix . 'partnerField4=' . urlencode($this->partnerField4);
-			$delim = '&';
-		}
-		if($this->partnerField5 != NULL) {
-			$str .= $delim .  $prefix . 'partnerField5=' . urlencode($this->partnerField5);
-			$delim = '&';
-		}
-		if($this->businessInfo != NULL) {
-			$newPrefix = $prefix . 'businessInfo.';
-			$str .= $delim . call_user_func(array($this->businessInfo, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		return $str;
-	}
-
-} 
+}
 
 
 
 /**
  * Valid values are: COMPLETED 
  */
-class CreateAccountResponse  {
+ 
+class CreateAccountResponse  
+  extends PPMessage   {
 
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var ResponseEnvelope
 	 */ 
 	public $responseEnvelope;
@@ -806,6 +652,8 @@ class CreateAccountResponse  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $createAccountKey;
@@ -813,6 +661,8 @@ class CreateAccountResponse  {
 	/**
 	 * Valid values are: COMPLETED 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $execStatus;
@@ -820,6 +670,8 @@ class CreateAccountResponse  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $redirectURL;
@@ -828,6 +680,8 @@ class CreateAccountResponse  {
 	 * Identifies a PayPal account. Only premier and business
 	 * accounts have an accountId 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $accountId;
@@ -836,61 +690,29 @@ class CreateAccountResponse  {
 	 * 
      * @array
 	 * @access public
+	 
+	 
 	 * @var ErrorData
 	 */ 
 	public $error;
 
 
-
-	public function init($map = NULL, $prefix = '') {
-		if($map != NULL) {
-			if (PPUtils::array_match_key($map, $prefix . "responseEnvelope.")) {
-				$newPrefix = $prefix . "responseEnvelope.";
-				$this->responseEnvelope = new ResponseEnvelope();
-				$this->responseEnvelope->init($map, $newPrefix);
-			}
-			$mapKeyName =  $prefix . 'createAccountKey';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->createAccountKey = $map[$mapKeyName];
-			}
-			$mapKeyName =  $prefix . 'execStatus';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->execStatus = $map[$mapKeyName];
-			}
-			$mapKeyName =  $prefix . 'redirectURL';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->redirectURL = $map[$mapKeyName];
-			}
-			$mapKeyName =  $prefix . 'accountId';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->accountId = $map[$mapKeyName];
-			}
-			$i = 0;
-			while(TRUE) {
-				if (PPUtils::array_match_key($map, $prefix . "error($i)")) {
-					$newPrefix = $prefix . "error($i).";
-					$this->error[$i] = new ErrorData();
-					$this->error[$i]->init($map, $newPrefix);
-				} else {
-					break;
-				}
-				$i++;
-			}
-			
-		}
-	}
-} 
+}
 
 
 
 /**
  * 
  */
-class GetUserAgreementRequest  {
+ 
+class GetUserAgreementRequest  
+  extends PPMessage   {
 
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var RequestEnvelope
 	 */ 
 	public $requestEnvelope;
@@ -898,6 +720,8 @@ class GetUserAgreementRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $createAccountKey;
@@ -905,6 +729,8 @@ class GetUserAgreementRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $countryCode;
@@ -912,6 +738,8 @@ class GetUserAgreementRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $languageCode;
@@ -924,41 +752,22 @@ class GetUserAgreementRequest  {
 	}
 
 
-	public function toNVPString($prefix = '') {
-		$str = '';
-		$delim = '';
-		if($this->requestEnvelope != NULL) {
-			$newPrefix = $prefix . 'requestEnvelope.';
-			$str .= $delim . call_user_func(array($this->requestEnvelope, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		if($this->createAccountKey != NULL) {
-			$str .= $delim .  $prefix . 'createAccountKey=' . urlencode($this->createAccountKey);
-			$delim = '&';
-		}
-		if($this->countryCode != NULL) {
-			$str .= $delim .  $prefix . 'countryCode=' . urlencode($this->countryCode);
-			$delim = '&';
-		}
-		if($this->languageCode != NULL) {
-			$str .= $delim .  $prefix . 'languageCode=' . urlencode($this->languageCode);
-			$delim = '&';
-		}
-		return $str;
-	}
-
-} 
+}
 
 
 
 /**
  * 
  */
-class GetUserAgreementResponse  {
+ 
+class GetUserAgreementResponse  
+  extends PPMessage   {
 
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var ResponseEnvelope
 	 */ 
 	public $responseEnvelope;
@@ -966,6 +775,8 @@ class GetUserAgreementResponse  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $agreement;
@@ -974,38 +785,14 @@ class GetUserAgreementResponse  {
 	 * 
      * @array
 	 * @access public
+	 
+	 
 	 * @var ErrorData
 	 */ 
 	public $error;
 
 
-
-	public function init($map = NULL, $prefix = '') {
-		if($map != NULL) {
-			if (PPUtils::array_match_key($map, $prefix . "responseEnvelope.")) {
-				$newPrefix = $prefix . "responseEnvelope.";
-				$this->responseEnvelope = new ResponseEnvelope();
-				$this->responseEnvelope->init($map, $newPrefix);
-			}
-			$mapKeyName =  $prefix . 'agreement';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->agreement = $map[$mapKeyName];
-			}
-			$i = 0;
-			while(TRUE) {
-				if (PPUtils::array_match_key($map, $prefix . "error($i)")) {
-					$newPrefix = $prefix . "error($i).";
-					$this->error[$i] = new ErrorData();
-					$this->error[$i]->init($map, $newPrefix);
-				} else {
-					break;
-				}
-				$i++;
-			}
-			
-		}
-	}
-} 
+}
 
 
 
@@ -1014,11 +801,15 @@ class GetUserAgreementResponse  {
  * emailAddress is used to locate the account. Currently, we
  * support matchCriteria of 'NAME' and 'NONE'. 
  */
-class GetVerifiedStatusRequest  {
+ 
+class GetVerifiedStatusRequest  
+  extends PPMessage   {
 
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var RequestEnvelope
 	 */ 
 	public $requestEnvelope;
@@ -1026,6 +817,8 @@ class GetVerifiedStatusRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $emailAddress;
@@ -1035,6 +828,8 @@ class GetVerifiedStatusRequest  {
 	 * emailAddress is used to locate the account. Currently, we
 	 * support matchCriteria of 'NAME' and 'NONE'. 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $matchCriteria;
@@ -1043,6 +838,8 @@ class GetVerifiedStatusRequest  {
 	 * Required if matchCriteria is NAME Optional if matchCriteria
 	 * is NONE 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $firstName;
@@ -1051,6 +848,8 @@ class GetVerifiedStatusRequest  {
 	 * Required if matchCriteria is NAME Optional if matchCriteria
 	 * is NONE 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $lastName;
@@ -1065,45 +864,22 @@ class GetVerifiedStatusRequest  {
 	}
 
 
-	public function toNVPString($prefix = '') {
-		$str = '';
-		$delim = '';
-		if($this->requestEnvelope != NULL) {
-			$newPrefix = $prefix . 'requestEnvelope.';
-			$str .= $delim . call_user_func(array($this->requestEnvelope, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		if($this->emailAddress != NULL) {
-			$str .= $delim .  $prefix . 'emailAddress=' . urlencode($this->emailAddress);
-			$delim = '&';
-		}
-		if($this->matchCriteria != NULL) {
-			$str .= $delim .  $prefix . 'matchCriteria=' . urlencode($this->matchCriteria);
-			$delim = '&';
-		}
-		if($this->firstName != NULL) {
-			$str .= $delim .  $prefix . 'firstName=' . urlencode($this->firstName);
-			$delim = '&';
-		}
-		if($this->lastName != NULL) {
-			$str .= $delim .  $prefix . 'lastName=' . urlencode($this->lastName);
-			$delim = '&';
-		}
-		return $str;
-	}
-
-} 
+}
 
 
 
 /**
  * Returned values are: VERIFIED|UNVERIFIED. 
  */
-class GetVerifiedStatusResponse  {
+ 
+class GetVerifiedStatusResponse  
+  extends PPMessage   {
 
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var ResponseEnvelope
 	 */ 
 	public $responseEnvelope;
@@ -1111,6 +887,8 @@ class GetVerifiedStatusResponse  {
 	/**
 	 * Returned values are: VERIFIED|UNVERIFIED. 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $accountStatus;
@@ -1118,6 +896,8 @@ class GetVerifiedStatusResponse  {
 	/**
 	 * Returns countryCode belonging to PayPal account. 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $countryCode;
@@ -1126,6 +906,8 @@ class GetVerifiedStatusResponse  {
 	 * Info about PayPal user such as emailAddress, accountId,
 	 * firstName, lastName etc. 
 	 * @access public
+	 
+	 
 	 * @var UserInfoType
 	 */ 
 	public $userInfo;
@@ -1134,47 +916,14 @@ class GetVerifiedStatusResponse  {
 	 * 
      * @array
 	 * @access public
+	 
+	 
 	 * @var ErrorData
 	 */ 
 	public $error;
 
 
-
-	public function init($map = NULL, $prefix = '') {
-		if($map != NULL) {
-			if (PPUtils::array_match_key($map, $prefix . "responseEnvelope.")) {
-				$newPrefix = $prefix . "responseEnvelope.";
-				$this->responseEnvelope = new ResponseEnvelope();
-				$this->responseEnvelope->init($map, $newPrefix);
-			}
-			$mapKeyName =  $prefix . 'accountStatus';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->accountStatus = $map[$mapKeyName];
-			}
-			$mapKeyName =  $prefix . 'countryCode';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->countryCode = $map[$mapKeyName];
-			}
-			if (PPUtils::array_match_key($map, $prefix . "userInfo.")) {
-				$newPrefix = $prefix . "userInfo.";
-				$this->userInfo = new UserInfoType();
-				$this->userInfo->init($map, $newPrefix);
-			}
-			$i = 0;
-			while(TRUE) {
-				if (PPUtils::array_match_key($map, $prefix . "error($i)")) {
-					$newPrefix = $prefix . "error($i).";
-					$this->error[$i] = new ErrorData();
-					$this->error[$i]->init($map, $newPrefix);
-				} else {
-					break;
-				}
-				$i++;
-			}
-			
-		}
-	}
-} 
+}
 
 
 
@@ -1183,11 +932,15 @@ class GetVerifiedStatusResponse  {
  * targetted to. Caller of this API has to either provided an
  * emailAddress or an accountId. 
  */
-class AddBankAccountRequest  {
+ 
+class AddBankAccountRequest  
+  extends PPMessage   {
 
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var RequestEnvelope
 	 */ 
 	public $requestEnvelope;
@@ -1197,6 +950,8 @@ class AddBankAccountRequest  {
 	 * targetted to. Caller of this API has to either provided an
 	 * emailAddress or an accountId. 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $emailAddress;
@@ -1206,6 +961,8 @@ class AddBankAccountRequest  {
 	 * targetted to. Caller of this API has to either provided an
 	 * emailAddress or an accountId. 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $accountId;
@@ -1213,6 +970,8 @@ class AddBankAccountRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $createAccountKey;
@@ -1220,6 +979,8 @@ class AddBankAccountRequest  {
 	/**
 	 * Country code for the bank 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $bankCountryCode;
@@ -1227,6 +988,8 @@ class AddBankAccountRequest  {
 	/**
 	 * The defualt value is UNKNOWN. 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $bankName;
@@ -1234,6 +997,8 @@ class AddBankAccountRequest  {
 	/**
 	 * Bank routing or transit number 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $routingNumber;
@@ -1241,6 +1006,8 @@ class AddBankAccountRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var BankAccountType
 	 */ 
 	public $bankAccountType;
@@ -1248,6 +1015,8 @@ class AddBankAccountRequest  {
 	/**
 	 * Basic Bank Account Number (BBAN) 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $bankAccountNumber;
@@ -1255,6 +1024,8 @@ class AddBankAccountRequest  {
 	/**
 	 * International Bank Account Number (IBAN) 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $iban;
@@ -1263,6 +1034,8 @@ class AddBankAccountRequest  {
 	 * CLABE represents the bank information for countries like
 	 * Mexico 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $clabe;
@@ -1270,6 +1043,8 @@ class AddBankAccountRequest  {
 	/**
 	 * Bank/State/Branch number 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $bsbNumber;
@@ -1277,6 +1052,8 @@ class AddBankAccountRequest  {
 	/**
 	 * Branch location 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $branchLocation;
@@ -1284,6 +1061,8 @@ class AddBankAccountRequest  {
 	/**
 	 * Branch sort code. 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $sortCode;
@@ -1291,6 +1070,8 @@ class AddBankAccountRequest  {
 	/**
 	 * Bank transit number 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $bankTransitNumber;
@@ -1298,6 +1079,8 @@ class AddBankAccountRequest  {
 	/**
 	 * Institution number 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $institutionNumber;
@@ -1305,6 +1088,8 @@ class AddBankAccountRequest  {
 	/**
 	 * Branch code 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $branchCode;
@@ -1312,6 +1097,8 @@ class AddBankAccountRequest  {
 	/**
 	 * For Brazil Agency Number 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $agencyNumber;
@@ -1319,6 +1106,8 @@ class AddBankAccountRequest  {
 	/**
 	 * Bank code 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $bankCode;
@@ -1326,6 +1115,8 @@ class AddBankAccountRequest  {
 	/**
 	 * RIB key 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $ribKey;
@@ -1333,6 +1124,8 @@ class AddBankAccountRequest  {
 	/**
 	 * control digits 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $controlDigit;
@@ -1340,6 +1133,8 @@ class AddBankAccountRequest  {
 	/**
 	 * Tax id type of CNPJ or CPF, only supported for Brazil. 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $taxIdType;
@@ -1347,6 +1142,8 @@ class AddBankAccountRequest  {
 	/**
 	 * Tax id number for Brazil. 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $taxIdNumber;
@@ -1354,6 +1151,8 @@ class AddBankAccountRequest  {
 	/**
 	 * Date of birth of the account holder 
 	 * @access public
+	 
+	 
 	 * @var date
 	 */ 
 	public $accountHolderDateOfBirth;
@@ -1361,6 +1160,8 @@ class AddBankAccountRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var ConfirmationType
 	 */ 
 	public $confirmationType;
@@ -1368,6 +1169,8 @@ class AddBankAccountRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var WebOptionsType
 	 */ 
 	public $webOptions;
@@ -1382,119 +1185,7 @@ class AddBankAccountRequest  {
 	}
 
 
-	public function toNVPString($prefix = '') {
-		$str = '';
-		$delim = '';
-		if($this->requestEnvelope != NULL) {
-			$newPrefix = $prefix . 'requestEnvelope.';
-			$str .= $delim . call_user_func(array($this->requestEnvelope, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		if($this->emailAddress != NULL) {
-			$str .= $delim .  $prefix . 'emailAddress=' . urlencode($this->emailAddress);
-			$delim = '&';
-		}
-		if($this->accountId != NULL) {
-			$str .= $delim .  $prefix . 'accountId=' . urlencode($this->accountId);
-			$delim = '&';
-		}
-		if($this->createAccountKey != NULL) {
-			$str .= $delim .  $prefix . 'createAccountKey=' . urlencode($this->createAccountKey);
-			$delim = '&';
-		}
-		if($this->bankCountryCode != NULL) {
-			$str .= $delim .  $prefix . 'bankCountryCode=' . urlencode($this->bankCountryCode);
-			$delim = '&';
-		}
-		if($this->bankName != NULL) {
-			$str .= $delim .  $prefix . 'bankName=' . urlencode($this->bankName);
-			$delim = '&';
-		}
-		if($this->routingNumber != NULL) {
-			$str .= $delim .  $prefix . 'routingNumber=' . urlencode($this->routingNumber);
-			$delim = '&';
-		}
-		if($this->bankAccountType != NULL) {
-			$str .= $delim .  $prefix . 'bankAccountType=' . urlencode($this->bankAccountType);
-			$delim = '&';
-		}
-		if($this->bankAccountNumber != NULL) {
-			$str .= $delim .  $prefix . 'bankAccountNumber=' . urlencode($this->bankAccountNumber);
-			$delim = '&';
-		}
-		if($this->iban != NULL) {
-			$str .= $delim .  $prefix . 'iban=' . urlencode($this->iban);
-			$delim = '&';
-		}
-		if($this->clabe != NULL) {
-			$str .= $delim .  $prefix . 'clabe=' . urlencode($this->clabe);
-			$delim = '&';
-		}
-		if($this->bsbNumber != NULL) {
-			$str .= $delim .  $prefix . 'bsbNumber=' . urlencode($this->bsbNumber);
-			$delim = '&';
-		}
-		if($this->branchLocation != NULL) {
-			$str .= $delim .  $prefix . 'branchLocation=' . urlencode($this->branchLocation);
-			$delim = '&';
-		}
-		if($this->sortCode != NULL) {
-			$str .= $delim .  $prefix . 'sortCode=' . urlencode($this->sortCode);
-			$delim = '&';
-		}
-		if($this->bankTransitNumber != NULL) {
-			$str .= $delim .  $prefix . 'bankTransitNumber=' . urlencode($this->bankTransitNumber);
-			$delim = '&';
-		}
-		if($this->institutionNumber != NULL) {
-			$str .= $delim .  $prefix . 'institutionNumber=' . urlencode($this->institutionNumber);
-			$delim = '&';
-		}
-		if($this->branchCode != NULL) {
-			$str .= $delim .  $prefix . 'branchCode=' . urlencode($this->branchCode);
-			$delim = '&';
-		}
-		if($this->agencyNumber != NULL) {
-			$str .= $delim .  $prefix . 'agencyNumber=' . urlencode($this->agencyNumber);
-			$delim = '&';
-		}
-		if($this->bankCode != NULL) {
-			$str .= $delim .  $prefix . 'bankCode=' . urlencode($this->bankCode);
-			$delim = '&';
-		}
-		if($this->ribKey != NULL) {
-			$str .= $delim .  $prefix . 'ribKey=' . urlencode($this->ribKey);
-			$delim = '&';
-		}
-		if($this->controlDigit != NULL) {
-			$str .= $delim .  $prefix . 'controlDigit=' . urlencode($this->controlDigit);
-			$delim = '&';
-		}
-		if($this->taxIdType != NULL) {
-			$str .= $delim .  $prefix . 'taxIdType=' . urlencode($this->taxIdType);
-			$delim = '&';
-		}
-		if($this->taxIdNumber != NULL) {
-			$str .= $delim .  $prefix . 'taxIdNumber=' . urlencode($this->taxIdNumber);
-			$delim = '&';
-		}
-		if($this->accountHolderDateOfBirth != NULL) {
-			$str .= $delim .  $prefix . 'accountHolderDateOfBirth=' . urlencode($this->accountHolderDateOfBirth);
-			$delim = '&';
-		}
-		if($this->confirmationType != NULL) {
-			$str .= $delim .  $prefix . 'confirmationType=' . urlencode($this->confirmationType);
-			$delim = '&';
-		}
-		if($this->webOptions != NULL) {
-			$newPrefix = $prefix . 'webOptions.';
-			$str .= $delim . call_user_func(array($this->webOptions, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		return $str;
-	}
-
-} 
+}
 
 
 
@@ -1502,11 +1193,15 @@ class AddBankAccountRequest  {
  * Valid values are: FUNDING_SOURCE_ADDED,
  * WEB_URL_VERIFICATION_NEEDED 
  */
-class AddBankAccountResponse  {
+ 
+class AddBankAccountResponse  
+  extends PPMessage   {
 
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var ResponseEnvelope
 	 */ 
 	public $responseEnvelope;
@@ -1515,6 +1210,8 @@ class AddBankAccountResponse  {
 	 * Valid values are: FUNDING_SOURCE_ADDED,
 	 * WEB_URL_VERIFICATION_NEEDED 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $execStatus;
@@ -1522,6 +1219,8 @@ class AddBankAccountResponse  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $redirectURL;
@@ -1529,6 +1228,8 @@ class AddBankAccountResponse  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $fundingSourceKey;
@@ -1537,46 +1238,14 @@ class AddBankAccountResponse  {
 	 * 
      * @array
 	 * @access public
+	 
+	 
 	 * @var ErrorData
 	 */ 
 	public $error;
 
 
-
-	public function init($map = NULL, $prefix = '') {
-		if($map != NULL) {
-			if (PPUtils::array_match_key($map, $prefix . "responseEnvelope.")) {
-				$newPrefix = $prefix . "responseEnvelope.";
-				$this->responseEnvelope = new ResponseEnvelope();
-				$this->responseEnvelope->init($map, $newPrefix);
-			}
-			$mapKeyName =  $prefix . 'execStatus';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->execStatus = $map[$mapKeyName];
-			}
-			$mapKeyName =  $prefix . 'redirectURL';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->redirectURL = $map[$mapKeyName];
-			}
-			$mapKeyName =  $prefix . 'fundingSourceKey';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->fundingSourceKey = $map[$mapKeyName];
-			}
-			$i = 0;
-			while(TRUE) {
-				if (PPUtils::array_match_key($map, $prefix . "error($i)")) {
-					$newPrefix = $prefix . "error($i).";
-					$this->error[$i] = new ErrorData();
-					$this->error[$i]->init($map, $newPrefix);
-				} else {
-					break;
-				}
-				$i++;
-			}
-			
-		}
-	}
-} 
+}
 
 
 
@@ -1585,11 +1254,15 @@ class AddBankAccountResponse  {
  * targetted to. Caller of this API has to either provided an
  * emailAddress or an accountId. 
  */
-class AddPaymentCardRequest  {
+ 
+class AddPaymentCardRequest  
+  extends PPMessage   {
 
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var RequestEnvelope
 	 */ 
 	public $requestEnvelope;
@@ -1599,6 +1272,8 @@ class AddPaymentCardRequest  {
 	 * targetted to. Caller of this API has to either provided an
 	 * emailAddress or an accountId. 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $emailAddress;
@@ -1608,6 +1283,8 @@ class AddPaymentCardRequest  {
 	 * targetted to. Caller of this API has to either provided an
 	 * emailAddress or an accountId. 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $accountId;
@@ -1615,6 +1292,8 @@ class AddPaymentCardRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $createAccountKey;
@@ -1622,6 +1301,8 @@ class AddPaymentCardRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var NameType
 	 */ 
 	public $nameOnCard;
@@ -1629,6 +1310,8 @@ class AddPaymentCardRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var AddressType
 	 */ 
 	public $billingAddress;
@@ -1636,6 +1319,8 @@ class AddPaymentCardRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var date
 	 */ 
 	public $cardOwnerDateOfBirth;
@@ -1643,6 +1328,8 @@ class AddPaymentCardRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $cardNumber;
@@ -1650,6 +1337,8 @@ class AddPaymentCardRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var CardTypeType
 	 */ 
 	public $cardType;
@@ -1657,6 +1346,8 @@ class AddPaymentCardRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var CardDateType
 	 */ 
 	public $expirationDate;
@@ -1665,6 +1356,8 @@ class AddPaymentCardRequest  {
 	 * CVV2: Proivde only for requests where confirmationType is
 	 * None (Direct request) 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $cardVerificationNumber;
@@ -1672,13 +1365,17 @@ class AddPaymentCardRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var CardDateType
 	 */ 
 	public $startDate;
 
 	/**
-	 * Up to 2 digit for Switch/Maestro/Solo cards. 
+	 * Up to 2 digit for Switch/Maestro cards. 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $issueNumber;
@@ -1686,6 +1383,8 @@ class AddPaymentCardRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var ConfirmationType
 	 */ 
 	public $confirmationType;
@@ -1693,6 +1392,8 @@ class AddPaymentCardRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var WebOptionsType
 	 */ 
 	public $webOptions;
@@ -1710,79 +1411,7 @@ class AddPaymentCardRequest  {
 	}
 
 
-	public function toNVPString($prefix = '') {
-		$str = '';
-		$delim = '';
-		if($this->requestEnvelope != NULL) {
-			$newPrefix = $prefix . 'requestEnvelope.';
-			$str .= $delim . call_user_func(array($this->requestEnvelope, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		if($this->emailAddress != NULL) {
-			$str .= $delim .  $prefix . 'emailAddress=' . urlencode($this->emailAddress);
-			$delim = '&';
-		}
-		if($this->accountId != NULL) {
-			$str .= $delim .  $prefix . 'accountId=' . urlencode($this->accountId);
-			$delim = '&';
-		}
-		if($this->createAccountKey != NULL) {
-			$str .= $delim .  $prefix . 'createAccountKey=' . urlencode($this->createAccountKey);
-			$delim = '&';
-		}
-		if($this->nameOnCard != NULL) {
-			$newPrefix = $prefix . 'nameOnCard.';
-			$str .= $delim . call_user_func(array($this->nameOnCard, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		if($this->billingAddress != NULL) {
-			$newPrefix = $prefix . 'billingAddress.';
-			$str .= $delim . call_user_func(array($this->billingAddress, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		if($this->cardOwnerDateOfBirth != NULL) {
-			$str .= $delim .  $prefix . 'cardOwnerDateOfBirth=' . urlencode($this->cardOwnerDateOfBirth);
-			$delim = '&';
-		}
-		if($this->cardNumber != NULL) {
-			$str .= $delim .  $prefix . 'cardNumber=' . urlencode($this->cardNumber);
-			$delim = '&';
-		}
-		if($this->cardType != NULL) {
-			$str .= $delim .  $prefix . 'cardType=' . urlencode($this->cardType);
-			$delim = '&';
-		}
-		if($this->expirationDate != NULL) {
-			$newPrefix = $prefix . 'expirationDate.';
-			$str .= $delim . call_user_func(array($this->expirationDate, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		if($this->cardVerificationNumber != NULL) {
-			$str .= $delim .  $prefix . 'cardVerificationNumber=' . urlencode($this->cardVerificationNumber);
-			$delim = '&';
-		}
-		if($this->startDate != NULL) {
-			$newPrefix = $prefix . 'startDate.';
-			$str .= $delim . call_user_func(array($this->startDate, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		if($this->issueNumber != NULL) {
-			$str .= $delim .  $prefix . 'issueNumber=' . urlencode($this->issueNumber);
-			$delim = '&';
-		}
-		if($this->confirmationType != NULL) {
-			$str .= $delim .  $prefix . 'confirmationType=' . urlencode($this->confirmationType);
-			$delim = '&';
-		}
-		if($this->webOptions != NULL) {
-			$newPrefix = $prefix . 'webOptions.';
-			$str .= $delim . call_user_func(array($this->webOptions, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		return $str;
-	}
-
-} 
+}
 
 
 
@@ -1790,11 +1419,15 @@ class AddPaymentCardRequest  {
  * Valid values are: FUNDING_SOURCE_ADDED,
  * WEB_URL_VERIFICATION_NEEDED 
  */
-class AddPaymentCardResponse  {
+ 
+class AddPaymentCardResponse  
+  extends PPMessage   {
 
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var ResponseEnvelope
 	 */ 
 	public $responseEnvelope;
@@ -1803,6 +1436,8 @@ class AddPaymentCardResponse  {
 	 * Valid values are: FUNDING_SOURCE_ADDED,
 	 * WEB_URL_VERIFICATION_NEEDED 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $execStatus;
@@ -1810,6 +1445,8 @@ class AddPaymentCardResponse  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $redirectURL;
@@ -1817,6 +1454,8 @@ class AddPaymentCardResponse  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $fundingSourceKey;
@@ -1825,46 +1464,14 @@ class AddPaymentCardResponse  {
 	 * 
      * @array
 	 * @access public
+	 
+	 
 	 * @var ErrorData
 	 */ 
 	public $error;
 
 
-
-	public function init($map = NULL, $prefix = '') {
-		if($map != NULL) {
-			if (PPUtils::array_match_key($map, $prefix . "responseEnvelope.")) {
-				$newPrefix = $prefix . "responseEnvelope.";
-				$this->responseEnvelope = new ResponseEnvelope();
-				$this->responseEnvelope->init($map, $newPrefix);
-			}
-			$mapKeyName =  $prefix . 'execStatus';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->execStatus = $map[$mapKeyName];
-			}
-			$mapKeyName =  $prefix . 'redirectURL';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->redirectURL = $map[$mapKeyName];
-			}
-			$mapKeyName =  $prefix . 'fundingSourceKey';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->fundingSourceKey = $map[$mapKeyName];
-			}
-			$i = 0;
-			while(TRUE) {
-				if (PPUtils::array_match_key($map, $prefix . "error($i)")) {
-					$newPrefix = $prefix . "error($i).";
-					$this->error[$i] = new ErrorData();
-					$this->error[$i]->init($map, $newPrefix);
-				} else {
-					break;
-				}
-				$i++;
-			}
-			
-		}
-	}
-} 
+}
 
 
 
@@ -1872,11 +1479,15 @@ class AddPaymentCardResponse  {
  * This not considered when
  * financialProductCategory=PRE_PAID_CARD 
  */
-class AddPartnerFinancialProductRequest  {
+ 
+class AddPartnerFinancialProductRequest  
+  extends PPMessage   {
 
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var RequestEnvelope
 	 */ 
 	public $requestEnvelope;
@@ -1884,6 +1495,8 @@ class AddPartnerFinancialProductRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var AccountIdentifierType
 	 */ 
 	public $accountIdentifier;
@@ -1892,6 +1505,8 @@ class AddPartnerFinancialProductRequest  {
 	 * This not considered when
 	 * financialProductCategory=PRE_PAID_CARD 
 	 * @access public
+	 
+	 
 	 * @var NameType
 	 */ 
 	public $nameOnCard;
@@ -1900,6 +1515,8 @@ class AddPartnerFinancialProductRequest  {
 	 * This not considered when
 	 * financialProductCategory=PRE_PAID_CARD 
 	 * @access public
+	 
+	 
 	 * @var AddressType
 	 */ 
 	public $billingAddress;
@@ -1908,6 +1525,8 @@ class AddPartnerFinancialProductRequest  {
 	 * This not considered when
 	 * financialProductCategory=PRE_PAID_CARD 
 	 * @access public
+	 
+	 
 	 * @var date
 	 */ 
 	public $cardOwnerDateOfBirth;
@@ -1915,6 +1534,8 @@ class AddPartnerFinancialProductRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $cardNumber;
@@ -1923,6 +1544,8 @@ class AddPartnerFinancialProductRequest  {
 	 * Identify the kind of PayPal financial product. Possible
 	 * value is : PRE_PAID_CARD 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $financialProductCategory;
@@ -1931,6 +1554,8 @@ class AddPartnerFinancialProductRequest  {
 	 * expirationDate is mandatory when financialProductCategoy =
 	 * PRE_PAID_CARD 
 	 * @access public
+	 
+	 
 	 * @var CardDateType
 	 */ 
 	public $expirationDate;
@@ -1939,6 +1564,8 @@ class AddPartnerFinancialProductRequest  {
 	 * This not considered when
 	 * financialProductCategory=PRE_PAID_CARD 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $cardVerificationNumber;
@@ -1947,13 +1574,17 @@ class AddPartnerFinancialProductRequest  {
 	 * This not considered when
 	 * financialProductCategory=PRE_PAID_CARD 
 	 * @access public
+	 
+	 
 	 * @var CardDateType
 	 */ 
 	public $startDate;
 
 	/**
-	 * Up to 2 digit for Switch/Maestro/Solo cards. 
+	 * Up to 2 digit for Switch/Maestro cards. 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $issueNumber;
@@ -1970,74 +1601,22 @@ class AddPartnerFinancialProductRequest  {
 	}
 
 
-	public function toNVPString($prefix = '') {
-		$str = '';
-		$delim = '';
-		if($this->requestEnvelope != NULL) {
-			$newPrefix = $prefix . 'requestEnvelope.';
-			$str .= $delim . call_user_func(array($this->requestEnvelope, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		if($this->accountIdentifier != NULL) {
-			$newPrefix = $prefix . 'accountIdentifier.';
-			$str .= $delim . call_user_func(array($this->accountIdentifier, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		if($this->nameOnCard != NULL) {
-			$newPrefix = $prefix . 'nameOnCard.';
-			$str .= $delim . call_user_func(array($this->nameOnCard, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		if($this->billingAddress != NULL) {
-			$newPrefix = $prefix . 'billingAddress.';
-			$str .= $delim . call_user_func(array($this->billingAddress, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		if($this->cardOwnerDateOfBirth != NULL) {
-			$str .= $delim .  $prefix . 'cardOwnerDateOfBirth=' . urlencode($this->cardOwnerDateOfBirth);
-			$delim = '&';
-		}
-		if($this->cardNumber != NULL) {
-			$str .= $delim .  $prefix . 'cardNumber=' . urlencode($this->cardNumber);
-			$delim = '&';
-		}
-		if($this->financialProductCategory != NULL) {
-			$str .= $delim .  $prefix . 'financialProductCategory=' . urlencode($this->financialProductCategory);
-			$delim = '&';
-		}
-		if($this->expirationDate != NULL) {
-			$newPrefix = $prefix . 'expirationDate.';
-			$str .= $delim . call_user_func(array($this->expirationDate, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		if($this->cardVerificationNumber != NULL) {
-			$str .= $delim .  $prefix . 'cardVerificationNumber=' . urlencode($this->cardVerificationNumber);
-			$delim = '&';
-		}
-		if($this->startDate != NULL) {
-			$newPrefix = $prefix . 'startDate.';
-			$str .= $delim . call_user_func(array($this->startDate, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		if($this->issueNumber != NULL) {
-			$str .= $delim .  $prefix . 'issueNumber=' . urlencode($this->issueNumber);
-			$delim = '&';
-		}
-		return $str;
-	}
-
-} 
+}
 
 
 
 /**
  * Valid values are: CARD_ADDED 
  */
-class AddPartnerFinancialProductResponse  {
+ 
+class AddPartnerFinancialProductResponse  
+  extends PPMessage   {
 
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var ResponseEnvelope
 	 */ 
 	public $responseEnvelope;
@@ -2045,6 +1624,8 @@ class AddPartnerFinancialProductResponse  {
 	/**
 	 * Valid values are: CARD_ADDED 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $execStatus;
@@ -2053,38 +1634,14 @@ class AddPartnerFinancialProductResponse  {
 	 * 
      * @array
 	 * @access public
+	 
+	 
 	 * @var ErrorData
 	 */ 
 	public $error;
 
 
-
-	public function init($map = NULL, $prefix = '') {
-		if($map != NULL) {
-			if (PPUtils::array_match_key($map, $prefix . "responseEnvelope.")) {
-				$newPrefix = $prefix . "responseEnvelope.";
-				$this->responseEnvelope = new ResponseEnvelope();
-				$this->responseEnvelope->init($map, $newPrefix);
-			}
-			$mapKeyName =  $prefix . 'execStatus';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->execStatus = $map[$mapKeyName];
-			}
-			$i = 0;
-			while(TRUE) {
-				if (PPUtils::array_match_key($map, $prefix . "error($i)")) {
-					$newPrefix = $prefix . "error($i).";
-					$this->error[$i] = new ErrorData();
-					$this->error[$i]->init($map, $newPrefix);
-				} else {
-					break;
-				}
-				$i++;
-			}
-			
-		}
-	}
-} 
+}
 
 
 
@@ -2093,11 +1650,15 @@ class AddPartnerFinancialProductResponse  {
  * targetted to. Caller of this API has to either provided an
  * emailAddress or an accountId. 
  */
-class SetFundingSourceConfirmedRequest  {
+ 
+class SetFundingSourceConfirmedRequest  
+  extends PPMessage   {
 
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var RequestEnvelope
 	 */ 
 	public $requestEnvelope;
@@ -2107,6 +1668,8 @@ class SetFundingSourceConfirmedRequest  {
 	 * targetted to. Caller of this API has to either provided an
 	 * emailAddress or an accountId. 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $emailAddress;
@@ -2116,6 +1679,8 @@ class SetFundingSourceConfirmedRequest  {
 	 * targetted to. Caller of this API has to either provided an
 	 * emailAddress or an accountId. 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $accountId;
@@ -2123,6 +1688,8 @@ class SetFundingSourceConfirmedRequest  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $fundingSourceKey;
@@ -2136,41 +1703,22 @@ class SetFundingSourceConfirmedRequest  {
 	}
 
 
-	public function toNVPString($prefix = '') {
-		$str = '';
-		$delim = '';
-		if($this->requestEnvelope != NULL) {
-			$newPrefix = $prefix . 'requestEnvelope.';
-			$str .= $delim . call_user_func(array($this->requestEnvelope, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		if($this->emailAddress != NULL) {
-			$str .= $delim .  $prefix . 'emailAddress=' . urlencode($this->emailAddress);
-			$delim = '&';
-		}
-		if($this->accountId != NULL) {
-			$str .= $delim .  $prefix . 'accountId=' . urlencode($this->accountId);
-			$delim = '&';
-		}
-		if($this->fundingSourceKey != NULL) {
-			$str .= $delim .  $prefix . 'fundingSourceKey=' . urlencode($this->fundingSourceKey);
-			$delim = '&';
-		}
-		return $str;
-	}
-
-} 
+}
 
 
 
 /**
  * 
  */
-class SetFundingSourceConfirmedResponse  {
+ 
+class SetFundingSourceConfirmedResponse  
+  extends PPMessage   {
 
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var ResponseEnvelope
 	 */ 
 	public $responseEnvelope;
@@ -2179,34 +1727,14 @@ class SetFundingSourceConfirmedResponse  {
 	 * 
      * @array
 	 * @access public
+	 
+	 
 	 * @var ErrorData
 	 */ 
 	public $error;
 
 
-
-	public function init($map = NULL, $prefix = '') {
-		if($map != NULL) {
-			if (PPUtils::array_match_key($map, $prefix . "responseEnvelope.")) {
-				$newPrefix = $prefix . "responseEnvelope.";
-				$this->responseEnvelope = new ResponseEnvelope();
-				$this->responseEnvelope->init($map, $newPrefix);
-			}
-			$i = 0;
-			while(TRUE) {
-				if (PPUtils::array_match_key($map, $prefix . "error($i)")) {
-					$newPrefix = $prefix . "error($i).";
-					$this->error[$i] = new ErrorData();
-					$this->error[$i]->init($map, $newPrefix);
-				} else {
-					break;
-				}
-				$i++;
-			}
-			
-		}
-	}
-} 
+}
 
 
 
@@ -2215,11 +1743,15 @@ class SetFundingSourceConfirmedResponse  {
  * targeted. Caller of this API has to provide ONLY one of
  * these inputs: emailAddress, accountId or phoneNumber. 
  */
-class CheckComplianceStatusRequest  {
+ 
+class CheckComplianceStatusRequest  
+  extends PPMessage   {
 
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var RequestEnvelope
 	 */ 
 	public $requestEnvelope;
@@ -2229,6 +1761,8 @@ class CheckComplianceStatusRequest  {
 	 * targeted. Caller of this API has to provide ONLY one of
 	 * these inputs: emailAddress, accountId or phoneNumber. 
 	 * @access public
+	 
+	 
 	 * @var AccountIdentifierType
 	 */ 
 	public $accountIdentifier;
@@ -2242,34 +1776,22 @@ class CheckComplianceStatusRequest  {
 	}
 
 
-	public function toNVPString($prefix = '') {
-		$str = '';
-		$delim = '';
-		if($this->requestEnvelope != NULL) {
-			$newPrefix = $prefix . 'requestEnvelope.';
-			$str .= $delim . call_user_func(array($this->requestEnvelope, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		if($this->accountIdentifier != NULL) {
-			$newPrefix = $prefix . 'accountIdentifier.';
-			$str .= $delim . call_user_func(array($this->accountIdentifier, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		return $str;
-	}
-
-} 
+}
 
 
 
 /**
  * Returned values are: ALLOW|DENY 
  */
-class CheckComplianceStatusResponse  {
+ 
+class CheckComplianceStatusResponse  
+  extends PPMessage   {
 
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var ResponseEnvelope
 	 */ 
 	public $responseEnvelope;
@@ -2277,6 +1799,8 @@ class CheckComplianceStatusResponse  {
 	/**
 	 * Returned values are: ALLOW|DENY 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $execStatus;
@@ -2286,6 +1810,8 @@ class CheckComplianceStatusResponse  {
 	 * COUNTRY_NOT_SUPPORTED, VERIFICATION_NOT_COMPLETED,
 	 * DOCUMENTS_UNDER_REVIEW, DENIED 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $denialReason;
@@ -2294,42 +1820,14 @@ class CheckComplianceStatusResponse  {
 	 * 
      * @array
 	 * @access public
+	 
+	 
 	 * @var ErrorData
 	 */ 
 	public $error;
 
 
-
-	public function init($map = NULL, $prefix = '') {
-		if($map != NULL) {
-			if (PPUtils::array_match_key($map, $prefix . "responseEnvelope.")) {
-				$newPrefix = $prefix . "responseEnvelope.";
-				$this->responseEnvelope = new ResponseEnvelope();
-				$this->responseEnvelope->init($map, $newPrefix);
-			}
-			$mapKeyName =  $prefix . 'execStatus';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->execStatus = $map[$mapKeyName];
-			}
-			$mapKeyName =  $prefix . 'denialReason';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->denialReason = $map[$mapKeyName];
-			}
-			$i = 0;
-			while(TRUE) {
-				if (PPUtils::array_match_key($map, $prefix . "error($i)")) {
-					$newPrefix = $prefix . "error($i).";
-					$this->error[$i] = new ErrorData();
-					$this->error[$i]->init($map, $newPrefix);
-				} else {
-					break;
-				}
-				$i++;
-			}
-			
-		}
-	}
-} 
+}
 
 
 
@@ -2337,11 +1835,15 @@ class CheckComplianceStatusResponse  {
  * This operation is for internal purposes developed for a POC.
  * 
  */
-class ActivateProductRequest  {
+ 
+class ActivateProductRequest  
+  extends PPMessage   {
 
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var RequestEnvelope
 	 */ 
 	public $requestEnvelope;
@@ -2351,6 +1853,8 @@ class ActivateProductRequest  {
 	 * targeted. Caller of this API has to provide ONLY one of
 	 * these inputs: emailAddress or accountId. 
 	 * @access public
+	 
+	 
 	 * @var AccountIdentifierType
 	 */ 
 	public $accountIdentifier;
@@ -2364,34 +1868,22 @@ class ActivateProductRequest  {
 	}
 
 
-	public function toNVPString($prefix = '') {
-		$str = '';
-		$delim = '';
-		if($this->requestEnvelope != NULL) {
-			$newPrefix = $prefix . 'requestEnvelope.';
-			$str .= $delim . call_user_func(array($this->requestEnvelope, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		if($this->accountIdentifier != NULL) {
-			$newPrefix = $prefix . 'accountIdentifier.';
-			$str .= $delim . call_user_func(array($this->accountIdentifier, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		return $str;
-	}
-
-} 
+}
 
 
 
 /**
  * Valid values are: SUCCESS, FAILED 
  */
-class ActivateProductResponse  {
+ 
+class ActivateProductResponse  
+  extends PPMessage   {
 
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var ResponseEnvelope
 	 */ 
 	public $responseEnvelope;
@@ -2399,6 +1891,8 @@ class ActivateProductResponse  {
 	/**
 	 * Valid values are: SUCCESS, FAILED 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $execStatus;
@@ -2407,6 +1901,8 @@ class ActivateProductResponse  {
 	 * 
      * @array
 	 * @access public
+	 
+	 
 	 * @var ProductActivationErrors
 	 */ 
 	public $productActivationErrors;
@@ -2415,59 +1911,29 @@ class ActivateProductResponse  {
 	 * 
      * @array
 	 * @access public
+	 
+	 
 	 * @var ErrorData
 	 */ 
 	public $error;
 
 
-
-	public function init($map = NULL, $prefix = '') {
-		if($map != NULL) {
-			if (PPUtils::array_match_key($map, $prefix . "responseEnvelope.")) {
-				$newPrefix = $prefix . "responseEnvelope.";
-				$this->responseEnvelope = new ResponseEnvelope();
-				$this->responseEnvelope->init($map, $newPrefix);
-			}
-			$mapKeyName =  $prefix . 'execStatus';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->execStatus = $map[$mapKeyName];
-			}
-			$i = 0;
-			while(TRUE) {
-				$mapKeyName = $prefix . "productActivationErrors($i)";
-				if (PPUtils::array_match_key($map, $mapKeyName)) {
-					$this->productActivationErrors[$i] = $map[$mapKeyName];
-				} else {
-					break;
-				}
-				$i++;
-			}
-			$i = 0;
-			while(TRUE) {
-				if (PPUtils::array_match_key($map, $prefix . "error($i)")) {
-					$newPrefix = $prefix . "error($i).";
-					$this->error[$i] = new ErrorData();
-					$this->error[$i]->init($map, $newPrefix);
-				} else {
-					break;
-				}
-				$i++;
-			}
-			
-		}
-	}
-} 
+}
 
 
 
 /**
  * 
  */
-class NameType  {
+ 
+class NameType  
+  extends PPMessage   {
 
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $salutation;
@@ -2475,6 +1941,8 @@ class NameType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $firstName;
@@ -2482,6 +1950,8 @@ class NameType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $middleName;
@@ -2489,6 +1959,8 @@ class NameType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $lastName;
@@ -2496,6 +1968,8 @@ class NameType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $suffix;
@@ -2509,69 +1983,22 @@ class NameType  {
 	}
 
 
-	public function toNVPString($prefix = '') {
-		$str = '';
-		$delim = '';
-		if($this->salutation != NULL) {
-			$str .= $delim .  $prefix . 'salutation=' . urlencode($this->salutation);
-			$delim = '&';
-		}
-		if($this->firstName != NULL) {
-			$str .= $delim .  $prefix . 'firstName=' . urlencode($this->firstName);
-			$delim = '&';
-		}
-		if($this->middleName != NULL) {
-			$str .= $delim .  $prefix . 'middleName=' . urlencode($this->middleName);
-			$delim = '&';
-		}
-		if($this->lastName != NULL) {
-			$str .= $delim .  $prefix . 'lastName=' . urlencode($this->lastName);
-			$delim = '&';
-		}
-		if($this->suffix != NULL) {
-			$str .= $delim .  $prefix . 'suffix=' . urlencode($this->suffix);
-			$delim = '&';
-		}
-		return $str;
-	}
-
-	public function init($map = NULL, $prefix = '') {
-		if($map != NULL) {
-			$mapKeyName =  $prefix . 'salutation';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->salutation = $map[$mapKeyName];
-			}
-			$mapKeyName =  $prefix . 'firstName';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->firstName = $map[$mapKeyName];
-			}
-			$mapKeyName =  $prefix . 'middleName';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->middleName = $map[$mapKeyName];
-			}
-			$mapKeyName =  $prefix . 'lastName';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->lastName = $map[$mapKeyName];
-			}
-			$mapKeyName =  $prefix . 'suffix';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->suffix = $map[$mapKeyName];
-			}
-			
-		}
-	}
-} 
+}
 
 
 
 /**
  * 
  */
-class AddressType  {
+ 
+class AddressType  
+  extends PPMessage   {
 
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $line1;
@@ -2579,6 +2006,8 @@ class AddressType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $line2;
@@ -2586,6 +2015,8 @@ class AddressType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $city;
@@ -2593,6 +2024,8 @@ class AddressType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $state;
@@ -2600,6 +2033,8 @@ class AddressType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $postalCode;
@@ -2607,6 +2042,8 @@ class AddressType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $countryCode;
@@ -2620,37 +2057,7 @@ class AddressType  {
 	}
 
 
-	public function toNVPString($prefix = '') {
-		$str = '';
-		$delim = '';
-		if($this->line1 != NULL) {
-			$str .= $delim .  $prefix . 'line1=' . urlencode($this->line1);
-			$delim = '&';
-		}
-		if($this->line2 != NULL) {
-			$str .= $delim .  $prefix . 'line2=' . urlencode($this->line2);
-			$delim = '&';
-		}
-		if($this->city != NULL) {
-			$str .= $delim .  $prefix . 'city=' . urlencode($this->city);
-			$delim = '&';
-		}
-		if($this->state != NULL) {
-			$str .= $delim .  $prefix . 'state=' . urlencode($this->state);
-			$delim = '&';
-		}
-		if($this->postalCode != NULL) {
-			$str .= $delim .  $prefix . 'postalCode=' . urlencode($this->postalCode);
-			$delim = '&';
-		}
-		if($this->countryCode != NULL) {
-			$str .= $delim .  $prefix . 'countryCode=' . urlencode($this->countryCode);
-			$delim = '&';
-		}
-		return $str;
-	}
-
-} 
+}
 
 
 
@@ -2659,11 +2066,15 @@ class AddressType  {
  * phone. This number must be supplied by the API caller (using
  * mobilePhoneNumber) Default=false. 
  */
-class CreateAccountWebOptionsType  {
+ 
+class CreateAccountWebOptionsType  
+  extends PPMessage   {
 
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $returnUrl;
@@ -2671,6 +2082,8 @@ class CreateAccountWebOptionsType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var boolean
 	 */ 
 	public $showAddCreditCard;
@@ -2680,6 +2093,8 @@ class CreateAccountWebOptionsType  {
 	 * phone. This number must be supplied by the API caller (using
 	 * mobilePhoneNumber) Default=false. 
 	 * @access public
+	 
+	 
 	 * @var boolean
 	 */ 
 	public $showMobileConfirm;
@@ -2687,6 +2102,8 @@ class CreateAccountWebOptionsType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $returnUrlDescription;
@@ -2696,6 +2113,8 @@ class CreateAccountWebOptionsType  {
 	 * flow on a Mini Browser. If not provided, flow defaults to
 	 * the Multi-page flow that is full size. 
 	 * @access public
+	 
+	 
 	 * @var boolean
 	 */ 
 	public $useMiniBrowser;
@@ -2708,53 +2127,44 @@ class CreateAccountWebOptionsType  {
 	 * not present) NONE: No reminder emails will be sent (More
 	 * values to be added in future) 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $reminderEmailFrequency;
 
+	/**
+	 * Indicates if the Return URL is used to confirm email. On
+	 * accessing the Return URL successfully, confirm the email if
+	 * this parameter is true, otherwise, do not confirm the email.
+	 * Used only when registrationType is Web. Valid values (mixed
+	 * case): true: Append the Email Confirmation Code to the
+	 * Return URL. false: Do not append the Email Confirmation Code
+	 * to the Return URL. 
+	 * @access public
+	 
+	 
+	 * @var string
+	 */ 
+	public $confirmEmail;
 
-	public function toNVPString($prefix = '') {
-		$str = '';
-		$delim = '';
-		if($this->returnUrl != NULL) {
-			$str .= $delim .  $prefix . 'returnUrl=' . urlencode($this->returnUrl);
-			$delim = '&';
-		}
-		if($this->showAddCreditCard != NULL) {
-			$str .= $delim .  $prefix . 'showAddCreditCard=' . urlencode($this->showAddCreditCard);
-			$delim = '&';
-		}
-		if($this->showMobileConfirm != NULL) {
-			$str .= $delim .  $prefix . 'showMobileConfirm=' . urlencode($this->showMobileConfirm);
-			$delim = '&';
-		}
-		if($this->returnUrlDescription != NULL) {
-			$str .= $delim .  $prefix . 'returnUrlDescription=' . urlencode($this->returnUrlDescription);
-			$delim = '&';
-		}
-		if($this->useMiniBrowser != NULL) {
-			$str .= $delim .  $prefix . 'useMiniBrowser=' . urlencode($this->useMiniBrowser);
-			$delim = '&';
-		}
-		if($this->reminderEmailFrequency != NULL) {
-			$str .= $delim .  $prefix . 'reminderEmailFrequency=' . urlencode($this->reminderEmailFrequency);
-			$delim = '&';
-		}
-		return $str;
-	}
 
-} 
+}
 
 
 
 /**
  * PayPal Business Category. i.e., baby - 1004 
  */
-class BusinessInfoType  {
+ 
+class BusinessInfoType  
+  extends PPMessage   {
 
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $businessName;
@@ -2762,6 +2172,8 @@ class BusinessInfoType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var AddressType
 	 */ 
 	public $businessAddress;
@@ -2769,6 +2181,8 @@ class BusinessInfoType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $workPhone;
@@ -2776,6 +2190,8 @@ class BusinessInfoType  {
 	/**
 	 * PayPal Business Category. i.e., baby - 1004 
 	 * @access public
+	 
+	 
 	 * @var integer
 	 */ 
 	public $category;
@@ -2783,6 +2199,8 @@ class BusinessInfoType  {
 	/**
 	 * Paypal Business subcategory. i.e., baby-clothing - 2027 
 	 * @access public
+	 
+	 
 	 * @var integer
 	 */ 
 	public $subCategory;
@@ -2793,6 +2211,8 @@ class BusinessInfoType  {
 	 * Category Codes. Please refer to your Association Merchant
 	 * Category Code documentation for a list of codes 
 	 * @access public
+	 
+	 
 	 * @var integer
 	 */ 
 	public $merchantCategoryCode;
@@ -2800,6 +2220,8 @@ class BusinessInfoType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $doingBusinessAs;
@@ -2807,6 +2229,8 @@ class BusinessInfoType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $customerServicePhone;
@@ -2814,6 +2238,8 @@ class BusinessInfoType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $customerServiceEmail;
@@ -2821,6 +2247,8 @@ class BusinessInfoType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $disputeEmail;
@@ -2828,6 +2256,8 @@ class BusinessInfoType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $webSite;
@@ -2835,6 +2265,8 @@ class BusinessInfoType  {
 	/**
 	 * Company Id: tax id, acn, abn, etc. 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $companyId;
@@ -2842,6 +2274,8 @@ class BusinessInfoType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var date
 	 */ 
 	public $dateOfEstablishment;
@@ -2849,6 +2283,8 @@ class BusinessInfoType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var BusinessType
 	 */ 
 	public $businessType;
@@ -2856,6 +2292,8 @@ class BusinessInfoType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var BusinessSubtypeType
 	 */ 
 	public $businessSubtype;
@@ -2863,6 +2301,8 @@ class BusinessInfoType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $incorporationId;
@@ -2870,6 +2310,8 @@ class BusinessInfoType  {
 	/**
 	 * Average transaction value. 
 	 * @access public
+	 
+	 
 	 * @var double
 	 */ 
 	public $averagePrice;
@@ -2877,6 +2319,8 @@ class BusinessInfoType  {
 	/**
 	 * Average monthly transaction value. 
 	 * @access public
+	 
+	 
 	 * @var double
 	 */ 
 	public $averageMonthlyVolume;
@@ -2885,6 +2329,8 @@ class BusinessInfoType  {
 	 * Percentage of the revenue that is from online sales
 	 * (0%-100%). 
 	 * @access public
+	 
+	 
 	 * @var integer
 	 */ 
 	public $percentageRevenueFromOnline;
@@ -2893,6 +2339,8 @@ class BusinessInfoType  {
 	 * 
      * @array
 	 * @access public
+	 
+	 
 	 * @var SalesVenueType
 	 */ 
 	public $salesVenue;
@@ -2901,6 +2349,8 @@ class BusinessInfoType  {
 	 * Description of store front or place for sales. Only required
 	 * when "OTHER" is specified for salesVenue. 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $salesVenueDesc;
@@ -2908,6 +2358,8 @@ class BusinessInfoType  {
 	/**
 	 * Value Added Tax (VAT) ID number 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $vatId;
@@ -2915,6 +2367,8 @@ class BusinessInfoType  {
 	/**
 	 * Country code for country on the vat id. 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $vatCountryCode;
@@ -2922,6 +2376,8 @@ class BusinessInfoType  {
 	/**
 	 * Official commercial registration location. 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $commercialRegistrationLocation;
@@ -2929,6 +2385,8 @@ class BusinessInfoType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var AddressType
 	 */ 
 	public $principalPlaceOfBusinessAddress;
@@ -2936,6 +2394,8 @@ class BusinessInfoType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var AddressType
 	 */ 
 	public $registeredOfficeAddress;
@@ -2943,6 +2403,8 @@ class BusinessInfoType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $establishmentCountryCode;
@@ -2950,6 +2412,8 @@ class BusinessInfoType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $establishmentState;
@@ -2958,6 +2422,8 @@ class BusinessInfoType  {
 	 * All the stakeholders of the company. 
      * @array
 	 * @access public
+	 
+	 
 	 * @var BusinessStakeholderType
 	 */ 
 	public $businessStakeholder;
@@ -2972,133 +2438,7 @@ class BusinessInfoType  {
 	}
 
 
-	public function toNVPString($prefix = '') {
-		$str = '';
-		$delim = '';
-		if($this->businessName != NULL) {
-			$str .= $delim .  $prefix . 'businessName=' . urlencode($this->businessName);
-			$delim = '&';
-		}
-		if($this->businessAddress != NULL) {
-			$newPrefix = $prefix . 'businessAddress.';
-			$str .= $delim . call_user_func(array($this->businessAddress, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		if($this->workPhone != NULL) {
-			$str .= $delim .  $prefix . 'workPhone=' . urlencode($this->workPhone);
-			$delim = '&';
-		}
-		if($this->category != NULL) {
-			$str .= $delim .  $prefix . 'category=' . urlencode($this->category);
-			$delim = '&';
-		}
-		if($this->subCategory != NULL) {
-			$str .= $delim .  $prefix . 'subCategory=' . urlencode($this->subCategory);
-			$delim = '&';
-		}
-		if($this->merchantCategoryCode != NULL) {
-			$str .= $delim .  $prefix . 'merchantCategoryCode=' . urlencode($this->merchantCategoryCode);
-			$delim = '&';
-		}
-		if($this->doingBusinessAs != NULL) {
-			$str .= $delim .  $prefix . 'doingBusinessAs=' . urlencode($this->doingBusinessAs);
-			$delim = '&';
-		}
-		if($this->customerServicePhone != NULL) {
-			$str .= $delim .  $prefix . 'customerServicePhone=' . urlencode($this->customerServicePhone);
-			$delim = '&';
-		}
-		if($this->customerServiceEmail != NULL) {
-			$str .= $delim .  $prefix . 'customerServiceEmail=' . urlencode($this->customerServiceEmail);
-			$delim = '&';
-		}
-		if($this->disputeEmail != NULL) {
-			$str .= $delim .  $prefix . 'disputeEmail=' . urlencode($this->disputeEmail);
-			$delim = '&';
-		}
-		if($this->webSite != NULL) {
-			$str .= $delim .  $prefix . 'webSite=' . urlencode($this->webSite);
-			$delim = '&';
-		}
-		if($this->companyId != NULL) {
-			$str .= $delim .  $prefix . 'companyId=' . urlencode($this->companyId);
-			$delim = '&';
-		}
-		if($this->dateOfEstablishment != NULL) {
-			$str .= $delim .  $prefix . 'dateOfEstablishment=' . urlencode($this->dateOfEstablishment);
-			$delim = '&';
-		}
-		if($this->businessType != NULL) {
-			$str .= $delim .  $prefix . 'businessType=' . urlencode($this->businessType);
-			$delim = '&';
-		}
-		if($this->businessSubtype != NULL) {
-			$str .= $delim .  $prefix . 'businessSubtype=' . urlencode($this->businessSubtype);
-			$delim = '&';
-		}
-		if($this->incorporationId != NULL) {
-			$str .= $delim .  $prefix . 'incorporationId=' . urlencode($this->incorporationId);
-			$delim = '&';
-		}
-		if($this->averagePrice != NULL) {
-			$str .= $delim .  $prefix . 'averagePrice=' . urlencode($this->averagePrice);
-			$delim = '&';
-		}
-		if($this->averageMonthlyVolume != NULL) {
-			$str .= $delim .  $prefix . 'averageMonthlyVolume=' . urlencode($this->averageMonthlyVolume);
-			$delim = '&';
-		}
-		if($this->percentageRevenueFromOnline != NULL) {
-			$str .= $delim .  $prefix . 'percentageRevenueFromOnline=' . urlencode($this->percentageRevenueFromOnline);
-			$delim = '&';
-		}
-		for($i = 0; $i < count($this->salesVenue); $i++) {
-			$str .= $delim .  $prefix . "salesVenue($i)=" .  urlencode($this->salesVenue[$i]);
-			$delim = '&';
-		}
-		if($this->salesVenueDesc != NULL) {
-			$str .= $delim .  $prefix . 'salesVenueDesc=' . urlencode($this->salesVenueDesc);
-			$delim = '&';
-		}
-		if($this->vatId != NULL) {
-			$str .= $delim .  $prefix . 'vatId=' . urlencode($this->vatId);
-			$delim = '&';
-		}
-		if($this->vatCountryCode != NULL) {
-			$str .= $delim .  $prefix . 'vatCountryCode=' . urlencode($this->vatCountryCode);
-			$delim = '&';
-		}
-		if($this->commercialRegistrationLocation != NULL) {
-			$str .= $delim .  $prefix . 'commercialRegistrationLocation=' . urlencode($this->commercialRegistrationLocation);
-			$delim = '&';
-		}
-		if($this->principalPlaceOfBusinessAddress != NULL) {
-			$newPrefix = $prefix . 'principalPlaceOfBusinessAddress.';
-			$str .= $delim . call_user_func(array($this->principalPlaceOfBusinessAddress, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		if($this->registeredOfficeAddress != NULL) {
-			$newPrefix = $prefix . 'registeredOfficeAddress.';
-			$str .= $delim . call_user_func(array($this->registeredOfficeAddress, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		if($this->establishmentCountryCode != NULL) {
-			$str .= $delim .  $prefix . 'establishmentCountryCode=' . urlencode($this->establishmentCountryCode);
-			$delim = '&';
-		}
-		if($this->establishmentState != NULL) {
-			$str .= $delim .  $prefix . 'establishmentState=' . urlencode($this->establishmentState);
-			$delim = '&';
-		}
-		for($i = 0; $i < count($this->businessStakeholder); $i++) {
-			$newPrefix = $prefix . "businessStakeholder($i).";
-			$str .= $delim . call_user_func(array($this->businessStakeholder[$i], 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		return $str;
-	}
-
-} 
+}
 
 
 
@@ -3106,11 +2446,15 @@ class BusinessInfoType  {
  * Info about Stakeholders such as partner, beneficial, owner,
  * director etc. 
  */
-class BusinessStakeholderType  {
+ 
+class BusinessStakeholderType  
+  extends PPMessage   {
 
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var StakeholderRoleType
 	 */ 
 	public $role;
@@ -3118,6 +2462,8 @@ class BusinessStakeholderType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var NameType
 	 */ 
 	public $name;
@@ -3125,6 +2471,8 @@ class BusinessStakeholderType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $fullLegalName;
@@ -3132,6 +2480,8 @@ class BusinessStakeholderType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var AddressType
 	 */ 
 	public $address;
@@ -3139,6 +2489,8 @@ class BusinessStakeholderType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var date
 	 */ 
 	public $dateOfBirth;
@@ -3151,35 +2503,7 @@ class BusinessStakeholderType  {
 	}
 
 
-	public function toNVPString($prefix = '') {
-		$str = '';
-		$delim = '';
-		if($this->role != NULL) {
-			$str .= $delim .  $prefix . 'role=' . urlencode($this->role);
-			$delim = '&';
-		}
-		if($this->name != NULL) {
-			$newPrefix = $prefix . 'name.';
-			$str .= $delim . call_user_func(array($this->name, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		if($this->fullLegalName != NULL) {
-			$str .= $delim .  $prefix . 'fullLegalName=' . urlencode($this->fullLegalName);
-			$delim = '&';
-		}
-		if($this->address != NULL) {
-			$newPrefix = $prefix . 'address.';
-			$str .= $delim . call_user_func(array($this->address, 'toNVPString'), $newPrefix);
-			$delim = '&';
-		}
-		if($this->dateOfBirth != NULL) {
-			$str .= $delim .  $prefix . 'dateOfBirth=' . urlencode($this->dateOfBirth);
-			$delim = '&';
-		}
-		return $str;
-	}
-
-} 
+}
 
 
 
@@ -3187,11 +2511,15 @@ class BusinessStakeholderType  {
  * Info about PayPal user such as emailAddress, accountId,
  * firstName, lastName etc. 
  */
-class UserInfoType  {
+ 
+class UserInfoType  
+  extends PPMessage   {
 
 	/**
 	 * Returns emailAddress belonging to PayPal account. 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $emailAddress;
@@ -3200,6 +2528,8 @@ class UserInfoType  {
 	 * Valid values are: Personal, Premier, and Business (not
 	 * case-sensitive). 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $accountType;
@@ -3208,6 +2538,8 @@ class UserInfoType  {
 	 * Identifies a PayPal account. Only premier and business
 	 * accounts have an accountId 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $accountId;
@@ -3215,6 +2547,8 @@ class UserInfoType  {
 	/**
 	 * Identifies a PayPal user, like firstName, lastName. 
 	 * @access public
+	 
+	 
 	 * @var NameType
 	 */ 
 	public $name;
@@ -3222,50 +2556,29 @@ class UserInfoType  {
 	/**
 	 * Business Name of the PayPal account holder. 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $businessName;
 
 
-
-	public function init($map = NULL, $prefix = '') {
-		if($map != NULL) {
-			$mapKeyName =  $prefix . 'emailAddress';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->emailAddress = $map[$mapKeyName];
-			}
-			$mapKeyName =  $prefix . 'accountType';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->accountType = $map[$mapKeyName];
-			}
-			$mapKeyName =  $prefix . 'accountId';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->accountId = $map[$mapKeyName];
-			}
-			if (PPUtils::array_match_key($map, $prefix . "name.")) {
-				$newPrefix = $prefix . "name.";
-				$this->name = new NameType();
-				$this->name->init($map, $newPrefix);
-			}
-			$mapKeyName =  $prefix . 'businessName';
-			if($map != NULL && array_key_exists($mapKeyName, $map)) {
-				$this->businessName = $map[$mapKeyName];
-			}
-			
-		}
-	}
-} 
+}
 
 
 
 /**
  * 
  */
-class WebOptionsType  {
+ 
+class WebOptionsType  
+  extends PPMessage   {
 
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $returnUrl;
@@ -3273,6 +2586,8 @@ class WebOptionsType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $cancelUrl;
@@ -3280,6 +2595,8 @@ class WebOptionsType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $returnUrlDescription;
@@ -3287,45 +2604,29 @@ class WebOptionsType  {
 	/**
 	 * 
 	 * @access public
+	 
+	 
 	 * @var string
 	 */ 
 	public $cancelUrlDescription;
 
 
-	public function toNVPString($prefix = '') {
-		$str = '';
-		$delim = '';
-		if($this->returnUrl != NULL) {
-			$str .= $delim .  $prefix . 'returnUrl=' . urlencode($this->returnUrl);
-			$delim = '&';
-		}
-		if($this->cancelUrl != NULL) {
-			$str .= $delim .  $prefix . 'cancelUrl=' . urlencode($this->cancelUrl);
-			$delim = '&';
-		}
-		if($this->returnUrlDescription != NULL) {
-			$str .= $delim .  $prefix . 'returnUrlDescription=' . urlencode($this->returnUrlDescription);
-			$delim = '&';
-		}
-		if($this->cancelUrlDescription != NULL) {
-			$str .= $delim .  $prefix . 'cancelUrlDescription=' . urlencode($this->cancelUrlDescription);
-			$delim = '&';
-		}
-		return $str;
-	}
-
-} 
+}
 
 
 
 /**
  * Month in integer format, between 1 and 12 
  */
-class CardDateType  {
+ 
+class CardDateType  
+  extends PPMessage   {
 
 	/**
 	 * Month in integer format, between 1 and 12 
 	 * @access public
+	 
+	 
 	 * @var integer
 	 */ 
 	public $month;
@@ -3333,6 +2634,8 @@ class CardDateType  {
 	/**
 	 * Year in four digit format- YYYY 
 	 * @access public
+	 
+	 
 	 * @var integer
 	 */ 
 	public $year;
@@ -3346,21 +2649,7 @@ class CardDateType  {
 	}
 
 
-	public function toNVPString($prefix = '') {
-		$str = '';
-		$delim = '';
-		if($this->month != NULL) {
-			$str .= $delim .  $prefix . 'month=' . urlencode($this->month);
-			$delim = '&';
-		}
-		if($this->year != NULL) {
-			$str .= $delim .  $prefix . 'year=' . urlencode($this->year);
-			$delim = '&';
-		}
-		return $str;
-	}
-
-} 
+}
 
 
 
