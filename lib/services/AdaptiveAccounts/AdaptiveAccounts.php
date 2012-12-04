@@ -82,8 +82,6 @@ class ErrorData
      * @array
 	 * @access public
 	 
-	 
-	 * @value
 	 	 	 	 
 	 * @var ErrorParameter 	 
 	 */ 
@@ -95,6 +93,7 @@ class ErrorData
 
 
 /**
+ * @hasAttribute
  * 
  */
  
@@ -116,6 +115,8 @@ class ErrorParameter
 	 * 
 	 * @access public
 	 
+	 
+	 * @value
 	 	 	 	 
 	 * @var string 	 
 	 */ 
@@ -318,8 +319,6 @@ class FaultMessage
      * @array
 	 * @access public
 	 
-	 
-	 * @value
 	 	 	 	 
 	 * @var ErrorData 	 
 	 */ 
@@ -695,8 +694,6 @@ class CreateAccountResponse
      * @array
 	 * @access public
 	 
-	 
-	 * @value
 	 	 	 	 
 	 * @var ErrorData 	 
 	 */ 
@@ -792,8 +789,6 @@ class GetUserAgreementResponse
      * @array
 	 * @access public
 	 
-	 
-	 * @value
 	 	 	 	 
 	 * @var ErrorData 	 
 	 */ 
@@ -925,8 +920,6 @@ class GetVerifiedStatusResponse
      * @array
 	 * @access public
 	 
-	 
-	 * @value
 	 	 	 	 
 	 * @var ErrorData 	 
 	 */ 
@@ -1249,8 +1242,6 @@ class AddBankAccountResponse
      * @array
 	 * @access public
 	 
-	 
-	 * @value
 	 	 	 	 
 	 * @var ErrorData 	 
 	 */ 
@@ -1477,8 +1468,6 @@ class AddPaymentCardResponse
      * @array
 	 * @access public
 	 
-	 
-	 * @value
 	 	 	 	 
 	 * @var ErrorData 	 
 	 */ 
@@ -1649,8 +1638,6 @@ class AddPartnerFinancialProductResponse
      * @array
 	 * @access public
 	 
-	 
-	 * @value
 	 	 	 	 
 	 * @var ErrorData 	 
 	 */ 
@@ -1744,8 +1731,6 @@ class SetFundingSourceConfirmedResponse
      * @array
 	 * @access public
 	 
-	 
-	 * @value
 	 	 	 	 
 	 * @var ErrorData 	 
 	 */ 
@@ -1839,8 +1824,6 @@ class CheckComplianceStatusResponse
      * @array
 	 * @access public
 	 
-	 
-	 * @value
 	 	 	 	 
 	 * @var ErrorData 	 
 	 */ 
@@ -1922,8 +1905,6 @@ class ActivateProductResponse
      * @array
 	 * @access public
 	 
-	 
-	 * @value
 	 	 	 	 
 	 * @var string 	 
 	 */ 
@@ -1934,8 +1915,6 @@ class ActivateProductResponse
      * @array
 	 * @access public
 	 
-	 
-	 * @value
 	 	 	 	 
 	 * @var ErrorData 	 
 	 */ 
@@ -2364,8 +2343,6 @@ class BusinessInfoType
      * @array
 	 * @access public
 	 
-	 
-	 * @value
 	 	 	 	 
 	 * @var string 	 
 	 */ 
@@ -2449,8 +2426,6 @@ class BusinessInfoType
      * @array
 	 * @access public
 	 
-	 
-	 * @value
 	 	 	 	 
 	 * @var BusinessStakeholderType 	 
 	 */ 
