@@ -18,8 +18,8 @@ class ErrorData
 	 * 
 	 * @access public
 	 
-	 
-	 * @var integer
+	 	 	 	 
+	 * @var integer 	 
 	 */ 
 	public $errorId;
 
@@ -27,8 +27,8 @@ class ErrorData
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $domain;
 
@@ -36,8 +36,8 @@ class ErrorData
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $subdomain;
 
@@ -45,8 +45,8 @@ class ErrorData
 	 * 
 	 * @access public
 	 
-	 
-	 * @var ErrorSeverity
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $severity;
 
@@ -54,8 +54,8 @@ class ErrorData
 	 * 
 	 * @access public
 	 
-	 
-	 * @var ErrorCategory
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $category;
 
@@ -63,8 +63,8 @@ class ErrorData
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $message;
 
@@ -72,8 +72,8 @@ class ErrorData
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $exceptionId;
 
@@ -83,7 +83,9 @@ class ErrorData
 	 * @access public
 	 
 	 
-	 * @var ErrorParameter
+	 * @value
+	 	 	 	 
+	 * @var ErrorParameter 	 
 	 */ 
 	public $parameter;
 
@@ -105,8 +107,8 @@ class ErrorParameter
 	 
 	 
 	 * @attribute 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $name;
 
@@ -114,8 +116,8 @@ class ErrorParameter
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $value;
 
@@ -140,8 +142,8 @@ class RequestEnvelope
 	 * enumerated values of the detail level for each component. 
 	 * @access public
 	 
-	 
-	 * @var DetailLevelCode
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $detailLevel;
 
@@ -150,8 +152,8 @@ class RequestEnvelope
 	 * tag, e.g., en_US. 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $errorLanguage;
 
@@ -172,8 +174,8 @@ class ResponseEnvelope
 	 * 
 	 * @access public
 	 
-	 
-	 * @var dateTime
+	 	 	 	 
+	 * @var dateTime 	 
 	 */ 
 	public $timestamp;
 
@@ -181,8 +183,8 @@ class ResponseEnvelope
 	 * Application level acknowledgement code. 
 	 * @access public
 	 
-	 
-	 * @var AckCode
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $ack;
 
@@ -190,8 +192,8 @@ class ResponseEnvelope
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $correlationId;
 
@@ -199,8 +201,8 @@ class ResponseEnvelope
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $build;
 
@@ -221,8 +223,8 @@ class ClientDetailsType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $ipAddress;
 
@@ -230,8 +232,8 @@ class ClientDetailsType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $deviceId;
 
@@ -239,8 +241,8 @@ class ClientDetailsType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $applicationId;
 
@@ -248,8 +250,8 @@ class ClientDetailsType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $model;
 
@@ -257,8 +259,8 @@ class ClientDetailsType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $geoLocation;
 
@@ -266,8 +268,8 @@ class ClientDetailsType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $customerType;
 
@@ -275,8 +277,8 @@ class ClientDetailsType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $partnerName;
 
@@ -284,8 +286,8 @@ class ClientDetailsType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $customerId;
 
@@ -306,8 +308,8 @@ class FaultMessage
 	 * 
 	 * @access public
 	 
-	 
-	 * @var ResponseEnvelope
+	 	 	 	 
+	 * @var ResponseEnvelope 	 
 	 */ 
 	public $responseEnvelope;
 
@@ -317,7 +319,9 @@ class FaultMessage
 	 * @access public
 	 
 	 
-	 * @var ErrorData
+	 * @value
+	 	 	 	 
+	 * @var ErrorData 	 
 	 */ 
 	public $error;
 
@@ -339,8 +343,8 @@ class AccountIdentifierType
 	 * Identifies the PayPal account based on the emailAddress. 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $emailAddress;
 
@@ -348,8 +352,8 @@ class AccountIdentifierType
 	 * Identifies the PayPal account based on the phoneNumber. 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $phoneNumber;
 
@@ -357,8 +361,8 @@ class AccountIdentifierType
 	 * Identifies the PayPal account based on the accountId. 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $accountId;
 
@@ -389,8 +393,8 @@ class CreateAccountRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var RequestEnvelope
+	 	 	 	 
+	 * @var RequestEnvelope 	 
 	 */ 
 	public $requestEnvelope;
 
@@ -398,8 +402,8 @@ class CreateAccountRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var ClientDetailsType
+	 	 	 	 
+	 * @var ClientDetailsType 	 
 	 */ 
 	public $clientDetails;
 
@@ -409,8 +413,8 @@ class CreateAccountRequest
 	 * meaning the strings are not case-sensitive 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $accountType;
 
@@ -418,8 +422,8 @@ class CreateAccountRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var NameType
+	 	 	 	 
+	 * @var NameType 	 
 	 */ 
 	public $name;
 
@@ -427,8 +431,8 @@ class CreateAccountRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var date
+	 	 	 	 
+	 * @var date 	 
 	 */ 
 	public $dateOfBirth;
 
@@ -436,8 +440,8 @@ class CreateAccountRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var AddressType
+	 	 	 	 
+	 * @var AddressType 	 
 	 */ 
 	public $address;
 
@@ -446,8 +450,8 @@ class CreateAccountRequest
 	 * homePhoneNumber, or mobilePhoneNumber 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $contactPhoneNumber;
 
@@ -456,8 +460,8 @@ class CreateAccountRequest
 	 * homePhoneNumber, or mobilePhoneNumber 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $homePhoneNumber;
 
@@ -466,8 +470,8 @@ class CreateAccountRequest
 	 * homePhoneNumber, or mobilePhoneNumber 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $mobilePhoneNumber;
 
@@ -475,8 +479,8 @@ class CreateAccountRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $currencyCode;
 
@@ -484,8 +488,8 @@ class CreateAccountRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $citizenshipCountryCode;
 
@@ -493,8 +497,8 @@ class CreateAccountRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $preferredLanguageCode;
 
@@ -502,8 +506,8 @@ class CreateAccountRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $notificationURL;
 
@@ -511,8 +515,8 @@ class CreateAccountRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $emailAddress;
 
@@ -522,8 +526,8 @@ class CreateAccountRequest
 	 * the registration. 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $registrationType;
 
@@ -531,8 +535,8 @@ class CreateAccountRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var CreateAccountWebOptionsType
+	 	 	 	 
+	 * @var CreateAccountWebOptionsType 	 
 	 */ 
 	public $createAccountWebOptions;
 
@@ -540,8 +544,8 @@ class CreateAccountRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var boolean
+	 	 	 	 
+	 * @var boolean 	 
 	 */ 
 	public $suppressWelcomeEmail;
 
@@ -550,8 +554,8 @@ class CreateAccountRequest
 	 * vetting by PayPal before becoming usable. 
 	 * @access public
 	 
-	 
-	 * @var boolean
+	 	 	 	 
+	 * @var boolean 	 
 	 */ 
 	public $performExtraVettingOnThisAccount;
 
@@ -559,8 +563,8 @@ class CreateAccountRequest
 	 * tax id, ssn, itin, pan, cpf, acn, abn, etc. 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $taxId;
 
@@ -568,8 +572,8 @@ class CreateAccountRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $partnerField1;
 
@@ -577,8 +581,8 @@ class CreateAccountRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $partnerField2;
 
@@ -586,8 +590,8 @@ class CreateAccountRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $partnerField3;
 
@@ -595,8 +599,8 @@ class CreateAccountRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $partnerField4;
 
@@ -604,8 +608,8 @@ class CreateAccountRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $partnerField5;
 
@@ -613,8 +617,8 @@ class CreateAccountRequest
 	 * Required for business account creation 
 	 * @access public
 	 
-	 
-	 * @var BusinessInfoType
+	 	 	 	 
+	 * @var BusinessInfoType 	 
 	 */ 
 	public $businessInfo;
 
@@ -644,8 +648,8 @@ class CreateAccountResponse
 	 * 
 	 * @access public
 	 
-	 
-	 * @var ResponseEnvelope
+	 	 	 	 
+	 * @var ResponseEnvelope 	 
 	 */ 
 	public $responseEnvelope;
 
@@ -653,8 +657,8 @@ class CreateAccountResponse
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $createAccountKey;
 
@@ -662,8 +666,8 @@ class CreateAccountResponse
 	 * Valid values are: COMPLETED 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $execStatus;
 
@@ -671,8 +675,8 @@ class CreateAccountResponse
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $redirectURL;
 
@@ -681,8 +685,8 @@ class CreateAccountResponse
 	 * accounts have an accountId 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $accountId;
 
@@ -692,7 +696,9 @@ class CreateAccountResponse
 	 * @access public
 	 
 	 
-	 * @var ErrorData
+	 * @value
+	 	 	 	 
+	 * @var ErrorData 	 
 	 */ 
 	public $error;
 
@@ -712,8 +718,8 @@ class GetUserAgreementRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var RequestEnvelope
+	 	 	 	 
+	 * @var RequestEnvelope 	 
 	 */ 
 	public $requestEnvelope;
 
@@ -721,8 +727,8 @@ class GetUserAgreementRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $createAccountKey;
 
@@ -730,8 +736,8 @@ class GetUserAgreementRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $countryCode;
 
@@ -739,8 +745,8 @@ class GetUserAgreementRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $languageCode;
 
@@ -767,8 +773,8 @@ class GetUserAgreementResponse
 	 * 
 	 * @access public
 	 
-	 
-	 * @var ResponseEnvelope
+	 	 	 	 
+	 * @var ResponseEnvelope 	 
 	 */ 
 	public $responseEnvelope;
 
@@ -776,8 +782,8 @@ class GetUserAgreementResponse
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $agreement;
 
@@ -787,7 +793,9 @@ class GetUserAgreementResponse
 	 * @access public
 	 
 	 
-	 * @var ErrorData
+	 * @value
+	 	 	 	 
+	 * @var ErrorData 	 
 	 */ 
 	public $error;
 
@@ -809,8 +817,8 @@ class GetVerifiedStatusRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var RequestEnvelope
+	 	 	 	 
+	 * @var RequestEnvelope 	 
 	 */ 
 	public $requestEnvelope;
 
@@ -818,8 +826,8 @@ class GetVerifiedStatusRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $emailAddress;
 
@@ -829,8 +837,8 @@ class GetVerifiedStatusRequest
 	 * support matchCriteria of 'NAME' and 'NONE'. 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $matchCriteria;
 
@@ -839,8 +847,8 @@ class GetVerifiedStatusRequest
 	 * is NONE 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $firstName;
 
@@ -849,8 +857,8 @@ class GetVerifiedStatusRequest
 	 * is NONE 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $lastName;
 
@@ -879,8 +887,8 @@ class GetVerifiedStatusResponse
 	 * 
 	 * @access public
 	 
-	 
-	 * @var ResponseEnvelope
+	 	 	 	 
+	 * @var ResponseEnvelope 	 
 	 */ 
 	public $responseEnvelope;
 
@@ -888,8 +896,8 @@ class GetVerifiedStatusResponse
 	 * Returned values are: VERIFIED|UNVERIFIED. 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $accountStatus;
 
@@ -897,8 +905,8 @@ class GetVerifiedStatusResponse
 	 * Returns countryCode belonging to PayPal account. 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $countryCode;
 
@@ -907,8 +915,8 @@ class GetVerifiedStatusResponse
 	 * firstName, lastName etc. 
 	 * @access public
 	 
-	 
-	 * @var UserInfoType
+	 	 	 	 
+	 * @var UserInfoType 	 
 	 */ 
 	public $userInfo;
 
@@ -918,7 +926,9 @@ class GetVerifiedStatusResponse
 	 * @access public
 	 
 	 
-	 * @var ErrorData
+	 * @value
+	 	 	 	 
+	 * @var ErrorData 	 
 	 */ 
 	public $error;
 
@@ -940,8 +950,8 @@ class AddBankAccountRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var RequestEnvelope
+	 	 	 	 
+	 * @var RequestEnvelope 	 
 	 */ 
 	public $requestEnvelope;
 
@@ -951,8 +961,8 @@ class AddBankAccountRequest
 	 * emailAddress or an accountId. 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $emailAddress;
 
@@ -962,8 +972,8 @@ class AddBankAccountRequest
 	 * emailAddress or an accountId. 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $accountId;
 
@@ -971,8 +981,8 @@ class AddBankAccountRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $createAccountKey;
 
@@ -980,8 +990,8 @@ class AddBankAccountRequest
 	 * Country code for the bank 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $bankCountryCode;
 
@@ -989,8 +999,8 @@ class AddBankAccountRequest
 	 * The defualt value is UNKNOWN. 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $bankName;
 
@@ -998,8 +1008,8 @@ class AddBankAccountRequest
 	 * Bank routing or transit number 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $routingNumber;
 
@@ -1007,8 +1017,8 @@ class AddBankAccountRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var BankAccountType
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $bankAccountType;
 
@@ -1016,8 +1026,8 @@ class AddBankAccountRequest
 	 * Basic Bank Account Number (BBAN) 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $bankAccountNumber;
 
@@ -1025,8 +1035,8 @@ class AddBankAccountRequest
 	 * International Bank Account Number (IBAN) 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $iban;
 
@@ -1035,8 +1045,8 @@ class AddBankAccountRequest
 	 * Mexico 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $clabe;
 
@@ -1044,8 +1054,8 @@ class AddBankAccountRequest
 	 * Bank/State/Branch number 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $bsbNumber;
 
@@ -1053,8 +1063,8 @@ class AddBankAccountRequest
 	 * Branch location 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $branchLocation;
 
@@ -1062,8 +1072,8 @@ class AddBankAccountRequest
 	 * Branch sort code. 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $sortCode;
 
@@ -1071,8 +1081,8 @@ class AddBankAccountRequest
 	 * Bank transit number 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $bankTransitNumber;
 
@@ -1080,8 +1090,8 @@ class AddBankAccountRequest
 	 * Institution number 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $institutionNumber;
 
@@ -1089,8 +1099,8 @@ class AddBankAccountRequest
 	 * Branch code 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $branchCode;
 
@@ -1098,8 +1108,8 @@ class AddBankAccountRequest
 	 * For Brazil Agency Number 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $agencyNumber;
 
@@ -1107,8 +1117,8 @@ class AddBankAccountRequest
 	 * Bank code 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $bankCode;
 
@@ -1116,8 +1126,8 @@ class AddBankAccountRequest
 	 * RIB key 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $ribKey;
 
@@ -1125,8 +1135,8 @@ class AddBankAccountRequest
 	 * control digits 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $controlDigit;
 
@@ -1134,8 +1144,8 @@ class AddBankAccountRequest
 	 * Tax id type of CNPJ or CPF, only supported for Brazil. 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $taxIdType;
 
@@ -1143,8 +1153,8 @@ class AddBankAccountRequest
 	 * Tax id number for Brazil. 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $taxIdNumber;
 
@@ -1152,8 +1162,8 @@ class AddBankAccountRequest
 	 * Date of birth of the account holder 
 	 * @access public
 	 
-	 
-	 * @var date
+	 	 	 	 
+	 * @var date 	 
 	 */ 
 	public $accountHolderDateOfBirth;
 
@@ -1161,8 +1171,8 @@ class AddBankAccountRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var ConfirmationType
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $confirmationType;
 
@@ -1170,8 +1180,8 @@ class AddBankAccountRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var WebOptionsType
+	 	 	 	 
+	 * @var WebOptionsType 	 
 	 */ 
 	public $webOptions;
 
@@ -1201,8 +1211,8 @@ class AddBankAccountResponse
 	 * 
 	 * @access public
 	 
-	 
-	 * @var ResponseEnvelope
+	 	 	 	 
+	 * @var ResponseEnvelope 	 
 	 */ 
 	public $responseEnvelope;
 
@@ -1211,8 +1221,8 @@ class AddBankAccountResponse
 	 * WEB_URL_VERIFICATION_NEEDED 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $execStatus;
 
@@ -1220,8 +1230,8 @@ class AddBankAccountResponse
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $redirectURL;
 
@@ -1229,8 +1239,8 @@ class AddBankAccountResponse
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $fundingSourceKey;
 
@@ -1240,7 +1250,9 @@ class AddBankAccountResponse
 	 * @access public
 	 
 	 
-	 * @var ErrorData
+	 * @value
+	 	 	 	 
+	 * @var ErrorData 	 
 	 */ 
 	public $error;
 
@@ -1262,8 +1274,8 @@ class AddPaymentCardRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var RequestEnvelope
+	 	 	 	 
+	 * @var RequestEnvelope 	 
 	 */ 
 	public $requestEnvelope;
 
@@ -1273,8 +1285,8 @@ class AddPaymentCardRequest
 	 * emailAddress or an accountId. 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $emailAddress;
 
@@ -1284,8 +1296,8 @@ class AddPaymentCardRequest
 	 * emailAddress or an accountId. 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $accountId;
 
@@ -1293,8 +1305,8 @@ class AddPaymentCardRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $createAccountKey;
 
@@ -1302,8 +1314,8 @@ class AddPaymentCardRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var NameType
+	 	 	 	 
+	 * @var NameType 	 
 	 */ 
 	public $nameOnCard;
 
@@ -1311,8 +1323,8 @@ class AddPaymentCardRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var AddressType
+	 	 	 	 
+	 * @var AddressType 	 
 	 */ 
 	public $billingAddress;
 
@@ -1320,8 +1332,8 @@ class AddPaymentCardRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var date
+	 	 	 	 
+	 * @var date 	 
 	 */ 
 	public $cardOwnerDateOfBirth;
 
@@ -1329,8 +1341,8 @@ class AddPaymentCardRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $cardNumber;
 
@@ -1338,8 +1350,8 @@ class AddPaymentCardRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var CardTypeType
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $cardType;
 
@@ -1347,8 +1359,8 @@ class AddPaymentCardRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var CardDateType
+	 	 	 	 
+	 * @var CardDateType 	 
 	 */ 
 	public $expirationDate;
 
@@ -1357,8 +1369,8 @@ class AddPaymentCardRequest
 	 * None (Direct request) 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $cardVerificationNumber;
 
@@ -1366,8 +1378,8 @@ class AddPaymentCardRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var CardDateType
+	 	 	 	 
+	 * @var CardDateType 	 
 	 */ 
 	public $startDate;
 
@@ -1375,8 +1387,8 @@ class AddPaymentCardRequest
 	 * Up to 2 digit for Switch/Maestro cards. 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $issueNumber;
 
@@ -1384,8 +1396,8 @@ class AddPaymentCardRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var ConfirmationType
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $confirmationType;
 
@@ -1393,8 +1405,8 @@ class AddPaymentCardRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var WebOptionsType
+	 	 	 	 
+	 * @var WebOptionsType 	 
 	 */ 
 	public $webOptions;
 
@@ -1427,8 +1439,8 @@ class AddPaymentCardResponse
 	 * 
 	 * @access public
 	 
-	 
-	 * @var ResponseEnvelope
+	 	 	 	 
+	 * @var ResponseEnvelope 	 
 	 */ 
 	public $responseEnvelope;
 
@@ -1437,8 +1449,8 @@ class AddPaymentCardResponse
 	 * WEB_URL_VERIFICATION_NEEDED 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $execStatus;
 
@@ -1446,8 +1458,8 @@ class AddPaymentCardResponse
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $redirectURL;
 
@@ -1455,8 +1467,8 @@ class AddPaymentCardResponse
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $fundingSourceKey;
 
@@ -1466,7 +1478,9 @@ class AddPaymentCardResponse
 	 * @access public
 	 
 	 
-	 * @var ErrorData
+	 * @value
+	 	 	 	 
+	 * @var ErrorData 	 
 	 */ 
 	public $error;
 
@@ -1487,8 +1501,8 @@ class AddPartnerFinancialProductRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var RequestEnvelope
+	 	 	 	 
+	 * @var RequestEnvelope 	 
 	 */ 
 	public $requestEnvelope;
 
@@ -1496,8 +1510,8 @@ class AddPartnerFinancialProductRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var AccountIdentifierType
+	 	 	 	 
+	 * @var AccountIdentifierType 	 
 	 */ 
 	public $accountIdentifier;
 
@@ -1506,8 +1520,8 @@ class AddPartnerFinancialProductRequest
 	 * financialProductCategory=PRE_PAID_CARD 
 	 * @access public
 	 
-	 
-	 * @var NameType
+	 	 	 	 
+	 * @var NameType 	 
 	 */ 
 	public $nameOnCard;
 
@@ -1516,8 +1530,8 @@ class AddPartnerFinancialProductRequest
 	 * financialProductCategory=PRE_PAID_CARD 
 	 * @access public
 	 
-	 
-	 * @var AddressType
+	 	 	 	 
+	 * @var AddressType 	 
 	 */ 
 	public $billingAddress;
 
@@ -1526,8 +1540,8 @@ class AddPartnerFinancialProductRequest
 	 * financialProductCategory=PRE_PAID_CARD 
 	 * @access public
 	 
-	 
-	 * @var date
+	 	 	 	 
+	 * @var date 	 
 	 */ 
 	public $cardOwnerDateOfBirth;
 
@@ -1535,8 +1549,8 @@ class AddPartnerFinancialProductRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $cardNumber;
 
@@ -1545,8 +1559,8 @@ class AddPartnerFinancialProductRequest
 	 * value is : PRE_PAID_CARD 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $financialProductCategory;
 
@@ -1555,8 +1569,8 @@ class AddPartnerFinancialProductRequest
 	 * PRE_PAID_CARD 
 	 * @access public
 	 
-	 
-	 * @var CardDateType
+	 	 	 	 
+	 * @var CardDateType 	 
 	 */ 
 	public $expirationDate;
 
@@ -1565,8 +1579,8 @@ class AddPartnerFinancialProductRequest
 	 * financialProductCategory=PRE_PAID_CARD 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $cardVerificationNumber;
 
@@ -1575,8 +1589,8 @@ class AddPartnerFinancialProductRequest
 	 * financialProductCategory=PRE_PAID_CARD 
 	 * @access public
 	 
-	 
-	 * @var CardDateType
+	 	 	 	 
+	 * @var CardDateType 	 
 	 */ 
 	public $startDate;
 
@@ -1584,8 +1598,8 @@ class AddPartnerFinancialProductRequest
 	 * Up to 2 digit for Switch/Maestro cards. 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $issueNumber;
 
@@ -1616,8 +1630,8 @@ class AddPartnerFinancialProductResponse
 	 * 
 	 * @access public
 	 
-	 
-	 * @var ResponseEnvelope
+	 	 	 	 
+	 * @var ResponseEnvelope 	 
 	 */ 
 	public $responseEnvelope;
 
@@ -1625,8 +1639,8 @@ class AddPartnerFinancialProductResponse
 	 * Valid values are: CARD_ADDED 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $execStatus;
 
@@ -1636,7 +1650,9 @@ class AddPartnerFinancialProductResponse
 	 * @access public
 	 
 	 
-	 * @var ErrorData
+	 * @value
+	 	 	 	 
+	 * @var ErrorData 	 
 	 */ 
 	public $error;
 
@@ -1658,8 +1674,8 @@ class SetFundingSourceConfirmedRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var RequestEnvelope
+	 	 	 	 
+	 * @var RequestEnvelope 	 
 	 */ 
 	public $requestEnvelope;
 
@@ -1669,8 +1685,8 @@ class SetFundingSourceConfirmedRequest
 	 * emailAddress or an accountId. 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $emailAddress;
 
@@ -1680,8 +1696,8 @@ class SetFundingSourceConfirmedRequest
 	 * emailAddress or an accountId. 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $accountId;
 
@@ -1689,8 +1705,8 @@ class SetFundingSourceConfirmedRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $fundingSourceKey;
 
@@ -1718,8 +1734,8 @@ class SetFundingSourceConfirmedResponse
 	 * 
 	 * @access public
 	 
-	 
-	 * @var ResponseEnvelope
+	 	 	 	 
+	 * @var ResponseEnvelope 	 
 	 */ 
 	public $responseEnvelope;
 
@@ -1729,7 +1745,9 @@ class SetFundingSourceConfirmedResponse
 	 * @access public
 	 
 	 
-	 * @var ErrorData
+	 * @value
+	 	 	 	 
+	 * @var ErrorData 	 
 	 */ 
 	public $error;
 
@@ -1751,8 +1769,8 @@ class CheckComplianceStatusRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var RequestEnvelope
+	 	 	 	 
+	 * @var RequestEnvelope 	 
 	 */ 
 	public $requestEnvelope;
 
@@ -1762,8 +1780,8 @@ class CheckComplianceStatusRequest
 	 * these inputs: emailAddress, accountId or phoneNumber. 
 	 * @access public
 	 
-	 
-	 * @var AccountIdentifierType
+	 	 	 	 
+	 * @var AccountIdentifierType 	 
 	 */ 
 	public $accountIdentifier;
 
@@ -1791,8 +1809,8 @@ class CheckComplianceStatusResponse
 	 * 
 	 * @access public
 	 
-	 
-	 * @var ResponseEnvelope
+	 	 	 	 
+	 * @var ResponseEnvelope 	 
 	 */ 
 	public $responseEnvelope;
 
@@ -1800,8 +1818,8 @@ class CheckComplianceStatusResponse
 	 * Returned values are: ALLOW|DENY 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $execStatus;
 
@@ -1811,8 +1829,8 @@ class CheckComplianceStatusResponse
 	 * DOCUMENTS_UNDER_REVIEW, DENIED 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $denialReason;
 
@@ -1822,7 +1840,9 @@ class CheckComplianceStatusResponse
 	 * @access public
 	 
 	 
-	 * @var ErrorData
+	 * @value
+	 	 	 	 
+	 * @var ErrorData 	 
 	 */ 
 	public $error;
 
@@ -1843,8 +1863,8 @@ class ActivateProductRequest
 	 * 
 	 * @access public
 	 
-	 
-	 * @var RequestEnvelope
+	 	 	 	 
+	 * @var RequestEnvelope 	 
 	 */ 
 	public $requestEnvelope;
 
@@ -1854,8 +1874,8 @@ class ActivateProductRequest
 	 * these inputs: emailAddress or accountId. 
 	 * @access public
 	 
-	 
-	 * @var AccountIdentifierType
+	 	 	 	 
+	 * @var AccountIdentifierType 	 
 	 */ 
 	public $accountIdentifier;
 
@@ -1883,8 +1903,8 @@ class ActivateProductResponse
 	 * 
 	 * @access public
 	 
-	 
-	 * @var ResponseEnvelope
+	 	 	 	 
+	 * @var ResponseEnvelope 	 
 	 */ 
 	public $responseEnvelope;
 
@@ -1892,8 +1912,8 @@ class ActivateProductResponse
 	 * Valid values are: SUCCESS, FAILED 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $execStatus;
 
@@ -1903,7 +1923,9 @@ class ActivateProductResponse
 	 * @access public
 	 
 	 
-	 * @var ProductActivationErrors
+	 * @value
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $productActivationErrors;
 
@@ -1913,7 +1935,9 @@ class ActivateProductResponse
 	 * @access public
 	 
 	 
-	 * @var ErrorData
+	 * @value
+	 	 	 	 
+	 * @var ErrorData 	 
 	 */ 
 	public $error;
 
@@ -1933,8 +1957,8 @@ class NameType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $salutation;
 
@@ -1942,8 +1966,8 @@ class NameType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $firstName;
 
@@ -1951,8 +1975,8 @@ class NameType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $middleName;
 
@@ -1960,8 +1984,8 @@ class NameType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $lastName;
 
@@ -1969,8 +1993,8 @@ class NameType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $suffix;
 
@@ -1998,8 +2022,8 @@ class AddressType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $line1;
 
@@ -2007,8 +2031,8 @@ class AddressType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $line2;
 
@@ -2016,8 +2040,8 @@ class AddressType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $city;
 
@@ -2025,8 +2049,8 @@ class AddressType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $state;
 
@@ -2034,8 +2058,8 @@ class AddressType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $postalCode;
 
@@ -2043,8 +2067,8 @@ class AddressType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $countryCode;
 
@@ -2074,8 +2098,8 @@ class CreateAccountWebOptionsType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $returnUrl;
 
@@ -2083,8 +2107,8 @@ class CreateAccountWebOptionsType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var boolean
+	 	 	 	 
+	 * @var boolean 	 
 	 */ 
 	public $showAddCreditCard;
 
@@ -2094,8 +2118,8 @@ class CreateAccountWebOptionsType
 	 * mobilePhoneNumber) Default=false. 
 	 * @access public
 	 
-	 
-	 * @var boolean
+	 	 	 	 
+	 * @var boolean 	 
 	 */ 
 	public $showMobileConfirm;
 
@@ -2103,8 +2127,8 @@ class CreateAccountWebOptionsType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $returnUrlDescription;
 
@@ -2114,8 +2138,8 @@ class CreateAccountWebOptionsType
 	 * the Multi-page flow that is full size. 
 	 * @access public
 	 
-	 
-	 * @var boolean
+	 	 	 	 
+	 * @var boolean 	 
 	 */ 
 	public $useMiniBrowser;
 
@@ -2128,8 +2152,8 @@ class CreateAccountWebOptionsType
 	 * values to be added in future) 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $reminderEmailFrequency;
 
@@ -2143,8 +2167,8 @@ class CreateAccountWebOptionsType
 	 * to the Return URL. 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $confirmEmail;
 
@@ -2164,8 +2188,8 @@ class BusinessInfoType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $businessName;
 
@@ -2173,8 +2197,8 @@ class BusinessInfoType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var AddressType
+	 	 	 	 
+	 * @var AddressType 	 
 	 */ 
 	public $businessAddress;
 
@@ -2182,8 +2206,8 @@ class BusinessInfoType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $workPhone;
 
@@ -2191,8 +2215,8 @@ class BusinessInfoType
 	 * PayPal Business Category. i.e., baby - 1004 
 	 * @access public
 	 
-	 
-	 * @var integer
+	 	 	 	 
+	 * @var integer 	 
 	 */ 
 	public $category;
 
@@ -2200,8 +2224,8 @@ class BusinessInfoType
 	 * Paypal Business subcategory. i.e., baby-clothing - 2027 
 	 * @access public
 	 
-	 
-	 * @var integer
+	 	 	 	 
+	 * @var integer 	 
 	 */ 
 	public $subCategory;
 
@@ -2212,8 +2236,8 @@ class BusinessInfoType
 	 * Category Code documentation for a list of codes 
 	 * @access public
 	 
-	 
-	 * @var integer
+	 	 	 	 
+	 * @var integer 	 
 	 */ 
 	public $merchantCategoryCode;
 
@@ -2221,8 +2245,8 @@ class BusinessInfoType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $doingBusinessAs;
 
@@ -2230,8 +2254,8 @@ class BusinessInfoType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $customerServicePhone;
 
@@ -2239,8 +2263,8 @@ class BusinessInfoType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $customerServiceEmail;
 
@@ -2248,8 +2272,8 @@ class BusinessInfoType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $disputeEmail;
 
@@ -2257,8 +2281,8 @@ class BusinessInfoType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $webSite;
 
@@ -2266,8 +2290,8 @@ class BusinessInfoType
 	 * Company Id: tax id, acn, abn, etc. 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $companyId;
 
@@ -2275,8 +2299,8 @@ class BusinessInfoType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var date
+	 	 	 	 
+	 * @var date 	 
 	 */ 
 	public $dateOfEstablishment;
 
@@ -2284,8 +2308,8 @@ class BusinessInfoType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var BusinessType
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $businessType;
 
@@ -2293,8 +2317,8 @@ class BusinessInfoType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var BusinessSubtypeType
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $businessSubtype;
 
@@ -2302,8 +2326,8 @@ class BusinessInfoType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $incorporationId;
 
@@ -2311,8 +2335,8 @@ class BusinessInfoType
 	 * Average transaction value. 
 	 * @access public
 	 
-	 
-	 * @var double
+	 	 	 	 
+	 * @var double 	 
 	 */ 
 	public $averagePrice;
 
@@ -2320,8 +2344,8 @@ class BusinessInfoType
 	 * Average monthly transaction value. 
 	 * @access public
 	 
-	 
-	 * @var double
+	 	 	 	 
+	 * @var double 	 
 	 */ 
 	public $averageMonthlyVolume;
 
@@ -2330,8 +2354,8 @@ class BusinessInfoType
 	 * (0%-100%). 
 	 * @access public
 	 
-	 
-	 * @var integer
+	 	 	 	 
+	 * @var integer 	 
 	 */ 
 	public $percentageRevenueFromOnline;
 
@@ -2341,7 +2365,9 @@ class BusinessInfoType
 	 * @access public
 	 
 	 
-	 * @var SalesVenueType
+	 * @value
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $salesVenue;
 
@@ -2350,8 +2376,8 @@ class BusinessInfoType
 	 * when "OTHER" is specified for salesVenue. 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $salesVenueDesc;
 
@@ -2359,8 +2385,8 @@ class BusinessInfoType
 	 * Value Added Tax (VAT) ID number 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $vatId;
 
@@ -2368,8 +2394,8 @@ class BusinessInfoType
 	 * Country code for country on the vat id. 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $vatCountryCode;
 
@@ -2377,8 +2403,8 @@ class BusinessInfoType
 	 * Official commercial registration location. 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $commercialRegistrationLocation;
 
@@ -2386,8 +2412,8 @@ class BusinessInfoType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var AddressType
+	 	 	 	 
+	 * @var AddressType 	 
 	 */ 
 	public $principalPlaceOfBusinessAddress;
 
@@ -2395,8 +2421,8 @@ class BusinessInfoType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var AddressType
+	 	 	 	 
+	 * @var AddressType 	 
 	 */ 
 	public $registeredOfficeAddress;
 
@@ -2404,8 +2430,8 @@ class BusinessInfoType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $establishmentCountryCode;
 
@@ -2413,8 +2439,8 @@ class BusinessInfoType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $establishmentState;
 
@@ -2424,7 +2450,9 @@ class BusinessInfoType
 	 * @access public
 	 
 	 
-	 * @var BusinessStakeholderType
+	 * @value
+	 	 	 	 
+	 * @var BusinessStakeholderType 	 
 	 */ 
 	public $businessStakeholder;
 
@@ -2454,8 +2482,8 @@ class BusinessStakeholderType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var StakeholderRoleType
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $role;
 
@@ -2463,8 +2491,8 @@ class BusinessStakeholderType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var NameType
+	 	 	 	 
+	 * @var NameType 	 
 	 */ 
 	public $name;
 
@@ -2472,8 +2500,8 @@ class BusinessStakeholderType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $fullLegalName;
 
@@ -2481,8 +2509,8 @@ class BusinessStakeholderType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var AddressType
+	 	 	 	 
+	 * @var AddressType 	 
 	 */ 
 	public $address;
 
@@ -2490,8 +2518,8 @@ class BusinessStakeholderType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var date
+	 	 	 	 
+	 * @var date 	 
 	 */ 
 	public $dateOfBirth;
 
@@ -2519,8 +2547,8 @@ class UserInfoType
 	 * Returns emailAddress belonging to PayPal account. 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $emailAddress;
 
@@ -2529,8 +2557,8 @@ class UserInfoType
 	 * case-sensitive). 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $accountType;
 
@@ -2539,8 +2567,8 @@ class UserInfoType
 	 * accounts have an accountId 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $accountId;
 
@@ -2548,8 +2576,8 @@ class UserInfoType
 	 * Identifies a PayPal user, like firstName, lastName. 
 	 * @access public
 	 
-	 
-	 * @var NameType
+	 	 	 	 
+	 * @var NameType 	 
 	 */ 
 	public $name;
 
@@ -2557,8 +2585,8 @@ class UserInfoType
 	 * Business Name of the PayPal account holder. 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $businessName;
 
@@ -2578,8 +2606,8 @@ class WebOptionsType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $returnUrl;
 
@@ -2587,8 +2615,8 @@ class WebOptionsType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $cancelUrl;
 
@@ -2596,8 +2624,8 @@ class WebOptionsType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $returnUrlDescription;
 
@@ -2605,8 +2633,8 @@ class WebOptionsType
 	 * 
 	 * @access public
 	 
-	 
-	 * @var string
+	 	 	 	 
+	 * @var string 	 
 	 */ 
 	public $cancelUrlDescription;
 
@@ -2626,8 +2654,8 @@ class CardDateType
 	 * Month in integer format, between 1 and 12 
 	 * @access public
 	 
-	 
-	 * @var integer
+	 	 	 	 
+	 * @var integer 	 
 	 */ 
 	public $month;
 
@@ -2635,8 +2663,8 @@ class CardDateType
 	 * Year in four digit format- YYYY 
 	 * @access public
 	 
-	 
-	 * @var integer
+	 	 	 	 
+	 * @var integer 	 
 	 */ 
 	public $year;
 
