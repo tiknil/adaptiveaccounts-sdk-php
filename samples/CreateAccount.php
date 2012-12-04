@@ -72,32 +72,34 @@ if($_REQUEST['accountType'] == "Business") {
 	$businessStakeholder->role =  $_REQUEST['role'];
 	$businessStakeholder->fullLegalName = $_REQUEST['fullLegalName'];
 
-	$businssinfo = new BusinessInfoType();
-	$businssinfo->businessAddress = $bizAddress;
-	$businssinfo->businessName = $_REQUEST['businessName'];
-	$businssinfo->workPhone = $_REQUEST['workPhone'];
-	$businssinfo->category = $_REQUEST['category'];
-	$businssinfo->subCategory = $_REQUEST['subCategory'];
-	$businssinfo->merchantCategoryCode = $_REQUEST['merchantCategoryCode'];
-	$businssinfo->doingBusinessAs = $_REQUEST['doingBusinessAs'];
-	$businssinfo->customerServicePhone = $_REQUEST['customerServicePhone'];
-	$businssinfo->customerServiceEmail = $_REQUEST['customerServiceEmail'];
-	$businssinfo->disputeEmail = $_REQUEST['disputeEmail'];
-	$businssinfo->webSite = $_REQUEST['webSite'];
-	$businssinfo->companyId = $_REQUEST['companyId'];
-	$businssinfo->dateOfEstablishment = $_REQUEST['dateOfEstablishment'];
-	$businssinfo->businessType = $_REQUEST['businessType'];
-	// $businssinfo->businessSubtype = $_REQUEST['businessSubtype'];
-	$businssinfo->incorporationId = $_REQUEST['incorporationId'];
-	$businssinfo->averagePrice = $_REQUEST['averagePrice'];
-	$businssinfo->averageMonthlyVolume = $_REQUEST['averageMonthlyVolume'];
-	$businssinfo->percentageRevenueFromOnline = $_REQUEST['percentageRevenueFromOnline'];
-	$businssinfo->salesVenue = array($_REQUEST['salesVenue']);
-	$businssinfo->salesVenueDesc = $_REQUEST['salesVenueDesc'];
-	$businssinfo->vatId = $_REQUEST['vatId'];
-	$businssinfo->vatCountryCode = $_REQUEST['vatCountryCode'];
-	$businssinfo->commercialRegistrationLocation  = $_REQUEST['commercialRegistrationLocation'];
-	$businssinfo->businessStakeholder = array($businessStakeholder);
+	$businessInfo = new BusinessInfoType();
+	$businessInfo->businessAddress = $bizAddress;
+	$businessInfo->businessName = $_REQUEST['businessName'];
+	$businessInfo->workPhone = $_REQUEST['workPhone'];
+	$businessInfo->category = $_REQUEST['category'];
+	$businessInfo->subCategory = $_REQUEST['subCategory'];
+	$businessInfo->merchantCategoryCode = $_REQUEST['merchantCategoryCode'];
+	$businessInfo->doingBusinessAs = $_REQUEST['doingBusinessAs'];
+	$businessInfo->customerServicePhone = $_REQUEST['customerServicePhone'];
+	$businessInfo->customerServiceEmail = $_REQUEST['customerServiceEmail'];
+	$businessInfo->disputeEmail = $_REQUEST['disputeEmail'];
+	$businessInfo->webSite = $_REQUEST['webSite'];
+	$businessInfo->companyId = $_REQUEST['companyId'];
+	$businessInfo->dateOfEstablishment = $_REQUEST['dateOfEstablishment'];
+	$businessInfo->businessType = $_REQUEST['businessType'];
+	if($businessInfo->businessType == 'ASSOCIATION_GOVERNMENT' || $businessInfo->businessType == "GOVERNMENT") {
+		$businessInfo->businessSubtype = $_REQUEST['businessSubtype'];
+	}
+	$businessInfo->incorporationId = $_REQUEST['incorporationId'];
+	$businessInfo->averagePrice = $_REQUEST['averagePrice'];
+	$businessInfo->averageMonthlyVolume = $_REQUEST['averageMonthlyVolume'];
+	$businessInfo->percentageRevenueFromOnline = $_REQUEST['percentageRevenueFromOnline'];
+	$businessInfo->salesVenue = array($_REQUEST['salesVenue']);
+	$businessInfo->salesVenueDesc = $_REQUEST['salesVenueDesc'];
+	$businessInfo->vatId = $_REQUEST['vatId'];
+	$businessInfo->vatCountryCode = $_REQUEST['vatCountryCode'];
+	$businessInfo->commercialRegistrationLocation  = $_REQUEST['commercialRegistrationLocation'];
+// 	$businessInfo->businessStakeholder = array($businessStakeholder);
 }
 
 $requestEnvelope = new RequestEnvelope("en_US");
@@ -131,7 +133,7 @@ $createAccountRequest->performExtraVettingOnThisAccount = $_POST['performExtraVe
 $createAccountRequest->taxId = $_POST['taxId'];
 
 if($_REQUEST['accountType'] == "Business") {
-	$createAccountRequest->businessInfo = $businssinfo;
+	$createAccountRequest->businessInfo = $businessInfo;
 }
 
 $service  = new AdaptiveAccountsService();

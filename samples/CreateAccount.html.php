@@ -433,19 +433,19 @@
 				<table class="params">
 					<tr>
 						<th>Salutation</th>
-						<th>First Name</th>
-						<th>Last Name</th>
+						<th>First Name</th>						
 						<th>Middle Name</th>
+						<th>Last Name</th>
 						<th>Suffix</th>
 					</tr>
 					<tr>
 						<td><input type="text" name="stakeholderSalutation" value="Mr." />
 						</td>
 						<td><input type="text" name="stakeholderFirstName" value="Krakkel" />
+						</td>						
+						<td><input type="text" name="stakeholderMiddleName" value="" />
 						</td>
-						<td><input type="text" name="stakeholderLastName" value="" /></td>
-						<td><input type="text" name="stakeholderMiddleName" value="Simore" />
-						</td>
+						<td><input type="text" name="stakeholderLastName" value="Simore" /></td>
 						<td><input type="text" name="stakeholderSuffix" value="" /></td>
 					</tr>
 				</table>
