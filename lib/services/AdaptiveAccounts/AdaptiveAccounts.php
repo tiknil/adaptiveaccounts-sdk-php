@@ -2656,5 +2656,3 @@ class CardDateType
 
 
 
-
-?>
