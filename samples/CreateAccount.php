@@ -131,6 +131,10 @@ $createAccountRequest->partnerField5 = $_REQUEST['partnerField5'];
 $createAccountRequest->suppressWelcomeEmail = $_POST['suppressWelcomeEmail'];
 $createAccountRequest->performExtraVettingOnThisAccount = $_POST['performExtraVettingOnThisAccount'];
 $createAccountRequest->taxId = $_POST['taxId'];
+if(isset($_REQUEST['notificationURL']))
+{
+$createAccountRequest->notificationURL = $_REQUEST['notificationURL'];
+}
 
 if($_REQUEST['accountType'] == "Business") {
 	$createAccountRequest->businessInfo = $businessInfo;

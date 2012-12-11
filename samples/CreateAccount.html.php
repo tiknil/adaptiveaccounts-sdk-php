@@ -140,6 +140,12 @@
 					</div>
 				</div>
 				<div class="params">
+					<div class="param_name">Notification URL</div>
+					<div class="param_value">
+						<input type="text" name="notificationURL" value="" />
+					</div>
+				</div>
+				<div class="params">
 					<div class="param_name">Show "Add CreditCard"</div>
 					<div class="param_value">
 						<input type="text" name="showAddCreditCard" value="true" />
