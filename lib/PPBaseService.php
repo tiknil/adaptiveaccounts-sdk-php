@@ -32,12 +32,38 @@ class PPBaseService {
 	public function getAccessToken() {
 		return $this->accessToken;
 	}
-	public function setAccessToken($accessToken) {
+	/**
+	 * @deprecated
+	 * For using third party token permissions, 
+	 * create a ICredential object and pass it to the
+	 * call() method instead. 
+	 *
+	 *<pre>
+	 * $service = new *Service();
+	 * $cred = new PPSignatureCredential("username", "password", "signature");
+	 * $cred->setThirdPartyAuthorization(new PPTokenAuthorization("accessToken", "tokenSecret"));
+	 * $service->SomeOperation($reqObject, $cred); 
+	 *</pre>	 
+	 */
+ 	public function setAccessToken($accessToken) {
 		$this->accessToken = $accessToken;
 	}
 	public function getTokenSecret() {
 		return $this->tokenSecret;
 	}
+	/**
+	 * @deprecated
+	 * For using third party token permissions, 
+	 * create a ICredential object and pass it to the
+	 * call() method instead. 
+	 *
+	 *<pre>
+	 * $service = new *Service();
+	 * $cred = new PPSignatureCredential("username", "password", "signature");
+	 * $cred->setThirdPartyAuthorization(new PPTokenAuthorization("accessToken", "tokenSecret"));
+	 * $service->SomeOperation($reqObject, $cred); 
+	 *</pre>	 
+	 */
 	public function setTokenSecret($tokenSecret) {
 		$this->tokenSecret = $tokenSecret;
 	}
@@ -60,8 +86,8 @@ class PPBaseService {
 	 * 		a username configured in sdk_config.ini or a ICredential object
 	 *      created dynamically 		
 	 */
-	public function call($method, $requestObject, $apiCredential = null) {		
-		$service = new PPAPIService($this->serviceName, 
+	public function call($port, $method, $requestObject, $apiCredential = null) {		
+		$service = new PPAPIService($port, $this->serviceName, 
 				$this->serviceBinding, $this->handlers);		
 		$ret = $service->makeRequest($method, $requestObject, $apiCredential,
 				$this->accessToken, $this->tokenSecret);
@@ -70,4 +96,3 @@ class PPBaseService {
 		return $this->lastResponse;
 	}
 }
-?>
