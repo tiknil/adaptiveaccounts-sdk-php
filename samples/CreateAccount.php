@@ -131,6 +131,11 @@ $createAccountRequest->partnerField5 = $_REQUEST['partnerField5'];
 $createAccountRequest->suppressWelcomeEmail = $_POST['suppressWelcomeEmail'];
 $createAccountRequest->performExtraVettingOnThisAccount = $_POST['performExtraVettingOnThisAccount'];
 $createAccountRequest->taxId = $_POST['taxId'];
+
+$clientDetails = new ClientDetailsType();
+$clientDetails->ipAddress = '127.0.0.1';
+$createAccountRequest->clientDetails = $clientDetails;
+
 if(isset($_REQUEST['notificationURL']))
 {
 $createAccountRequest->notificationURL = $_REQUEST['notificationURL'];

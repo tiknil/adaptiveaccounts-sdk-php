@@ -14,10 +14,10 @@ class AdaptiveAccountsService extends PPBaseService {
 	private static $SERVICE_NAME = "AdaptiveAccounts";
 
     // SDK Name
-	private static $SDK_NAME = "adaptiveaccounts-php-sdk";
+	private static $SDK_NAME = "sdkname";
 	
 	// SDK Version
-	private static $SDK_VERSION = "2.0.96";
+	private static $SDK_VERSION = "sdkversion";
 
 	public function __construct() {
 		parent::__construct(self::$SERVICE_NAME, 'NV', array('PPPlatformServiceHandler'));
@@ -35,7 +35,7 @@ class AdaptiveAccountsService extends PPBaseService {
 	 */
 	public function CreateAccount($createAccountRequest, $apiCredential = NULL) {
 		$ret = new CreateAccountResponse();
-		$resp = $this->call("CreateAccount", $createAccountRequest, $apiCredential);
+		$resp = $this->call('AdaptiveAccounts', 'CreateAccount', $createAccountRequest, $apiCredential);
 		$ret->init(PPUtils::nvpToMap($resp));
 		return $ret;
 	}
@@ -52,7 +52,7 @@ class AdaptiveAccountsService extends PPBaseService {
 	 */
 	public function GetUserAgreement($getUserAgreementRequest, $apiCredential = NULL) {
 		$ret = new GetUserAgreementResponse();
-		$resp = $this->call("GetUserAgreement", $getUserAgreementRequest, $apiCredential);
+		$resp = $this->call('AdaptiveAccounts', 'GetUserAgreement', $getUserAgreementRequest, $apiCredential);
 		$ret->init(PPUtils::nvpToMap($resp));
 		return $ret;
 	}
@@ -69,7 +69,7 @@ class AdaptiveAccountsService extends PPBaseService {
 	 */
 	public function GetVerifiedStatus($getVerifiedStatusRequest, $apiCredential = NULL) {
 		$ret = new GetVerifiedStatusResponse();
-		$resp = $this->call("GetVerifiedStatus", $getVerifiedStatusRequest, $apiCredential);
+		$resp = $this->call('AdaptiveAccounts', 'GetVerifiedStatus', $getVerifiedStatusRequest, $apiCredential);
 		$ret->init(PPUtils::nvpToMap($resp));
 		return $ret;
 	}
@@ -86,7 +86,7 @@ class AdaptiveAccountsService extends PPBaseService {
 	 */
 	public function AddBankAccount($addBankAccountRequest, $apiCredential = NULL) {
 		$ret = new AddBankAccountResponse();
-		$resp = $this->call("AddBankAccount", $addBankAccountRequest, $apiCredential);
+		$resp = $this->call('AdaptiveAccounts', 'AddBankAccount', $addBankAccountRequest, $apiCredential);
 		$ret->init(PPUtils::nvpToMap($resp));
 		return $ret;
 	}
@@ -103,7 +103,7 @@ class AdaptiveAccountsService extends PPBaseService {
 	 */
 	public function AddPaymentCard($addPaymentCardRequest, $apiCredential = NULL) {
 		$ret = new AddPaymentCardResponse();
-		$resp = $this->call("AddPaymentCard", $addPaymentCardRequest, $apiCredential);
+		$resp = $this->call('AdaptiveAccounts', 'AddPaymentCard', $addPaymentCardRequest, $apiCredential);
 		$ret->init(PPUtils::nvpToMap($resp));
 		return $ret;
 	}
@@ -120,7 +120,7 @@ class AdaptiveAccountsService extends PPBaseService {
 	 */
 	public function SetFundingSourceConfirmed($setFundingSourceConfirmedRequest, $apiCredential = NULL) {
 		$ret = new SetFundingSourceConfirmedResponse();
-		$resp = $this->call("SetFundingSourceConfirmed", $setFundingSourceConfirmedRequest, $apiCredential);
+		$resp = $this->call('AdaptiveAccounts', 'SetFundingSourceConfirmed', $setFundingSourceConfirmedRequest, $apiCredential);
 		$ret->init(PPUtils::nvpToMap($resp));
 		return $ret;
 	}
@@ -137,7 +137,7 @@ class AdaptiveAccountsService extends PPBaseService {
 	 */
 	public function CheckComplianceStatus($checkComplianceStatusRequest, $apiCredential = NULL) {
 		$ret = new CheckComplianceStatusResponse();
-		$resp = $this->call("CheckComplianceStatus", $checkComplianceStatusRequest, $apiCredential);
+		$resp = $this->call('AdaptiveAccounts', 'CheckComplianceStatus', $checkComplianceStatusRequest, $apiCredential);
 		$ret->init(PPUtils::nvpToMap($resp));
 		return $ret;
 	}
@@ -154,7 +154,7 @@ class AdaptiveAccountsService extends PPBaseService {
 	 */
 	public function AddPartnerFinancialProduct($addPartnerFinancialProductRequest, $apiCredential = NULL) {
 		$ret = new AddPartnerFinancialProductResponse();
-		$resp = $this->call("AddPartnerFinancialProduct", $addPartnerFinancialProductRequest, $apiCredential);
+		$resp = $this->call('AdaptiveAccounts', 'AddPartnerFinancialProduct', $addPartnerFinancialProductRequest, $apiCredential);
 		$ret->init(PPUtils::nvpToMap($resp));
 		return $ret;
 	}
@@ -171,7 +171,7 @@ class AdaptiveAccountsService extends PPBaseService {
 	 */
 	public function ActivateProduct($activateProductRequest, $apiCredential = NULL) {
 		$ret = new ActivateProductResponse();
-		$resp = $this->call("ActivateProduct", $activateProductRequest, $apiCredential);
+		$resp = $this->call('AdaptiveAccounts', 'ActivateProduct', $activateProductRequest, $apiCredential);
 		$ret->init(PPUtils::nvpToMap($resp));
 		return $ret;
 	}
