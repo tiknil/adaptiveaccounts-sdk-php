@@ -1375,7 +1375,7 @@ class AddPaymentCardRequest
 	public $startDate;
 
 	/**
-	 * Up to 2 digit for Switch/Maestro/Solo cards. 
+	 * Up to 2 digit for Switch/Maestro cards. 
 	 * @access public
 	 
 	 	 	 	 
@@ -1584,7 +1584,7 @@ class AddPartnerFinancialProductRequest
 	public $startDate;
 
 	/**
-	 * Up to 2 digit for Switch/Maestro/Solo cards. 
+	 * Up to 2 digit for Switch/Maestro cards. 
 	 * @access public
 	 
 	 	 	 	 
@@ -2135,6 +2135,21 @@ class CreateAccountWebOptionsType
 	 * @var string 	 
 	 */ 
 	public $reminderEmailFrequency;
+
+	/**
+	 * Indicates if the Return URL is used to confirm email. On
+	 * accessing the Return URL successfully, confirm the email if
+	 * this parameter is true, otherwise, do not confirm the email.
+	 * Used only when registrationType is Web. Valid values (mixed
+	 * case): true: Append the Email Confirmation Code to the
+	 * Return URL. false: Do not append the Email Confirmation Code
+	 * to the Return URL. 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $confirmEmail;
 
 
 }
