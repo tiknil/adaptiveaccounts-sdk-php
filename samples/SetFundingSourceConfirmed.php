@@ -1,9 +1,5 @@
 <?php
-$path = '../lib';
-set_include_path(get_include_path() . PATH_SEPARATOR . $path);
-require_once('services/AdaptiveAccounts/AdaptiveAccountsService.php');
-require_once('PPLoggingManager.php');
-require_once('Common/Constants.php');
+require_once('PPBootStrap.php');
 
 $logger = new PPLoggingManager('SetFundingSourceConfirmed');
 $setFundingSourceConfirmed = new SetFundingSourceConfirmedRequest();
