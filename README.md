@@ -11,23 +11,21 @@ PayPal's PHP Adaptive Accounts SDK requires
   
 Installing the SDK
 -------------------
-   if using composer 
+   if not using composer 
    
-   Run from commandline and after the installation set the path to config file in PPBootStrap.php, config file is in vendor/paypal/adaptiveaccounts-sdk-php/config/
-   
-    curl  https://raw.github.com/paypal/adaptiveaccounts-sdk-php/composer/samples/install.php | php
-     
-   or run this command from adaptiveaccounts-sdk-php/samples directory and after the installation set the path to config file in PPBootStrap.php, config file is in vendor/paypal/adaptiveaccounts-sdk-php/config/
-    
-    composer update
-   
-   if not using composer
+   run installation script from adaptiveaccounts-sdk-php/samples directory
    
     curl  https://raw.github.com/paypal/adaptiveaccounts-sdk-php/composer/samples/install.php | php
     
-   or run this command from adaptiveaccounts-sdk-php/samples directory
-   
+        or 
+        
     php install.php
+    
+   if using composer
+   
+   Run from adaptiveaccounts-sdk-php/samples directory and after the installation set the path to config file in PPBootStrap.php, config file is in vendor/paypal/adaptiveaccounts-sdk-php/config/
+   
+    composer update
     
 Using the SDK
 -------------
