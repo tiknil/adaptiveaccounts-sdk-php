@@ -1,6 +1,4 @@
 <?php 
-require_once 'PPBaseService.php';
-require_once 'AdaptiveAccounts.php';
 
 /**
  * AUTO GENERATED code for AdaptiveAccounts
@@ -8,19 +6,21 @@ require_once 'AdaptiveAccounts.php';
 class AdaptiveAccountsService extends PPBaseService {
 
 	// Service Version
-	private static $SERVICE_VERSION = "1.0.3";
+	private static $SERVICE_VERSION = "1.0.4";
 
 	// Service Name
 	private static $SERVICE_NAME = "AdaptiveAccounts";
 
     // SDK Name
-	protected static $SDK_NAME = "adaptiveaccounts-php-sdk";
+	protected static $SDK_NAME = "sdkname";
 	
 	// SDK Version
-	protected static $SDK_VERSION = "2.1.96";
+	protected static $SDK_VERSION = "sdkversion";
 
 	public function __construct() {
 		parent::__construct(self::$SERVICE_NAME, 'NV', array('PPPlatformServiceHandler'));
+        parent::$SDK_NAME    = self::$SDK_NAME ;
+        parent::$SDK_VERSION = self::$SDK_VERSION;
 	}
 
 
@@ -172,6 +172,23 @@ class AdaptiveAccountsService extends PPBaseService {
 	public function ActivateProduct($activateProductRequest, $apiCredential = NULL) {
 		$ret = new ActivateProductResponse();
 		$resp = $this->call('AdaptiveAccounts', 'ActivateProduct', $activateProductRequest, $apiCredential);
+		$ret->init(PPUtils::nvpToMap($resp));
+		return $ret;
+	}
+	 
+
+	/**
+	 * Service Call: UpdateComplianceStatus
+	 * @param UpdateComplianceStatusRequest $updateComplianceStatusRequest
+	 * @param mixed $apiCredential - Optional API credential - can either be
+	 * 		a username configured in sdk_config.ini or a ICredential object
+	 *      created dynamically 		
+	 * @return UpdateComplianceStatusResponse
+	 * @throws APIException
+	 */
+	public function UpdateComplianceStatus($updateComplianceStatusRequest, $apiCredential = NULL) {
+		$ret = new UpdateComplianceStatusResponse();
+		$resp = $this->call('AdaptiveAccounts', 'UpdateComplianceStatus', $updateComplianceStatusRequest, $apiCredential);
 		$ret->init(PPUtils::nvpToMap($resp));
 		return $ret;
 	}

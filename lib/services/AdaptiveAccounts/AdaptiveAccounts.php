@@ -4,8 +4,6 @@
   * Auto generated code 
   * 
   */
-require_once 'PPUtils.php';
-require_once 'PPMessage.php';	
 /**
  * This type contains the detailed error information resulting
  * from the service operation. 
@@ -1929,6 +1927,103 @@ class ActivateProductResponse
  * 
  */
  
+class UpdateComplianceStatusRequest  
+  extends PPMessage   {
+
+	/**
+	 * 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var RequestEnvelope 	 
+	 */ 
+	public $requestEnvelope;
+
+	/**
+	 * 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var AuditeeInfoType 	 
+	 */ 
+	public $auditeeInfo;
+
+	/**
+	 * 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var AuditorList 	 
+	 */ 
+	public $auditorList;
+
+	/**
+	 * 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var AuditDetailsType 	 
+	 */ 
+	public $auditDetails;
+
+	/**
+	 * Constructor with arguments
+	 */
+	public function __construct($requestEnvelope = NULL, $auditeeInfo = NULL, $auditDetails = NULL) {
+		$this->requestEnvelope = $requestEnvelope;
+		$this->auditeeInfo = $auditeeInfo;
+		$this->auditDetails = $auditDetails;
+	}
+
+
+}
+
+
+
+/**
+ * 
+ */
+ 
+class UpdateComplianceStatusResponse  
+  extends PPMessage   {
+
+	/**
+	 * 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var ResponseEnvelope 	 
+	 */ 
+	public $responseEnvelope;
+
+	/**
+	 * 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $execStatus;
+
+	/**
+	 * 
+     * @array
+	 * @access public
+	 
+	 	 	 	 
+	 * @var ErrorData 	 
+	 */ 
+	public $error;
+
+
+}
+
+
+
+/**
+ * 
+ */
+ 
 class NameType  
   extends PPMessage   {
 
@@ -2649,6 +2744,275 @@ class CardDateType
 	public function __construct($month = NULL, $year = NULL) {
 		$this->month = $month;
 		$this->year = $year;
+	}
+
+
+}
+
+
+
+/**
+ * 
+ */
+ 
+class Auditor  
+  extends PPMessage   {
+
+	/**
+	 * 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $id;
+
+	/**
+	 * 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $name;
+
+	/**
+	 * 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $action;
+
+	/**
+	 * 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $notes;
+
+	/**
+	 * Constructor with arguments
+	 */
+	public function __construct($id = NULL, $name = NULL, $action = NULL) {
+		$this->id = $id;
+		$this->name = $name;
+		$this->action = $action;
+	}
+
+
+}
+
+
+
+/**
+ * 
+ */
+ 
+class TupleType  
+  extends PPMessage   {
+
+	/**
+	 * 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $name;
+
+	/**
+	 * 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $value;
+
+	/**
+	 * Constructor with arguments
+	 */
+	public function __construct($name = NULL, $value = NULL) {
+		$this->name = $name;
+		$this->value = $value;
+	}
+
+
+}
+
+
+
+/**
+ * 
+ */
+ 
+class DocumentType  
+  extends PPMessage   {
+
+	/**
+	 * 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $type;
+
+	/**
+	 * 
+     * @array
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $filename;
+
+	/**
+	 * Constructor with arguments
+	 */
+	public function __construct($type = NULL, $filename = NULL) {
+		$this->type = $type;
+		$this->filename = $filename;
+	}
+
+
+}
+
+
+
+/**
+ * 
+ */
+ 
+class AuditorList  
+  extends PPMessage   {
+
+	/**
+	 * 
+     * @array
+	 * @access public
+	 
+	 	 	 	 
+	 * @var Auditor 	 
+	 */ 
+	public $auditor;
+
+	/**
+	 * Constructor with arguments
+	 */
+	public function __construct($auditor = NULL) {
+		$this->auditor = $auditor;
+	}
+
+
+}
+
+
+
+/**
+ * 
+ */
+ 
+class AuditeeInfoType  
+  extends PPMessage   {
+
+	/**
+	 * 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var AccountIdentifierType 	 
+	 */ 
+	public $accountIdentifier;
+
+	/**
+	 * 
+     * @array
+	 * @access public
+	 
+	 	 	 	 
+	 * @var DocumentType 	 
+	 */ 
+	public $document;
+
+	/**
+	 * 
+     * @array
+	 * @access public
+	 
+	 	 	 	 
+	 * @var TupleType 	 
+	 */ 
+	public $data;
+
+	/**
+	 * Constructor with arguments
+	 */
+	public function __construct($accountIdentifier = NULL) {
+		$this->accountIdentifier = $accountIdentifier;
+	}
+
+
+}
+
+
+
+/**
+ * 
+ */
+ 
+class AuditDetailsType  
+  extends PPMessage   {
+
+	/**
+	 * 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $status;
+
+	/**
+	 * 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $level;
+
+	/**
+	 * 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $method;
+
+	/**
+	 * 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $reason;
+
+	/**
+	 * Constructor with arguments
+	 */
+	public function __construct($status = NULL, $level = NULL, $method = NULL, $reason = NULL) {
+		$this->status = $status;
+		$this->level = $level;
+		$this->method = $method;
+		$this->reason = $reason;
 	}
 
 
