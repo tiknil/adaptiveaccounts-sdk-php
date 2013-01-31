@@ -8,7 +8,7 @@
  * This type contains the detailed error information resulting
  * from the service operation. 
  */
-if(!class_exists('ErrorData')) {
+if(!class_exists('ErrorData', false)) {
 class ErrorData  
   extends PPMessage   {
 
@@ -95,7 +95,7 @@ class ErrorData
  * @hasAttribute
  * 
  */
-if(!class_exists('ErrorParameter')) {
+if(!class_exists('ErrorParameter', false)) {
 class ErrorParameter  
   extends PPMessage   {
 
@@ -131,7 +131,7 @@ class ErrorParameter
  * This specifies the list of parameters with every request to
  * the service. 
  */
-if(!class_exists('RequestEnvelope')) {
+if(!class_exists('RequestEnvelope', false)) {
 class RequestEnvelope  
   extends PPMessage   {
 
@@ -168,7 +168,7 @@ class RequestEnvelope
  * This specifies a list of parameters with every response from
  * a service. 
  */
-if(!class_exists('ResponseEnvelope')) {
+if(!class_exists('ResponseEnvelope', false)) {
 class ResponseEnvelope  
   extends PPMessage   {
 
@@ -218,7 +218,7 @@ class ResponseEnvelope
  * This elements in this type refers to the end user of the
  * application invoking this service. 
  */
-if(!class_exists('ClientDetailsType')) {
+if(!class_exists('ClientDetailsType', false)) {
 class ClientDetailsType  
   extends PPMessage   {
 
@@ -304,7 +304,7 @@ class ClientDetailsType
  * This specifies a fault, encapsulating error data, with
  * specific error codes. 
  */
-if(!class_exists('FaultMessage')) {
+if(!class_exists('FaultMessage', false)) {
 class FaultMessage  
   extends PPMessage   {
 
