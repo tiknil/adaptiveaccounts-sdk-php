@@ -8,7 +8,7 @@
  * This type contains the detailed error information resulting
  * from the service operation. 
  */
- 
+if(!class_exists('ErrorData')) {
 class ErrorData  
   extends PPMessage   {
 
@@ -87,6 +87,7 @@ class ErrorData
 
 
 }
+}
 
 
 
@@ -94,7 +95,7 @@ class ErrorData
  * @hasAttribute
  * 
  */
- 
+if(!class_exists('ErrorParameter')) {
 class ErrorParameter  
   extends PPMessage   {
 
@@ -122,6 +123,7 @@ class ErrorParameter
 
 
 }
+}
 
 
 
@@ -129,7 +131,7 @@ class ErrorParameter
  * This specifies the list of parameters with every request to
  * the service. 
  */
- 
+if(!class_exists('RequestEnvelope')) {
 class RequestEnvelope  
   extends PPMessage   {
 
@@ -158,6 +160,7 @@ class RequestEnvelope
 
 
 }
+}
 
 
 
@@ -165,7 +168,7 @@ class RequestEnvelope
  * This specifies a list of parameters with every response from
  * a service. 
  */
- 
+if(!class_exists('ResponseEnvelope')) {
 class ResponseEnvelope  
   extends PPMessage   {
 
@@ -207,6 +210,7 @@ class ResponseEnvelope
 
 
 }
+}
 
 
 
@@ -214,7 +218,7 @@ class ResponseEnvelope
  * This elements in this type refers to the end user of the
  * application invoking this service. 
  */
- 
+if(!class_exists('ClientDetailsType')) {
 class ClientDetailsType  
   extends PPMessage   {
 
@@ -292,6 +296,7 @@ class ClientDetailsType
 
 
 }
+}
 
 
 
@@ -299,7 +304,7 @@ class ClientDetailsType
  * This specifies a fault, encapsulating error data, with
  * specific error codes. 
  */
- 
+if(!class_exists('FaultMessage')) {
 class FaultMessage  
   extends PPMessage   {
 
@@ -324,6 +329,7 @@ class FaultMessage
 
 
 }
+}
 
 
 
@@ -332,7 +338,6 @@ class FaultMessage
  * targeted. Caller of this API has to provide ONLY one of
  * these inputs: emailAddress, accountId or phoneNumber. 
  */
- 
 class AccountIdentifierType  
   extends PPMessage   {
 
@@ -382,7 +387,6 @@ class AccountIdentifierType
  * corresponds to java.util.regex.Pattern.CASE_INSENSITIVE,
  * meaning the strings are not case-sensitive 
  */
- 
 class CreateAccountRequest  
   extends PPMessage   {
 
@@ -637,7 +641,6 @@ class CreateAccountRequest
 /**
  * Valid values are: COMPLETED 
  */
- 
 class CreateAccountResponse  
   extends PPMessage   {
 
@@ -705,7 +708,6 @@ class CreateAccountResponse
 /**
  * 
  */
- 
 class GetUserAgreementRequest  
   extends PPMessage   {
 
@@ -760,7 +762,6 @@ class GetUserAgreementRequest
 /**
  * 
  */
- 
 class GetUserAgreementResponse  
   extends PPMessage   {
 
@@ -802,7 +803,6 @@ class GetUserAgreementResponse
  * emailAddress is used to locate the account. Currently, we
  * support matchCriteria of 'NAME' and 'NONE'. 
  */
- 
 class GetVerifiedStatusRequest  
   extends PPMessage   {
 
@@ -872,7 +872,6 @@ class GetVerifiedStatusRequest
 /**
  * Returned values are: VERIFIED|UNVERIFIED. 
  */
- 
 class GetVerifiedStatusResponse  
   extends PPMessage   {
 
@@ -933,7 +932,6 @@ class GetVerifiedStatusResponse
  * targetted to. Caller of this API has to either provided an
  * emailAddress or an accountId. 
  */
- 
 class AddBankAccountRequest  
   extends PPMessage   {
 
@@ -1194,7 +1192,6 @@ class AddBankAccountRequest
  * Valid values are: FUNDING_SOURCE_ADDED,
  * WEB_URL_VERIFICATION_NEEDED 
  */
- 
 class AddBankAccountResponse  
   extends PPMessage   {
 
@@ -1255,7 +1252,6 @@ class AddBankAccountResponse
  * targetted to. Caller of this API has to either provided an
  * emailAddress or an accountId. 
  */
- 
 class AddPaymentCardRequest  
   extends PPMessage   {
 
@@ -1420,7 +1416,6 @@ class AddPaymentCardRequest
  * Valid values are: FUNDING_SOURCE_ADDED,
  * WEB_URL_VERIFICATION_NEEDED 
  */
- 
 class AddPaymentCardResponse  
   extends PPMessage   {
 
@@ -1480,7 +1475,6 @@ class AddPaymentCardResponse
  * This not considered when
  * financialProductCategory=PRE_PAID_CARD 
  */
- 
 class AddPartnerFinancialProductRequest  
   extends PPMessage   {
 
@@ -1609,7 +1603,6 @@ class AddPartnerFinancialProductRequest
 /**
  * Valid values are: CARD_ADDED 
  */
- 
 class AddPartnerFinancialProductResponse  
   extends PPMessage   {
 
@@ -1651,7 +1644,6 @@ class AddPartnerFinancialProductResponse
  * targetted to. Caller of this API has to either provided an
  * emailAddress or an accountId. 
  */
- 
 class SetFundingSourceConfirmedRequest  
   extends PPMessage   {
 
@@ -1711,7 +1703,6 @@ class SetFundingSourceConfirmedRequest
 /**
  * 
  */
- 
 class SetFundingSourceConfirmedResponse  
   extends PPMessage   {
 
@@ -1744,7 +1735,6 @@ class SetFundingSourceConfirmedResponse
  * targeted. Caller of this API has to provide ONLY one of
  * these inputs: emailAddress, accountId or phoneNumber. 
  */
- 
 class CheckComplianceStatusRequest  
   extends PPMessage   {
 
@@ -1784,7 +1774,6 @@ class CheckComplianceStatusRequest
 /**
  * Returned values are: ALLOW|DENY 
  */
- 
 class CheckComplianceStatusResponse  
   extends PPMessage   {
 
@@ -1836,7 +1825,6 @@ class CheckComplianceStatusResponse
  * This operation is for internal purposes developed for a POC.
  * 
  */
- 
 class ActivateProductRequest  
   extends PPMessage   {
 
@@ -1876,7 +1864,6 @@ class ActivateProductRequest
 /**
  * Valid values are: SUCCESS, FAILED 
  */
- 
 class ActivateProductResponse  
   extends PPMessage   {
 
@@ -1926,7 +1913,6 @@ class ActivateProductResponse
 /**
  * 
  */
- 
 class UpdateComplianceStatusRequest  
   extends PPMessage   {
 
@@ -1983,7 +1969,6 @@ class UpdateComplianceStatusRequest
 /**
  * 
  */
- 
 class UpdateComplianceStatusResponse  
   extends PPMessage   {
 
@@ -2023,7 +2008,6 @@ class UpdateComplianceStatusResponse
 /**
  * 
  */
- 
 class NameType  
   extends PPMessage   {
 
@@ -2088,7 +2072,6 @@ class NameType
 /**
  * 
  */
- 
 class AddressType  
   extends PPMessage   {
 
@@ -2164,7 +2147,6 @@ class AddressType
  * phone. This number must be supplied by the API caller (using
  * mobilePhoneNumber) Default=false. 
  */
- 
 class CreateAccountWebOptionsType  
   extends PPMessage   {
 
@@ -2254,7 +2236,6 @@ class CreateAccountWebOptionsType
 /**
  * PayPal Business Category. i.e., baby - 1004 
  */
- 
 class BusinessInfoType  
   extends PPMessage   {
 
@@ -2544,7 +2525,6 @@ class BusinessInfoType
  * Info about Stakeholders such as partner, beneficial, owner,
  * director etc. 
  */
- 
 class BusinessStakeholderType  
   extends PPMessage   {
 
@@ -2609,7 +2589,6 @@ class BusinessStakeholderType
  * Info about PayPal user such as emailAddress, accountId,
  * firstName, lastName etc. 
  */
- 
 class UserInfoType  
   extends PPMessage   {
 
@@ -2668,7 +2647,6 @@ class UserInfoType
 /**
  * 
  */
- 
 class WebOptionsType  
   extends PPMessage   {
 
@@ -2716,7 +2694,6 @@ class WebOptionsType
 /**
  * Month in integer format, between 1 and 12 
  */
- 
 class CardDateType  
   extends PPMessage   {
 
@@ -2754,7 +2731,6 @@ class CardDateType
 /**
  * 
  */
- 
 class Auditor  
   extends PPMessage   {
 
@@ -2811,7 +2787,6 @@ class Auditor
 /**
  * 
  */
- 
 class TupleType  
   extends PPMessage   {
 
@@ -2849,7 +2824,6 @@ class TupleType
 /**
  * 
  */
- 
 class DocumentType  
   extends PPMessage   {
 
@@ -2888,7 +2862,6 @@ class DocumentType
 /**
  * 
  */
- 
 class AuditorList  
   extends PPMessage   {
 
@@ -2917,7 +2890,6 @@ class AuditorList
 /**
  * 
  */
- 
 class AuditeeInfoType  
   extends PPMessage   {
 
@@ -2965,7 +2937,6 @@ class AuditeeInfoType
 /**
  * 
  */
- 
 class AuditDetailsType  
   extends PPMessage   {
 
