@@ -3,7 +3,7 @@ require_once('PPBootStrap.php');
 
 $logger = new PPLoggingManager('GetVerifiedStatus');
 $getVerifiedStatus = new GetVerifiedStatusRequest();
-$getVerifiedStatus->emailAddress = $_REQUEST['emailAddress'];
+$getVerifiedStatus->accountIdentifier->emailAddress = $_REQUEST['emailAddress'];
 $getVerifiedStatus->firstName = $_REQUEST['firstName'];
 $getVerifiedStatus->lastName = $_REQUEST['lastName'];
 $getVerifiedStatus->matchCriteria = $_REQUEST['matchCriteria'];
