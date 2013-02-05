@@ -357,7 +357,7 @@ class AccountIdentifierType
 	 	 	 	 
 	 * @var string 	 
 	 */ 
-	public $phoneNumber;
+	public $mobilePhoneNumber;
 
 	/**
 	 * Identifies the PayPal account based on the accountId. 
@@ -371,9 +371,9 @@ class AccountIdentifierType
 	/**
 	 * Constructor with arguments
 	 */
-	public function __construct($emailAddress = NULL, $phoneNumber = NULL, $accountId = NULL) {
+	public function __construct($emailAddress = NULL, $mobilePhoneNumber = NULL, $accountId = NULL) {
 		$this->emailAddress = $emailAddress;
-		$this->phoneNumber = $phoneNumber;
+		$this->mobilePhoneNumber = $mobilePhoneNumber;
 		$this->accountId = $accountId;
 	}
 
@@ -799,9 +799,7 @@ class GetUserAgreementResponse
 
 
 /**
- * matchCriteria determines which field(s) in addition to
- * emailAddress is used to locate the account. Currently, we
- * support matchCriteria of 'NAME' and 'NONE'. 
+ * Deprecated, use accountIdentifier.emailAddress instead 
  */
 class GetVerifiedStatusRequest  
   extends PPMessage   {
@@ -816,13 +814,24 @@ class GetVerifiedStatusRequest
 	public $requestEnvelope;
 
 	/**
-	 * 
+	 * Deprecated, use accountIdentifier.emailAddress instead 
 	 * @access public
 	 
 	 	 	 	 
 	 * @var string 	 
 	 */ 
 	public $emailAddress;
+
+	/**
+	 * Identifies a PayPal account to which this request is
+	 * targeted. Caller of this API has to provide ONLY one of
+	 * these inputs: emailAddress, accountId or mobilePhoneNumber. 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var AccountIdentifierType 	 
+	 */ 
+	public $accountIdentifier;
 
 	/**
 	 * matchCriteria determines which field(s) in addition to
@@ -858,9 +867,8 @@ class GetVerifiedStatusRequest
 	/**
 	 * Constructor with arguments
 	 */
-	public function __construct($requestEnvelope = NULL, $emailAddress = NULL, $matchCriteria = NULL) {
+	public function __construct($requestEnvelope = NULL, $matchCriteria = NULL) {
 		$this->requestEnvelope = $requestEnvelope;
-		$this->emailAddress = $emailAddress;
 		$this->matchCriteria = $matchCriteria;
 	}
 

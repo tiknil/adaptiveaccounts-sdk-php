@@ -6,7 +6,7 @@
 class AdaptiveAccountsService extends PPBaseService {
 
 	// Service Version
-	private static $SERVICE_VERSION = "1.0.4";
+	private static $SERVICE_VERSION = "1.1.0";
 
 	// Service Name
 	private static $SERVICE_NAME = "AdaptiveAccounts";
