@@ -1,7 +1,6 @@
 <?php
 require_once('PPBootStrap.php');
 
-$logger = new PPLoggingManager('GetUserAgreement');
 
 $getUserAgreement = new GetUserAgreementRequest();
 $getUserAgreement->countryCode  = $_REQUEST['countryCode'];

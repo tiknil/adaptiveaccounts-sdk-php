@@ -1,7 +1,6 @@
 <?php
 require_once('PPBootStrap.php');
 
-$logger = new PPLoggingManager('GetVerifiedStatus');
 $getVerifiedStatus = new GetVerifiedStatusRequest();
 $accountIdentifier=new AccountIdentifierType();
 $accountIdentifier->emailAddress = $_REQUEST['emailAddress'];

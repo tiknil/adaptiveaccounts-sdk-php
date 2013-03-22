@@ -2,8 +2,6 @@
 require_once('PPBootStrap.php');
 
 
-$logger = new PPLoggingManager('AddBankAccount');
-
 $addBankAccount = new AddBankAccountRequest();
 $addBankAccount->accountId = $_REQUEST['accountID'];
 $addBankAccount->emailAddress = $_REQUEST['emailAddress'];

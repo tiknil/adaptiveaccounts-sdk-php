@@ -1,7 +1,6 @@
 <?php
 require_once('PPBootStrap.php');
 
-$logger = new PPLoggingManager('SetFundingSourceConfirmed');
 $setFundingSourceConfirmed = new SetFundingSourceConfirmedRequest();
 $setFundingSourceConfirmed->accountId = $_REQUEST['accountId'];
 $setFundingSourceConfirmed->emailAddress = $_REQUEST['emailAddress'];

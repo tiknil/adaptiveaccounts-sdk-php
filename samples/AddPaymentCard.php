@@ -1,7 +1,6 @@
 <?php
 require_once('PPBootStrap.php');
 
-$logger = new PPLoggingManager('AddPaymentCard');
 
 $nameOnCard = new NameType();
 $nameOnCard->firstName  = $_REQUEST['firstName'];

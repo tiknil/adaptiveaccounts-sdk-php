@@ -8,7 +8,6 @@ Called by CreateAccount.html.php
 require_once('PPBootStrap.php');
 session_start();
 
-$logger = new PPLoggingManager('CreateAccount');
 
 $serverName = $_SERVER['SERVER_NAME'];
 $serverPort = $_SERVER['SERVER_PORT'];
@@ -148,7 +147,6 @@ try {
 	require_once 'Common/Error.php';
 	exit;
 }	
-$logger->log("Received CreateAccount Response:");
 $ack = strtoupper($response->responseEnvelope->ack);
 if($ack != "SUCCESS"){
 	echo "<b>Error </b>";
