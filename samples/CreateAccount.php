@@ -222,8 +222,7 @@ if($_REQUEST['accountType'] == "Business") {
 
 /*
  * ## Creating service wrapper object
-	  Creating service wrapper object to make API call and loading
-	  configuration file for your credentials and endpoint
+	  Creating service wrapper object to make API call 
  */
 $service  = new AdaptiveAccountsService();
 try {
