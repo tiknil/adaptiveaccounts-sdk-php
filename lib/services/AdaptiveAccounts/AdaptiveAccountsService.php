@@ -1,12 +1,12 @@
 <?php 
 
 /**
- *  AUTO GENERATED code for AdaptiveAccounts
+ * AUTO GENERATED code for AdaptiveAccounts
  */
 class AdaptiveAccountsService extends PPBaseService {
 
 	// Service Version
-	private static $SERVICE_VERSION = "1.1.0";
+	private static $SERVICE_VERSION = "1.2.0";
 
 	// Service Name
 	private static $SERVICE_NAME = "AdaptiveAccounts";
@@ -15,10 +15,10 @@ class AdaptiveAccountsService extends PPBaseService {
 	protected static $SDK_NAME = "adaptiveaccounts-php-sdk";
 	
 	// SDK Version
-	protected static $SDK_VERSION = "2.3.100";
+	protected static $SDK_VERSION = "2.3.101";
 
-	public function __construct($config = null) {
-		parent::__construct(self::$SERVICE_NAME, 'NV', array('PPPlatformServiceHandler'), $config);
+	public function __construct() {
+		parent::__construct(self::$SERVICE_NAME, 'NV', array('PPPlatformServiceHandler'));
         parent::$SDK_NAME    = self::$SDK_NAME ;
         parent::$SDK_VERSION = self::$SDK_VERSION;
 	}
