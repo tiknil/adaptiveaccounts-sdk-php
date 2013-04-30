@@ -5,15 +5,15 @@
   * 
   */
 /**
- *  This type contains the detailed error information resulting
- *  from the service operation. 
+ * This type contains the detailed error information resulting
+ * from the service operation. 
  */
 if(!class_exists('ErrorData', false)) {
 class ErrorData  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -22,7 +22,7 @@ class ErrorData
 	public $errorId;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -31,7 +31,7 @@ class ErrorData
 	public $domain;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -40,7 +40,7 @@ class ErrorData
 	public $subdomain;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -49,7 +49,7 @@ class ErrorData
 	public $severity;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -58,7 +58,7 @@ class ErrorData
 	public $category;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -67,7 +67,7 @@ class ErrorData
 	public $message;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -76,7 +76,7 @@ class ErrorData
 	public $exceptionId;
 
 	/**
-	*  
+	 * 
      * @array
 	 * @access public
 	 
@@ -93,14 +93,14 @@ class ErrorData
 
 /**
  * @hasAttribute
- *  
+ * 
  */
 if(!class_exists('ErrorParameter', false)) {
 class ErrorParameter  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 
@@ -111,7 +111,7 @@ class ErrorParameter
 	public $name;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 
@@ -128,19 +128,19 @@ class ErrorParameter
 
 
 /**
- *  This specifies the list of parameters with every request to
- *  the service. 
+ * This specifies the list of parameters with every request to
+ * the service. 
  */
 if(!class_exists('RequestEnvelope', false)) {
 class RequestEnvelope  
   extends PPMessage   {
 
 	/**
-	*  This specifies the required detail level that is needed by a
-	*  client application pertaining to a particular data component
-	*  (e.g., Item, Transaction, etc.). The detail level is
-	*  specified in the DetailLevelCodeType which has all the
-	*  enumerated values of the detail level for each component. 
+	 * This specifies the required detail level that is needed by a
+	 * client application pertaining to a particular data component
+	 * (e.g., Item, Transaction, etc.). The detail level is
+	 * specified in the DetailLevelCodeType which has all the
+	 * enumerated values of the detail level for each component. 
 	 * @access public
 	 
 	 	 	 	 
@@ -149,8 +149,8 @@ class RequestEnvelope
 	public $detailLevel;
 
 	/**
-	*  This should be the standard RFC 3066 language identification
-	*  tag, e.g., en_US. 
+	 * This should be the standard RFC 3066 language identification
+	 * tag, e.g., en_US. 
 	 * @access public
 	 
 	 	 	 	 
@@ -165,15 +165,15 @@ class RequestEnvelope
 
 
 /**
- *  This specifies a list of parameters with every response from
- *  a service. 
+ * This specifies a list of parameters with every response from
+ * a service. 
  */
 if(!class_exists('ResponseEnvelope', false)) {
 class ResponseEnvelope  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -182,7 +182,7 @@ class ResponseEnvelope
 	public $timestamp;
 
 	/**
-	*  Application level acknowledgement code. 
+	 * Application level acknowledgement code. 
 	 * @access public
 	 
 	 	 	 	 
@@ -191,7 +191,7 @@ class ResponseEnvelope
 	public $ack;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -200,7 +200,7 @@ class ResponseEnvelope
 	public $correlationId;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -215,15 +215,15 @@ class ResponseEnvelope
 
 
 /**
- *  This elements in this type refers to the end user of the
- *  application invoking this service. 
+ * This elements in this type refers to the end user of the
+ * application invoking this service. 
  */
 if(!class_exists('ClientDetailsType', false)) {
 class ClientDetailsType  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -232,7 +232,7 @@ class ClientDetailsType
 	public $ipAddress;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -241,7 +241,7 @@ class ClientDetailsType
 	public $deviceId;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -250,7 +250,7 @@ class ClientDetailsType
 	public $applicationId;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -259,7 +259,7 @@ class ClientDetailsType
 	public $model;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -268,7 +268,7 @@ class ClientDetailsType
 	public $geoLocation;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -277,7 +277,7 @@ class ClientDetailsType
 	public $customerType;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -286,7 +286,7 @@ class ClientDetailsType
 	public $partnerName;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -301,15 +301,15 @@ class ClientDetailsType
 
 
 /**
- *  This specifies a fault, encapsulating error data, with
- *  specific error codes. 
+ * This specifies a fault, encapsulating error data, with
+ * specific error codes. 
  */
 if(!class_exists('FaultMessage', false)) {
 class FaultMessage  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -318,7 +318,7 @@ class FaultMessage
 	public $responseEnvelope;
 
 	/**
-	*  
+	 * 
      * @array
 	 * @access public
 	 
@@ -334,15 +334,15 @@ class FaultMessage
 
 
 /**
- *  Identifies a PayPal account to which this request is
- *  targeted. Caller of this API has to provide ONLY one of
- *  these inputs: emailAddress, accountId or phoneNumber. 
+ * Identifies a PayPal account to which this request is
+ * targeted. Caller of this API has to provide ONLY one of
+ * these inputs: emailAddress, accountId or phoneNumber. 
  */
 class AccountIdentifierType  
   extends PPMessage   {
 
 	/**
-	*  Identifies the PayPal account based on the emailAddress. 
+	 * Identifies the PayPal account based on the emailAddress. 
 	 * @access public
 	 
 	 	 	 	 
@@ -351,7 +351,7 @@ class AccountIdentifierType
 	public $emailAddress;
 
 	/**
-	*  Identifies the PayPal account based on the phoneNumber. 
+	 * Identifies the PayPal account based on the phoneNumber. 
 	 * @access public
 	 
 	 	 	 	 
@@ -360,7 +360,7 @@ class AccountIdentifierType
 	public $mobilePhoneNumber;
 
 	/**
-	*  Identifies the PayPal account based on the accountId. 
+	 * Identifies the PayPal account based on the accountId. 
 	 * @access public
 	 
 	 	 	 	 
@@ -383,15 +383,15 @@ class AccountIdentifierType
 
 
 /**
- *  Valid values are: Personal, Premier, and Business. Flag="2"
- *  corresponds to java.util.regex.Pattern.CASE_INSENSITIVE,
- *  meaning the strings are not case-sensitive 
+ * Valid values are: Personal, Premier, and Business. Flag="2"
+ * corresponds to java.util.regex.Pattern.CASE_INSENSITIVE,
+ * meaning the strings are not case-sensitive 
  */
 class CreateAccountRequest  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -400,7 +400,7 @@ class CreateAccountRequest
 	public $requestEnvelope;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -409,9 +409,9 @@ class CreateAccountRequest
 	public $clientDetails;
 
 	/**
-	*  Valid values are: Personal, Premier, and Business. Flag="2"
-	*  corresponds to java.util.regex.Pattern.CASE_INSENSITIVE,
-	*  meaning the strings are not case-sensitive 
+	 * Valid values are: Personal, Premier, and Business. Flag="2"
+	 * corresponds to java.util.regex.Pattern.CASE_INSENSITIVE,
+	 * meaning the strings are not case-sensitive 
 	 * @access public
 	 
 	 	 	 	 
@@ -420,7 +420,7 @@ class CreateAccountRequest
 	public $accountType;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -429,7 +429,7 @@ class CreateAccountRequest
 	public $name;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -438,7 +438,7 @@ class CreateAccountRequest
 	public $dateOfBirth;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -447,8 +447,8 @@ class CreateAccountRequest
 	public $address;
 
 	/**
-	*  Must provide at least one of contactPhoneNumber,
-	*  homePhoneNumber, or mobilePhoneNumber 
+	 * Must provide at least one of contactPhoneNumber,
+	 * homePhoneNumber, or mobilePhoneNumber 
 	 * @access public
 	 
 	 	 	 	 
@@ -457,8 +457,8 @@ class CreateAccountRequest
 	public $contactPhoneNumber;
 
 	/**
-	*  Must provide at least one of contactPhoneNumber,
-	*  homePhoneNumber, or mobilePhoneNumber 
+	 * Must provide at least one of contactPhoneNumber,
+	 * homePhoneNumber, or mobilePhoneNumber 
 	 * @access public
 	 
 	 	 	 	 
@@ -467,8 +467,8 @@ class CreateAccountRequest
 	public $homePhoneNumber;
 
 	/**
-	*  Must provide at least one of contactPhoneNumber,
-	*  homePhoneNumber, or mobilePhoneNumber 
+	 * Must provide at least one of contactPhoneNumber,
+	 * homePhoneNumber, or mobilePhoneNumber 
 	 * @access public
 	 
 	 	 	 	 
@@ -477,7 +477,7 @@ class CreateAccountRequest
 	public $mobilePhoneNumber;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -486,7 +486,7 @@ class CreateAccountRequest
 	public $currencyCode;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -495,7 +495,7 @@ class CreateAccountRequest
 	public $citizenshipCountryCode;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -504,7 +504,7 @@ class CreateAccountRequest
 	public $preferredLanguageCode;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -513,7 +513,7 @@ class CreateAccountRequest
 	public $notificationURL;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -522,9 +522,9 @@ class CreateAccountRequest
 	public $emailAddress;
 
 	/**
-	*  Valid values are: Mobile and Web. Mobile: Returns a key to
-	*  complete the registration. Web: Returns a URL to complete
-	*  the registration. 
+	 * Valid values are: Mobile and Web. Mobile: Returns a key to
+	 * complete the registration. Web: Returns a URL to complete
+	 * the registration. 
 	 * @access public
 	 
 	 	 	 	 
@@ -533,7 +533,7 @@ class CreateAccountRequest
 	public $registrationType;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -542,7 +542,7 @@ class CreateAccountRequest
 	public $createAccountWebOptions;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -551,8 +551,8 @@ class CreateAccountRequest
 	public $suppressWelcomeEmail;
 
 	/**
-	*  Set to true if you want this account to undergo extra
-	*  vetting by PayPal before becoming usable. 
+	 * Set to true if you want this account to undergo extra
+	 * vetting by PayPal before becoming usable. 
 	 * @access public
 	 
 	 	 	 	 
@@ -561,7 +561,7 @@ class CreateAccountRequest
 	public $performExtraVettingOnThisAccount;
 
 	/**
-	*  tax id, ssn, itin, pan, cpf, acn, abn, etc. 
+	 * tax id, ssn, itin, pan, cpf, acn, abn, etc. 
 	 * @access public
 	 
 	 	 	 	 
@@ -570,7 +570,7 @@ class CreateAccountRequest
 	public $taxId;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -579,7 +579,7 @@ class CreateAccountRequest
 	public $partnerField1;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -588,7 +588,7 @@ class CreateAccountRequest
 	public $partnerField2;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -597,7 +597,7 @@ class CreateAccountRequest
 	public $partnerField3;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -606,7 +606,7 @@ class CreateAccountRequest
 	public $partnerField4;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -615,13 +615,88 @@ class CreateAccountRequest
 	public $partnerField5;
 
 	/**
-	*  Required for business account creation 
+	 * Required for business account creation 
 	 * @access public
 	 
 	 	 	 	 
 	 * @var BusinessInfoType 	 
 	 */ 
 	public $businessInfo;
+
+	/**
+	 * An ID representing a unique value, such as SSN, TIN, SIN,
+	 * TaxID, etc. generally issued by a Government. Currently
+	 * supports only SIN for Canada. 
+     * @array
+	 * @access public
+	 
+	 	 	 	 
+	 * @var GovernmentIDPair 	 
+	 */ 
+	public $governmentId;
+
+	/**
+	 * Account Holder's profession, values such as: Accountant,
+	 * Actuary, Advocate, Architect, Business Owner, Doctor,
+	 * Dentist, Engineer, Financial Analyst, Lawyer, Librarian,
+	 * Nurse, Pilot, Pharmacist, Physician, Physicial Therapist,
+	 * Professor, Psychologist, Scientist, Teacher, Webmaster,
+	 * Writer, Student, Other 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $profession;
+
+	/**
+	 * Account Holder's occupation. For business accounts only.
+	 * Values: Executive, President, Vice President, Director,
+	 * Manager, Staff, Other. 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $occupation;
+
+	/**
+	 * Account Holder's functional area. For business accounts
+	 * only. Values: Finance, Operations, Technology, Sales,
+	 * Marketing, Other 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $functionalArea;
+
+	/**
+	 * Boolean value, indicates whether user has agreed for a
+	 * particular agreement or not. 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var LegalAgreementType 	 
+	 */ 
+	public $legalAgreement;
+
+	/**
+	 * Expected Value: 0|1|2|3|4|5 according to the description
+	 * below: 0 - "Send payments for goods and/or services to
+	 * domestic merchants" 1 - "Send payments for goods and/or
+	 * services to cross-border merchants" 2 - "Send payments for
+	 * goods and/or services to domestic and cross-border
+	 * merchants" 3 - "Receive payments for goods and/or services
+	 * from domestic buyers" 4 - "Receive payments for goods and/or
+	 * services from cross-border buyers" 5 - "Receive payments for
+	 * goods and/or service from domestic/cross-border buyers" 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $purposeOfAccount;
 
 	/**
 	 * Constructor with arguments
@@ -639,13 +714,13 @@ class CreateAccountRequest
 
 
 /**
- *  Valid values are: COMPLETED 
+ * Valid values are: COMPLETED 
  */
 class CreateAccountResponse  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -654,7 +729,7 @@ class CreateAccountResponse
 	public $responseEnvelope;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -663,7 +738,7 @@ class CreateAccountResponse
 	public $createAccountKey;
 
 	/**
-	*  Valid values are: COMPLETED 
+	 * Valid values are: COMPLETED 
 	 * @access public
 	 
 	 	 	 	 
@@ -672,7 +747,7 @@ class CreateAccountResponse
 	public $execStatus;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -681,8 +756,8 @@ class CreateAccountResponse
 	public $redirectURL;
 
 	/**
-	*  Identifies a PayPal account. Only premier and business
-	*  accounts have an accountId 
+	 * Identifies a PayPal account. Only premier and business
+	 * accounts have an accountId 
 	 * @access public
 	 
 	 	 	 	 
@@ -691,7 +766,7 @@ class CreateAccountResponse
 	public $accountId;
 
 	/**
-	*  
+	 * 
      * @array
 	 * @access public
 	 
@@ -706,13 +781,13 @@ class CreateAccountResponse
 
 
 /**
- *  
+ * 
  */
 class GetUserAgreementRequest  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -721,7 +796,7 @@ class GetUserAgreementRequest
 	public $requestEnvelope;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -730,7 +805,7 @@ class GetUserAgreementRequest
 	public $createAccountKey;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -739,7 +814,7 @@ class GetUserAgreementRequest
 	public $countryCode;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -760,13 +835,13 @@ class GetUserAgreementRequest
 
 
 /**
- *  
+ * 
  */
 class GetUserAgreementResponse  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -775,7 +850,7 @@ class GetUserAgreementResponse
 	public $responseEnvelope;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -784,7 +859,7 @@ class GetUserAgreementResponse
 	public $agreement;
 
 	/**
-	*  
+	 * 
      * @array
 	 * @access public
 	 
@@ -799,13 +874,13 @@ class GetUserAgreementResponse
 
 
 /**
- *  Deprecated, use accountIdentifier.emailAddress instead 
+ * Deprecated, use accountIdentifier.emailAddress instead 
  */
 class GetVerifiedStatusRequest  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -814,7 +889,7 @@ class GetVerifiedStatusRequest
 	public $requestEnvelope;
 
 	/**
-	*  Deprecated, use accountIdentifier.emailAddress instead 
+	 * Deprecated, use accountIdentifier.emailAddress instead 
 	 * @access public
 	 
 	 	 	 	 
@@ -823,9 +898,9 @@ class GetVerifiedStatusRequest
 	public $emailAddress;
 
 	/**
-	*  Identifies a PayPal account to which this request is
-	*  targeted. Caller of this API has to provide ONLY one of
-	*  these inputs: emailAddress, accountId or mobilePhoneNumber. 
+	 * Identifies a PayPal account to which this request is
+	 * targeted. Caller of this API has to provide ONLY one of
+	 * these inputs: emailAddress, accountId or mobilePhoneNumber. 
 	 * @access public
 	 
 	 	 	 	 
@@ -834,9 +909,9 @@ class GetVerifiedStatusRequest
 	public $accountIdentifier;
 
 	/**
-	*  matchCriteria determines which field(s) in addition to
-	*  emailAddress is used to locate the account. Currently, we
-	*  support matchCriteria of 'NAME' and 'NONE'. 
+	 * matchCriteria determines which field(s) in addition to
+	 * emailAddress is used to locate the account. Currently, we
+	 * support matchCriteria of 'NAME' and 'NONE'. 
 	 * @access public
 	 
 	 	 	 	 
@@ -845,8 +920,8 @@ class GetVerifiedStatusRequest
 	public $matchCriteria;
 
 	/**
-	*  Required if matchCriteria is NAME Optional if matchCriteria
-	*  is NONE 
+	 * Required if matchCriteria is NAME Optional if matchCriteria
+	 * is NONE 
 	 * @access public
 	 
 	 	 	 	 
@@ -855,8 +930,8 @@ class GetVerifiedStatusRequest
 	public $firstName;
 
 	/**
-	*  Required if matchCriteria is NAME Optional if matchCriteria
-	*  is NONE 
+	 * Required if matchCriteria is NAME Optional if matchCriteria
+	 * is NONE 
 	 * @access public
 	 
 	 	 	 	 
@@ -878,13 +953,13 @@ class GetVerifiedStatusRequest
 
 
 /**
- *  Returned values are: VERIFIED|UNVERIFIED. 
+ * Returned values are: VERIFIED|UNVERIFIED. 
  */
 class GetVerifiedStatusResponse  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -893,7 +968,7 @@ class GetVerifiedStatusResponse
 	public $responseEnvelope;
 
 	/**
-	*  Returned values are: VERIFIED|UNVERIFIED. 
+	 * Returned values are: VERIFIED|UNVERIFIED. 
 	 * @access public
 	 
 	 	 	 	 
@@ -902,7 +977,7 @@ class GetVerifiedStatusResponse
 	public $accountStatus;
 
 	/**
-	*  Returns countryCode belonging to PayPal account. 
+	 * Returns countryCode belonging to PayPal account. 
 	 * @access public
 	 
 	 	 	 	 
@@ -911,8 +986,8 @@ class GetVerifiedStatusResponse
 	public $countryCode;
 
 	/**
-	*  Info about PayPal user such as emailAddress, accountId,
-	*  firstName, lastName etc. 
+	 * Info about PayPal user such as emailAddress, accountId,
+	 * firstName, lastName etc. 
 	 * @access public
 	 
 	 	 	 	 
@@ -921,7 +996,7 @@ class GetVerifiedStatusResponse
 	public $userInfo;
 
 	/**
-	*  
+	 * 
      * @array
 	 * @access public
 	 
@@ -936,15 +1011,15 @@ class GetVerifiedStatusResponse
 
 
 /**
- *  Identifying the PayPal account to which this request is
- *  targetted to. Caller of this API has to either provided an
- *  emailAddress or an accountId. 
+ * Identifying the PayPal account to which this request is
+ * targetted to. Caller of this API has to either provided an
+ * emailAddress or an accountId. 
  */
 class AddBankAccountRequest  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -953,9 +1028,9 @@ class AddBankAccountRequest
 	public $requestEnvelope;
 
 	/**
-	*  Identifying the PayPal account to which this request is
-	*  targetted to. Caller of this API has to either provided an
-	*  emailAddress or an accountId. 
+	 * Identifying the PayPal account to which this request is
+	 * targetted to. Caller of this API has to either provided an
+	 * emailAddress or an accountId. 
 	 * @access public
 	 
 	 	 	 	 
@@ -964,9 +1039,9 @@ class AddBankAccountRequest
 	public $emailAddress;
 
 	/**
-	*  Identifying the PayPal account to which this request is
-	*  targetted to. Caller of this API has to either provided an
-	*  emailAddress or an accountId. 
+	 * Identifying the PayPal account to which this request is
+	 * targetted to. Caller of this API has to either provided an
+	 * emailAddress or an accountId. 
 	 * @access public
 	 
 	 	 	 	 
@@ -975,7 +1050,7 @@ class AddBankAccountRequest
 	public $accountId;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -984,7 +1059,7 @@ class AddBankAccountRequest
 	public $createAccountKey;
 
 	/**
-	*  Country code for the bank 
+	 * Country code for the bank 
 	 * @access public
 	 
 	 	 	 	 
@@ -993,7 +1068,7 @@ class AddBankAccountRequest
 	public $bankCountryCode;
 
 	/**
-	*  The defualt value is UNKNOWN. 
+	 * The defualt value is UNKNOWN. 
 	 * @access public
 	 
 	 	 	 	 
@@ -1002,7 +1077,7 @@ class AddBankAccountRequest
 	public $bankName;
 
 	/**
-	*  Bank routing or transit number 
+	 * Bank routing or transit number 
 	 * @access public
 	 
 	 	 	 	 
@@ -1011,7 +1086,7 @@ class AddBankAccountRequest
 	public $routingNumber;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1020,7 +1095,7 @@ class AddBankAccountRequest
 	public $bankAccountType;
 
 	/**
-	*  Basic Bank Account Number (BBAN) 
+	 * Basic Bank Account Number (BBAN) 
 	 * @access public
 	 
 	 	 	 	 
@@ -1029,7 +1104,7 @@ class AddBankAccountRequest
 	public $bankAccountNumber;
 
 	/**
-	*  International Bank Account Number (IBAN) 
+	 * International Bank Account Number (IBAN) 
 	 * @access public
 	 
 	 	 	 	 
@@ -1038,8 +1113,8 @@ class AddBankAccountRequest
 	public $iban;
 
 	/**
-	*  CLABE represents the bank information for countries like
-	*  Mexico 
+	 * CLABE represents the bank information for countries like
+	 * Mexico 
 	 * @access public
 	 
 	 	 	 	 
@@ -1048,7 +1123,7 @@ class AddBankAccountRequest
 	public $clabe;
 
 	/**
-	*  Bank/State/Branch number 
+	 * Bank/State/Branch number 
 	 * @access public
 	 
 	 	 	 	 
@@ -1057,7 +1132,7 @@ class AddBankAccountRequest
 	public $bsbNumber;
 
 	/**
-	*  Branch location 
+	 * Branch location 
 	 * @access public
 	 
 	 	 	 	 
@@ -1066,7 +1141,7 @@ class AddBankAccountRequest
 	public $branchLocation;
 
 	/**
-	*  Branch sort code. 
+	 * Branch sort code. 
 	 * @access public
 	 
 	 	 	 	 
@@ -1075,7 +1150,7 @@ class AddBankAccountRequest
 	public $sortCode;
 
 	/**
-	*  Bank transit number 
+	 * Bank transit number 
 	 * @access public
 	 
 	 	 	 	 
@@ -1084,7 +1159,7 @@ class AddBankAccountRequest
 	public $bankTransitNumber;
 
 	/**
-	*  Institution number 
+	 * Institution number 
 	 * @access public
 	 
 	 	 	 	 
@@ -1093,7 +1168,7 @@ class AddBankAccountRequest
 	public $institutionNumber;
 
 	/**
-	*  Branch code 
+	 * Branch code 
 	 * @access public
 	 
 	 	 	 	 
@@ -1102,7 +1177,7 @@ class AddBankAccountRequest
 	public $branchCode;
 
 	/**
-	*  For Brazil Agency Number 
+	 * For Brazil Agency Number 
 	 * @access public
 	 
 	 	 	 	 
@@ -1111,7 +1186,7 @@ class AddBankAccountRequest
 	public $agencyNumber;
 
 	/**
-	*  Bank code 
+	 * Bank code 
 	 * @access public
 	 
 	 	 	 	 
@@ -1120,7 +1195,7 @@ class AddBankAccountRequest
 	public $bankCode;
 
 	/**
-	*  RIB key 
+	 * RIB key 
 	 * @access public
 	 
 	 	 	 	 
@@ -1129,7 +1204,7 @@ class AddBankAccountRequest
 	public $ribKey;
 
 	/**
-	*  control digits 
+	 * control digits 
 	 * @access public
 	 
 	 	 	 	 
@@ -1138,7 +1213,7 @@ class AddBankAccountRequest
 	public $controlDigit;
 
 	/**
-	*  Tax id type of CNPJ or CPF, only supported for Brazil. 
+	 * Tax id type of CNPJ or CPF, only supported for Brazil. 
 	 * @access public
 	 
 	 	 	 	 
@@ -1147,7 +1222,7 @@ class AddBankAccountRequest
 	public $taxIdType;
 
 	/**
-	*  Tax id number for Brazil. 
+	 * Tax id number for Brazil. 
 	 * @access public
 	 
 	 	 	 	 
@@ -1156,7 +1231,7 @@ class AddBankAccountRequest
 	public $taxIdNumber;
 
 	/**
-	*  Date of birth of the account holder 
+	 * Date of birth of the account holder 
 	 * @access public
 	 
 	 	 	 	 
@@ -1165,7 +1240,7 @@ class AddBankAccountRequest
 	public $accountHolderDateOfBirth;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1174,7 +1249,7 @@ class AddBankAccountRequest
 	public $confirmationType;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1197,14 +1272,14 @@ class AddBankAccountRequest
 
 
 /**
- *  Valid values are: FUNDING_SOURCE_ADDED,
- *  WEB_URL_VERIFICATION_NEEDED 
+ * Valid values are: FUNDING_SOURCE_ADDED,
+ * WEB_URL_VERIFICATION_NEEDED 
  */
 class AddBankAccountResponse  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1213,8 +1288,8 @@ class AddBankAccountResponse
 	public $responseEnvelope;
 
 	/**
-	*  Valid values are: FUNDING_SOURCE_ADDED,
-	*  WEB_URL_VERIFICATION_NEEDED 
+	 * Valid values are: FUNDING_SOURCE_ADDED,
+	 * WEB_URL_VERIFICATION_NEEDED 
 	 * @access public
 	 
 	 	 	 	 
@@ -1223,7 +1298,7 @@ class AddBankAccountResponse
 	public $execStatus;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1232,7 +1307,7 @@ class AddBankAccountResponse
 	public $redirectURL;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1241,7 +1316,7 @@ class AddBankAccountResponse
 	public $fundingSourceKey;
 
 	/**
-	*  
+	 * 
      * @array
 	 * @access public
 	 
@@ -1256,15 +1331,15 @@ class AddBankAccountResponse
 
 
 /**
- *  Identifying the PayPal account to which this request is
- *  targetted to. Caller of this API has to either provided an
- *  emailAddress or an accountId. 
+ * Identifying the PayPal account to which this request is
+ * targetted to. Caller of this API has to either provided an
+ * emailAddress or an accountId. 
  */
 class AddPaymentCardRequest  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1273,9 +1348,9 @@ class AddPaymentCardRequest
 	public $requestEnvelope;
 
 	/**
-	*  Identifying the PayPal account to which this request is
-	*  targetted to. Caller of this API has to either provided an
-	*  emailAddress or an accountId. 
+	 * Identifying the PayPal account to which this request is
+	 * targetted to. Caller of this API has to either provided an
+	 * emailAddress or an accountId. 
 	 * @access public
 	 
 	 	 	 	 
@@ -1284,9 +1359,9 @@ class AddPaymentCardRequest
 	public $emailAddress;
 
 	/**
-	*  Identifying the PayPal account to which this request is
-	*  targetted to. Caller of this API has to either provided an
-	*  emailAddress or an accountId. 
+	 * Identifying the PayPal account to which this request is
+	 * targetted to. Caller of this API has to either provided an
+	 * emailAddress or an accountId. 
 	 * @access public
 	 
 	 	 	 	 
@@ -1295,7 +1370,7 @@ class AddPaymentCardRequest
 	public $accountId;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1304,7 +1379,7 @@ class AddPaymentCardRequest
 	public $createAccountKey;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1313,7 +1388,7 @@ class AddPaymentCardRequest
 	public $nameOnCard;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1322,7 +1397,7 @@ class AddPaymentCardRequest
 	public $billingAddress;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1331,7 +1406,7 @@ class AddPaymentCardRequest
 	public $cardOwnerDateOfBirth;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1340,7 +1415,7 @@ class AddPaymentCardRequest
 	public $cardNumber;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1349,7 +1424,7 @@ class AddPaymentCardRequest
 	public $cardType;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1358,8 +1433,8 @@ class AddPaymentCardRequest
 	public $expirationDate;
 
 	/**
-	*  CVV2: Proivde only for requests where confirmationType is
-	*  None (Direct request) 
+	 * CVV2: Proivde only for requests where confirmationType is
+	 * None (Direct request) 
 	 * @access public
 	 
 	 	 	 	 
@@ -1368,7 +1443,7 @@ class AddPaymentCardRequest
 	public $cardVerificationNumber;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1377,7 +1452,7 @@ class AddPaymentCardRequest
 	public $startDate;
 
 	/**
-	*  Up to 2 digit for Switch/Maestro cards. 
+	 * Up to 2 digit for Switch/Maestro cards. 
 	 * @access public
 	 
 	 	 	 	 
@@ -1386,7 +1461,7 @@ class AddPaymentCardRequest
 	public $issueNumber;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1395,7 +1470,7 @@ class AddPaymentCardRequest
 	public $confirmationType;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1421,14 +1496,14 @@ class AddPaymentCardRequest
 
 
 /**
- *  Valid values are: FUNDING_SOURCE_ADDED,
- *  WEB_URL_VERIFICATION_NEEDED 
+ * Valid values are: FUNDING_SOURCE_ADDED,
+ * WEB_URL_VERIFICATION_NEEDED 
  */
 class AddPaymentCardResponse  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1437,8 +1512,8 @@ class AddPaymentCardResponse
 	public $responseEnvelope;
 
 	/**
-	*  Valid values are: FUNDING_SOURCE_ADDED,
-	*  WEB_URL_VERIFICATION_NEEDED 
+	 * Valid values are: FUNDING_SOURCE_ADDED,
+	 * WEB_URL_VERIFICATION_NEEDED 
 	 * @access public
 	 
 	 	 	 	 
@@ -1447,7 +1522,7 @@ class AddPaymentCardResponse
 	public $execStatus;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1456,7 +1531,7 @@ class AddPaymentCardResponse
 	public $redirectURL;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1465,7 +1540,7 @@ class AddPaymentCardResponse
 	public $fundingSourceKey;
 
 	/**
-	*  
+	 * 
      * @array
 	 * @access public
 	 
@@ -1480,14 +1555,14 @@ class AddPaymentCardResponse
 
 
 /**
- *  This not considered when
- *  financialProductCategory=PRE_PAID_CARD 
+ * This not considered when
+ * financialProductCategory=PRE_PAID_CARD 
  */
 class AddPartnerFinancialProductRequest  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1496,7 +1571,7 @@ class AddPartnerFinancialProductRequest
 	public $requestEnvelope;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1505,8 +1580,8 @@ class AddPartnerFinancialProductRequest
 	public $accountIdentifier;
 
 	/**
-	*  This not considered when
-	*  financialProductCategory=PRE_PAID_CARD 
+	 * This not considered when
+	 * financialProductCategory=PRE_PAID_CARD 
 	 * @access public
 	 
 	 	 	 	 
@@ -1515,8 +1590,8 @@ class AddPartnerFinancialProductRequest
 	public $nameOnCard;
 
 	/**
-	*  This not considered when
-	*  financialProductCategory=PRE_PAID_CARD 
+	 * This not considered when
+	 * financialProductCategory=PRE_PAID_CARD 
 	 * @access public
 	 
 	 	 	 	 
@@ -1525,8 +1600,8 @@ class AddPartnerFinancialProductRequest
 	public $billingAddress;
 
 	/**
-	*  This not considered when
-	*  financialProductCategory=PRE_PAID_CARD 
+	 * This not considered when
+	 * financialProductCategory=PRE_PAID_CARD 
 	 * @access public
 	 
 	 	 	 	 
@@ -1535,7 +1610,7 @@ class AddPartnerFinancialProductRequest
 	public $cardOwnerDateOfBirth;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1544,8 +1619,8 @@ class AddPartnerFinancialProductRequest
 	public $cardNumber;
 
 	/**
-	*  Identify the kind of PayPal financial product. Possible
-	*  value is : PRE_PAID_CARD 
+	 * Identify the kind of PayPal financial product. Possible
+	 * value is : PRE_PAID_CARD 
 	 * @access public
 	 
 	 	 	 	 
@@ -1554,8 +1629,8 @@ class AddPartnerFinancialProductRequest
 	public $financialProductCategory;
 
 	/**
-	*  expirationDate is mandatory when financialProductCategoy =
-	*  PRE_PAID_CARD 
+	 * expirationDate is mandatory when financialProductCategoy =
+	 * PRE_PAID_CARD 
 	 * @access public
 	 
 	 	 	 	 
@@ -1564,8 +1639,8 @@ class AddPartnerFinancialProductRequest
 	public $expirationDate;
 
 	/**
-	*  This not considered when
-	*  financialProductCategory=PRE_PAID_CARD 
+	 * This not considered when
+	 * financialProductCategory=PRE_PAID_CARD 
 	 * @access public
 	 
 	 	 	 	 
@@ -1574,8 +1649,8 @@ class AddPartnerFinancialProductRequest
 	public $cardVerificationNumber;
 
 	/**
-	*  This not considered when
-	*  financialProductCategory=PRE_PAID_CARD 
+	 * This not considered when
+	 * financialProductCategory=PRE_PAID_CARD 
 	 * @access public
 	 
 	 	 	 	 
@@ -1584,7 +1659,7 @@ class AddPartnerFinancialProductRequest
 	public $startDate;
 
 	/**
-	*  Up to 2 digit for Switch/Maestro cards. 
+	 * Up to 2 digit for Switch/Maestro cards. 
 	 * @access public
 	 
 	 	 	 	 
@@ -1609,13 +1684,13 @@ class AddPartnerFinancialProductRequest
 
 
 /**
- *  Valid values are: CARD_ADDED 
+ * Valid values are: CARD_ADDED 
  */
 class AddPartnerFinancialProductResponse  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1624,7 +1699,7 @@ class AddPartnerFinancialProductResponse
 	public $responseEnvelope;
 
 	/**
-	*  Valid values are: CARD_ADDED 
+	 * Valid values are: CARD_ADDED 
 	 * @access public
 	 
 	 	 	 	 
@@ -1633,7 +1708,7 @@ class AddPartnerFinancialProductResponse
 	public $execStatus;
 
 	/**
-	*  
+	 * 
      * @array
 	 * @access public
 	 
@@ -1648,15 +1723,15 @@ class AddPartnerFinancialProductResponse
 
 
 /**
- *  Identifying the PayPal account to which this request is
- *  targetted to. Caller of this API has to either provided an
- *  emailAddress or an accountId. 
+ * Identifying the PayPal account to which this request is
+ * targetted to. Caller of this API has to either provided an
+ * emailAddress or an accountId. 
  */
 class SetFundingSourceConfirmedRequest  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1665,9 +1740,9 @@ class SetFundingSourceConfirmedRequest
 	public $requestEnvelope;
 
 	/**
-	*  Identifying the PayPal account to which this request is
-	*  targetted to. Caller of this API has to either provided an
-	*  emailAddress or an accountId. 
+	 * Identifying the PayPal account to which this request is
+	 * targetted to. Caller of this API has to either provided an
+	 * emailAddress or an accountId. 
 	 * @access public
 	 
 	 	 	 	 
@@ -1676,9 +1751,9 @@ class SetFundingSourceConfirmedRequest
 	public $emailAddress;
 
 	/**
-	*  Identifying the PayPal account to which this request is
-	*  targetted to. Caller of this API has to either provided an
-	*  emailAddress or an accountId. 
+	 * Identifying the PayPal account to which this request is
+	 * targetted to. Caller of this API has to either provided an
+	 * emailAddress or an accountId. 
 	 * @access public
 	 
 	 	 	 	 
@@ -1687,7 +1762,7 @@ class SetFundingSourceConfirmedRequest
 	public $accountId;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1709,13 +1784,13 @@ class SetFundingSourceConfirmedRequest
 
 
 /**
- *  
+ * 
  */
 class SetFundingSourceConfirmedResponse  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1724,7 +1799,7 @@ class SetFundingSourceConfirmedResponse
 	public $responseEnvelope;
 
 	/**
-	*  
+	 * 
      * @array
 	 * @access public
 	 
@@ -1739,15 +1814,15 @@ class SetFundingSourceConfirmedResponse
 
 
 /**
- *  Identifies a PayPal account to which this request is
- *  targeted. Caller of this API has to provide ONLY one of
- *  these inputs: emailAddress, accountId or phoneNumber. 
+ * Identifies a PayPal account to which this request is
+ * targeted. Caller of this API has to provide ONLY one of
+ * these inputs: emailAddress, accountId or mobilePhoneNumber. 
  */
 class CheckComplianceStatusRequest  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1756,9 +1831,9 @@ class CheckComplianceStatusRequest
 	public $requestEnvelope;
 
 	/**
-	*  Identifies a PayPal account to which this request is
-	*  targeted. Caller of this API has to provide ONLY one of
-	*  these inputs: emailAddress, accountId or phoneNumber. 
+	 * Identifies a PayPal account to which this request is
+	 * targeted. Caller of this API has to provide ONLY one of
+	 * these inputs: emailAddress, accountId or mobilePhoneNumber. 
 	 * @access public
 	 
 	 	 	 	 
@@ -1780,13 +1855,13 @@ class CheckComplianceStatusRequest
 
 
 /**
- *  Returned values are: ALLOW|DENY 
+ * Returned values are: ALLOW|DENY 
  */
 class CheckComplianceStatusResponse  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1795,7 +1870,7 @@ class CheckComplianceStatusResponse
 	public $responseEnvelope;
 
 	/**
-	*  Returned values are: ALLOW|DENY 
+	 * Returned values are: ALLOW|DENY 
 	 * @access public
 	 
 	 	 	 	 
@@ -1804,9 +1879,9 @@ class CheckComplianceStatusResponse
 	public $execStatus;
 
 	/**
-	*  Returned values are: CLIENT_NOT_SUPPORTED,
-	*  COUNTRY_NOT_SUPPORTED, VERIFICATION_NOT_COMPLETED,
-	*  DOCUMENTS_UNDER_REVIEW, DENIED 
+	 * Returned values are: CLIENT_NOT_SUPPORTED,
+	 * COUNTRY_NOT_SUPPORTED, VERIFICATION_NOT_COMPLETED,
+	 * DOCUMENTS_UNDER_REVIEW, DENIED 
 	 * @access public
 	 
 	 	 	 	 
@@ -1815,7 +1890,7 @@ class CheckComplianceStatusResponse
 	public $denialReason;
 
 	/**
-	*  
+	 * 
      * @array
 	 * @access public
 	 
@@ -1830,14 +1905,14 @@ class CheckComplianceStatusResponse
 
 
 /**
- *  This operation is for internal purposes developed for a POC.
- *  
+ * This operation is for internal purposes developed for a POC.
+ * 
  */
 class ActivateProductRequest  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1846,9 +1921,9 @@ class ActivateProductRequest
 	public $requestEnvelope;
 
 	/**
-	*  Identifies a PayPal account to which this request is
-	*  targeted. Caller of this API has to provide ONLY one of
-	*  these inputs: emailAddress or accountId. 
+	 * Identifies a PayPal account to which this request is
+	 * targeted. Caller of this API has to provide ONLY one of
+	 * these inputs: emailAddress or accountId. 
 	 * @access public
 	 
 	 	 	 	 
@@ -1870,13 +1945,13 @@ class ActivateProductRequest
 
 
 /**
- *  Valid values are: SUCCESS, FAILED 
+ * Valid values are: SUCCESS, FAILED 
  */
 class ActivateProductResponse  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1885,7 +1960,7 @@ class ActivateProductResponse
 	public $responseEnvelope;
 
 	/**
-	*  Valid values are: SUCCESS, FAILED 
+	 * Valid values are: SUCCESS, FAILED 
 	 * @access public
 	 
 	 	 	 	 
@@ -1894,7 +1969,7 @@ class ActivateProductResponse
 	public $execStatus;
 
 	/**
-	*  
+	 * 
      * @array
 	 * @access public
 	 
@@ -1904,7 +1979,7 @@ class ActivateProductResponse
 	public $productActivationErrors;
 
 	/**
-	*  
+	 * 
      * @array
 	 * @access public
 	 
@@ -1919,13 +1994,13 @@ class ActivateProductResponse
 
 
 /**
- *  
+ * 
  */
 class UpdateComplianceStatusRequest  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1934,7 +2009,7 @@ class UpdateComplianceStatusRequest
 	public $requestEnvelope;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1943,7 +2018,7 @@ class UpdateComplianceStatusRequest
 	public $auditeeInfo;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1952,7 +2027,7 @@ class UpdateComplianceStatusRequest
 	public $auditorList;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1975,13 +2050,13 @@ class UpdateComplianceStatusRequest
 
 
 /**
- *  
+ * 
  */
 class UpdateComplianceStatusResponse  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1990,7 +2065,7 @@ class UpdateComplianceStatusResponse
 	public $responseEnvelope;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -1999,7 +2074,7 @@ class UpdateComplianceStatusResponse
 	public $execStatus;
 
 	/**
-	*  
+	 * 
      * @array
 	 * @access public
 	 
@@ -2014,13 +2089,13 @@ class UpdateComplianceStatusResponse
 
 
 /**
- *  
+ * 
  */
 class NameType  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2029,7 +2104,7 @@ class NameType
 	public $salutation;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2038,7 +2113,7 @@ class NameType
 	public $firstName;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2047,7 +2122,7 @@ class NameType
 	public $middleName;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2056,7 +2131,7 @@ class NameType
 	public $lastName;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2078,13 +2153,13 @@ class NameType
 
 
 /**
- *  
+ * 
  */
 class AddressType  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2093,7 +2168,7 @@ class AddressType
 	public $line1;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2102,7 +2177,7 @@ class AddressType
 	public $line2;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2111,7 +2186,7 @@ class AddressType
 	public $city;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2120,7 +2195,7 @@ class AddressType
 	public $state;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2129,7 +2204,7 @@ class AddressType
 	public $postalCode;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2151,15 +2226,15 @@ class AddressType
 
 
 /**
- *  Ask end-user to also initiate confirmation of their mobile
- *  phone. This number must be supplied by the API caller (using
- *  mobilePhoneNumber) Default=false. 
+ * Ask end-user to also initiate confirmation of their mobile
+ * phone. This number must be supplied by the API caller (using
+ * mobilePhoneNumber) Default=false. 
  */
 class CreateAccountWebOptionsType  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2168,7 +2243,7 @@ class CreateAccountWebOptionsType
 	public $returnUrl;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2177,9 +2252,9 @@ class CreateAccountWebOptionsType
 	public $showAddCreditCard;
 
 	/**
-	*  Ask end-user to also initiate confirmation of their mobile
-	*  phone. This number must be supplied by the API caller (using
-	*  mobilePhoneNumber) Default=false. 
+	 * Ask end-user to also initiate confirmation of their mobile
+	 * phone. This number must be supplied by the API caller (using
+	 * mobilePhoneNumber) Default=false. 
 	 * @access public
 	 
 	 	 	 	 
@@ -2188,7 +2263,7 @@ class CreateAccountWebOptionsType
 	public $showMobileConfirm;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2197,9 +2272,9 @@ class CreateAccountWebOptionsType
 	public $returnUrlDescription;
 
 	/**
-	*  If provided, end user will go through a single page sign-up
-	*  flow on a Mini Browser. If not provided, flow defaults to
-	*  the Multi-page flow that is full size. 
+	 * If provided, end user will go through a single page sign-up
+	 * flow on a Mini Browser. If not provided, flow defaults to
+	 * the Multi-page flow that is full size. 
 	 * @access public
 	 
 	 	 	 	 
@@ -2208,12 +2283,12 @@ class CreateAccountWebOptionsType
 	public $useMiniBrowser;
 
 	/**
-	*  Indicates the frequency of the reminder emails sent to the
-	*  PayPal user after CreateAccount. Used only when
-	*  registrationType is Web. Valid values: DEFAULT: All reminder
-	*  emails will be sent (same behaviour as when this paramter is
-	*  not present) NONE: No reminder emails will be sent (More
-	*  values to be added in future) 
+	 * Indicates the frequency of the reminder emails sent to the
+	 * PayPal user after CreateAccount. Used only when
+	 * registrationType is Web. Valid values: DEFAULT: All reminder
+	 * emails will be sent (same behaviour as when this paramter is
+	 * not present) NONE: No reminder emails will be sent (More
+	 * values to be added in future) 
 	 * @access public
 	 
 	 	 	 	 
@@ -2222,13 +2297,13 @@ class CreateAccountWebOptionsType
 	public $reminderEmailFrequency;
 
 	/**
-	*  Indicates if the Return URL is used to confirm email. On
-	*  accessing the Return URL successfully, confirm the email if
-	*  this parameter is true, otherwise, do not confirm the email.
-	*  Used only when registrationType is Web. Valid values (mixed
-	*  case): true: Append the Email Confirmation Code to the
-	*  Return URL. false: Do not append the Email Confirmation Code
-	*  to the Return URL. 
+	 * Indicates if the Return URL is used to confirm email. On
+	 * accessing the Return URL successfully, confirm the email if
+	 * this parameter is true, otherwise, do not confirm the email.
+	 * Used only when registrationType is Web. Valid values (mixed
+	 * case): true: Append the Email Confirmation Code to the
+	 * Return URL. false: Do not append the Email Confirmation Code
+	 * to the Return URL. 
 	 * @access public
 	 
 	 	 	 	 
@@ -2242,13 +2317,13 @@ class CreateAccountWebOptionsType
 
 
 /**
- *  PayPal Business Category. i.e., baby - 1004 
+ * PayPal Business Category. i.e., baby - 1004 
  */
 class BusinessInfoType  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2257,7 +2332,7 @@ class BusinessInfoType
 	public $businessName;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2266,7 +2341,7 @@ class BusinessInfoType
 	public $businessAddress;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2275,7 +2350,7 @@ class BusinessInfoType
 	public $workPhone;
 
 	/**
-	*  PayPal Business Category. i.e., baby - 1004 
+	 * PayPal Business Category. i.e., baby - 1004 
 	 * @access public
 	 
 	 	 	 	 
@@ -2284,7 +2359,7 @@ class BusinessInfoType
 	public $category;
 
 	/**
-	*  Paypal Business subcategory. i.e., baby-clothing - 2027 
+	 * Paypal Business subcategory. i.e., baby-clothing - 2027 
 	 * @access public
 	 
 	 	 	 	 
@@ -2293,10 +2368,10 @@ class BusinessInfoType
 	public $subCategory;
 
 	/**
-	*  If Category and Subcategory is specified, then this is
-	*  optional. PayPal uses the industry standard Merchant
-	*  Category Codes. Please refer to your Association Merchant
-	*  Category Code documentation for a list of codes 
+	 * If Category and Subcategory is specified, then this is
+	 * optional. PayPal uses the industry standard Merchant
+	 * Category Codes. Please refer to your Association Merchant
+	 * Category Code documentation for a list of codes 
 	 * @access public
 	 
 	 	 	 	 
@@ -2305,7 +2380,7 @@ class BusinessInfoType
 	public $merchantCategoryCode;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2314,7 +2389,7 @@ class BusinessInfoType
 	public $doingBusinessAs;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2323,7 +2398,7 @@ class BusinessInfoType
 	public $customerServicePhone;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2332,7 +2407,7 @@ class BusinessInfoType
 	public $customerServiceEmail;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2341,7 +2416,7 @@ class BusinessInfoType
 	public $disputeEmail;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2350,7 +2425,7 @@ class BusinessInfoType
 	public $webSite;
 
 	/**
-	*  Company Id: tax id, acn, abn, etc. 
+	 * Company Id: tax id, acn, abn, etc. 
 	 * @access public
 	 
 	 	 	 	 
@@ -2359,7 +2434,7 @@ class BusinessInfoType
 	public $companyId;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2368,7 +2443,7 @@ class BusinessInfoType
 	public $dateOfEstablishment;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2377,7 +2452,7 @@ class BusinessInfoType
 	public $businessType;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2386,7 +2461,7 @@ class BusinessInfoType
 	public $businessSubtype;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2395,7 +2470,7 @@ class BusinessInfoType
 	public $incorporationId;
 
 	/**
-	*  Average transaction value. 
+	 * Average transaction value. 
 	 * @access public
 	 
 	 	 	 	 
@@ -2404,7 +2479,7 @@ class BusinessInfoType
 	public $averagePrice;
 
 	/**
-	*  Average monthly transaction value. 
+	 * Average monthly transaction value. 
 	 * @access public
 	 
 	 	 	 	 
@@ -2413,8 +2488,8 @@ class BusinessInfoType
 	public $averageMonthlyVolume;
 
 	/**
-	*  Percentage of the revenue that is from online sales
-	*  (0%-100%). 
+	 * Percentage of the revenue that is from online sales
+	 * (0%-100%). 
 	 * @access public
 	 
 	 	 	 	 
@@ -2423,7 +2498,7 @@ class BusinessInfoType
 	public $percentageRevenueFromOnline;
 
 	/**
-	*  
+	 * 
      * @array
 	 * @access public
 	 
@@ -2433,8 +2508,8 @@ class BusinessInfoType
 	public $salesVenue;
 
 	/**
-	*  Description of store front or place for sales. Only required
-	*  when "OTHER" is specified for salesVenue. 
+	 * Description of store front or place for sales. Only required
+	 * when "OTHER" is specified for salesVenue. 
 	 * @access public
 	 
 	 	 	 	 
@@ -2443,7 +2518,7 @@ class BusinessInfoType
 	public $salesVenueDesc;
 
 	/**
-	*  Value Added Tax (VAT) ID number 
+	 * Value Added Tax (VAT) ID number 
 	 * @access public
 	 
 	 	 	 	 
@@ -2452,7 +2527,7 @@ class BusinessInfoType
 	public $vatId;
 
 	/**
-	*  Country code for country on the vat id. 
+	 * Country code for country on the vat id. 
 	 * @access public
 	 
 	 	 	 	 
@@ -2461,7 +2536,7 @@ class BusinessInfoType
 	public $vatCountryCode;
 
 	/**
-	*  Official commercial registration location. 
+	 * Official commercial registration location. 
 	 * @access public
 	 
 	 	 	 	 
@@ -2470,7 +2545,7 @@ class BusinessInfoType
 	public $commercialRegistrationLocation;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2479,7 +2554,7 @@ class BusinessInfoType
 	public $principalPlaceOfBusinessAddress;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2488,7 +2563,7 @@ class BusinessInfoType
 	public $registeredOfficeAddress;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2497,7 +2572,7 @@ class BusinessInfoType
 	public $establishmentCountryCode;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2506,7 +2581,7 @@ class BusinessInfoType
 	public $establishmentState;
 
 	/**
-	*  All the stakeholders of the company. 
+	 * All the stakeholders of the company. 
      * @array
 	 * @access public
 	 
@@ -2514,6 +2589,42 @@ class BusinessInfoType
 	 * @var BusinessStakeholderType 	 
 	 */ 
 	public $businessStakeholder;
+
+	/**
+	 * Business entity acting on behalf of Third Party. 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var BusinessEntityForThirdPartyType 	 
+	 */ 
+	public $businessEntityForThirdParty;
+
+	/**
+	 * Values: Yes or No 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $hasDirectors;
+
+	/**
+	 * Values: Yes or No 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $hasBeneficialOwners;
+
+	/**
+	 * Values: Yes or No 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $hasThirdPartyAssociates;
 
 	/**
 	 * Constructor with arguments
@@ -2530,14 +2641,14 @@ class BusinessInfoType
 
 
 /**
- *  Info about Stakeholders such as partner, beneficial, owner,
- *  director etc. 
+ * Info about Stakeholders such as partner, beneficial, owner,
+ * director etc. 
  */
 class BusinessStakeholderType  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2546,7 +2657,7 @@ class BusinessStakeholderType
 	public $role;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2555,7 +2666,7 @@ class BusinessStakeholderType
 	public $name;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2564,7 +2675,7 @@ class BusinessStakeholderType
 	public $fullLegalName;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2573,13 +2684,27 @@ class BusinessStakeholderType
 	public $address;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
 	 * @var date 	 
 	 */ 
 	public $dateOfBirth;
+
+	/**
+	 * Occupation of the business stakeholder. Values such as:
+	 * Accountant, Actuary, Advocate, Architect, Business Owner,
+	 * Doctor, Dentist, Engineer, Financial Analyst, Lawyer,
+	 * Librarian, Nurse, Pilot, Pharmacist, Physician, Physicial
+	 * Therapist, Professor, Psychologist, Scientist, Teacher,
+	 * Webmaster, Writer, Student, Other 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $occupation;
 
 	/**
 	 * Constructor with arguments
@@ -2594,14 +2719,14 @@ class BusinessStakeholderType
 
 
 /**
- *  Info about PayPal user such as emailAddress, accountId,
- *  firstName, lastName etc. 
+ * Info about PayPal user such as emailAddress, accountId,
+ * firstName, lastName etc. 
  */
 class UserInfoType  
   extends PPMessage   {
 
 	/**
-	*  Returns emailAddress belonging to PayPal account. 
+	 * Returns emailAddress belonging to PayPal account. 
 	 * @access public
 	 
 	 	 	 	 
@@ -2610,8 +2735,8 @@ class UserInfoType
 	public $emailAddress;
 
 	/**
-	*  Valid values are: Personal, Premier, and Business (not
-	*  case-sensitive). 
+	 * Valid values are: Personal, Premier, and Business (not
+	 * case-sensitive). 
 	 * @access public
 	 
 	 	 	 	 
@@ -2620,8 +2745,8 @@ class UserInfoType
 	public $accountType;
 
 	/**
-	*  Identifies a PayPal account. Only premier and business
-	*  accounts have an accountId 
+	 * Identifies a PayPal account. Only premier and business
+	 * accounts have an accountId 
 	 * @access public
 	 
 	 	 	 	 
@@ -2630,7 +2755,7 @@ class UserInfoType
 	public $accountId;
 
 	/**
-	*  Identifies a PayPal user, like firstName, lastName. 
+	 * Identifies a PayPal user, like firstName, lastName. 
 	 * @access public
 	 
 	 	 	 	 
@@ -2639,7 +2764,7 @@ class UserInfoType
 	public $name;
 
 	/**
-	*  Business Name of the PayPal account holder. 
+	 * Business Name of the PayPal account holder. 
 	 * @access public
 	 
 	 	 	 	 
@@ -2653,13 +2778,13 @@ class UserInfoType
 
 
 /**
- *  
+ * 
  */
 class WebOptionsType  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2668,7 +2793,7 @@ class WebOptionsType
 	public $returnUrl;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2677,7 +2802,7 @@ class WebOptionsType
 	public $cancelUrl;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2686,7 +2811,7 @@ class WebOptionsType
 	public $returnUrlDescription;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2700,13 +2825,13 @@ class WebOptionsType
 
 
 /**
- *  Month in integer format, between 1 and 12 
+ * Month in integer format, between 1 and 12 
  */
 class CardDateType  
   extends PPMessage   {
 
 	/**
-	*  Month in integer format, between 1 and 12 
+	 * Month in integer format, between 1 and 12 
 	 * @access public
 	 
 	 	 	 	 
@@ -2715,7 +2840,7 @@ class CardDateType
 	public $month;
 
 	/**
-	*  Year in four digit format- YYYY 
+	 * Year in four digit format- YYYY 
 	 * @access public
 	 
 	 	 	 	 
@@ -2737,22 +2862,22 @@ class CardDateType
 
 
 /**
- *  
+ * Third party type: Individual or Business. 
  */
-class Auditor  
+class BusinessEntityForThirdPartyType  
   extends PPMessage   {
 
 	/**
-	*  
+	 * Third party type: Individual or Business. 
 	 * @access public
 	 
 	 	 	 	 
 	 * @var string 	 
 	 */ 
-	public $id;
+	public $thirdPartyType;
 
 	/**
-	*  
+	 * If third party is individual, name of the individual. 
 	 * @access public
 	 
 	 	 	 	 
@@ -2761,7 +2886,181 @@ class Auditor
 	public $name;
 
 	/**
-	*  
+	 * If third party is individual, date of birth of the
+	 * individual. 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var date 	 
+	 */ 
+	public $dateOfBirth;
+
+	/**
+	 * Address of third party collecting the data. 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var AddressType 	 
+	 */ 
+	public $address;
+
+	/**
+	 * If third party is individual, profession of the individual
+	 * representing third party. 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $profession;
+
+	/**
+	 * Relationship with third party, of the individual or the
+	 * business. 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $relationshipWithThirdParty;
+
+	/**
+	 * Nature of Business, if third party is a business. 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $natureOfBusiness;
+
+	/**
+	 * Name of Business, if third party is a business. 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $nameOfBusiness;
+
+	/**
+	 * If third party is a business, collect the businessType.
+	 * Values: Corporation, Private Company, Public Company,
+	 * Partnership, Government Entity, Non-Profit Organization 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $businessType;
+
+	/**
+	 * If third party is a business, collect Incorporation ID. 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $incorporationId;
+
+	/**
+	 * If third party is business, collect place of issue of
+	 * Incorporation. 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $incorporationPlaceOfIssue;
+
+
+}
+
+
+
+/**
+ * 
+ */
+class GovernmentIDPair  
+  extends PPMessage   {
+
+	/**
+	 * 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $value;
+
+	/**
+	 * 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $type;
+
+
+}
+
+
+
+/**
+ * 
+ */
+class LegalAgreementType  
+  extends PPMessage   {
+
+	/**
+	 * 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $accepted;
+
+	/**
+	 * 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $type;
+
+
+}
+
+
+
+/**
+ * 
+ */
+class Auditor  
+  extends PPMessage   {
+
+	/**
+	 * 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $id;
+
+	/**
+	 * 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $name;
+
+	/**
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2770,7 +3069,7 @@ class Auditor
 	public $action;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2793,13 +3092,13 @@ class Auditor
 
 
 /**
- *  
+ * 
  */
 class TupleType  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2808,7 +3107,7 @@ class TupleType
 	public $name;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2830,13 +3129,13 @@ class TupleType
 
 
 /**
- *  
+ * 
  */
 class DocumentType  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2845,7 +3144,7 @@ class DocumentType
 	public $type;
 
 	/**
-	*  
+	 * 
      * @array
 	 * @access public
 	 
@@ -2868,13 +3167,13 @@ class DocumentType
 
 
 /**
- *  
+ * 
  */
 class AuditorList  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
      * @array
 	 * @access public
 	 
@@ -2896,13 +3195,13 @@ class AuditorList
 
 
 /**
- *  
+ * 
  */
 class AuditeeInfoType  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2911,7 +3210,7 @@ class AuditeeInfoType
 	public $accountIdentifier;
 
 	/**
-	*  
+	 * 
      * @array
 	 * @access public
 	 
@@ -2921,7 +3220,7 @@ class AuditeeInfoType
 	public $document;
 
 	/**
-	*  
+	 * 
      * @array
 	 * @access public
 	 
@@ -2943,13 +3242,13 @@ class AuditeeInfoType
 
 
 /**
- *  
+ * 
  */
 class AuditDetailsType  
   extends PPMessage   {
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2958,7 +3257,7 @@ class AuditDetailsType
 	public $status;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2967,7 +3266,7 @@ class AuditDetailsType
 	public $level;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
@@ -2976,13 +3275,32 @@ class AuditDetailsType
 	public $method;
 
 	/**
-	*  
+	 * 
 	 * @access public
 	 
 	 	 	 	 
 	 * @var string 	 
 	 */ 
 	public $reason;
+
+	/**
+	 * 
+     * @array
+	 * @access public
+	 
+	 	 	 	 
+	 * @var TupleType 	 
+	 */ 
+	public $data;
+
+	/**
+	 * 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $policyVersion;
 
 	/**
 	 * Constructor with arguments
