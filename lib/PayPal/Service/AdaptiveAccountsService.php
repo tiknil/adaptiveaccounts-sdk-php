@@ -1,24 +1,38 @@
 <?php 
+namespace PayPal\Service;
+use PayPal\Core\PPMessage;
+use PayPal\Core\PPBaseService;
+use PayPal\Core\PPUtils;
+use PayPal\Types\AA\CreateAccountResponse;
+use PayPal\Types\AA\GetUserAgreementResponse;
+use PayPal\Types\AA\GetVerifiedStatusResponse;
+use PayPal\Types\AA\AddBankAccountResponse;
+use PayPal\Types\AA\AddPaymentCardResponse;
+use PayPal\Types\AA\SetFundingSourceConfirmedResponse;
+use PayPal\Types\AA\CheckComplianceStatusResponse;
+use PayPal\Types\AA\AddPartnerFinancialProductResponse;
+use PayPal\Types\AA\ActivateProductResponse;
+use PayPal\Types\AA\UpdateComplianceStatusResponse;
 
 /**
- *  AUTO GENERATED code for AdaptiveAccounts
+ * AUTO GENERATED code for AdaptiveAccounts
  */
 class AdaptiveAccountsService extends PPBaseService {
 
 	// Service Version
-	private static $SERVICE_VERSION = "1.1.0";
+	private static $SERVICE_VERSION = "1.2.0";
 
 	// Service Name
 	private static $SERVICE_NAME = "AdaptiveAccounts";
 
     // SDK Name
-	protected static $SDK_NAME = "adaptiveaccounts-php-sdk";
+	protected static $SDK_NAME = "sdkname";
 	
 	// SDK Version
-	protected static $SDK_VERSION = "2.3.100";
+	protected static $SDK_VERSION = "sdkversion";
 
 	public function __construct($config = null) {
-		parent::__construct(self::$SERVICE_NAME, 'NV', array('PPPlatformServiceHandler'), $config);
+		parent::__construct(self::$SERVICE_NAME, 'NV', array('PayPal\Handler\PPPlatformServiceHandler'), $config);
         parent::$SDK_NAME    = self::$SDK_NAME ;
         parent::$SDK_VERSION = self::$SDK_VERSION;
 	}
