@@ -1,4 +1,6 @@
 <?php
+use PayPal\Service\AdaptiveAccountsService;
+use PayPal\Types\AA\SetFundingSourceConfirmedRequest;
 require_once('PPBootStrap.php');
 /********************************************
  # SetFundingSourceConfirmed API

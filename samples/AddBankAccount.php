@@ -1,4 +1,7 @@
 <?php
+use PayPal\Service\AdaptiveAccountsService;
+use PayPal\Types\AA\AddBankAccountRequest;
+use PayPal\Types\AA\WebOptionsType;
 require_once('PPBootStrap.php');
 /********************************************
  # AddBankAccount API

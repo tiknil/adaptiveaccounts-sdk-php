@@ -1,4 +1,10 @@
 <?php
+use PayPal\Service\AdaptiveAccountsService;
+use PayPal\Types\AA\AddPaymentCardRequest;
+use PayPal\Types\AA\AddressType;
+use PayPal\Types\AA\CardDateType;
+use PayPal\Types\AA\NameType;
+use PayPal\Types\AA\WebOptionsType;
 require_once('PPBootStrap.php');
 
 /********************************************

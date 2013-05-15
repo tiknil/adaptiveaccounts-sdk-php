@@ -1,4 +1,7 @@
 <?php
+use PayPal\Service\AdaptiveAccountsService;
+use PayPal\Types\AA\AccountIdentifierType;
+use PayPal\Types\AA\GetVerifiedStatusRequest;
 require_once('PPBootStrap.php');
 /********************************************
  # GetVerifiedStatus API

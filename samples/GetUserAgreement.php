@@ -1,4 +1,6 @@
 <?php
+use PayPal\Service\AdaptiveAccountsService;
+use PayPal\Types\AA\GetUserAgreementRequest;
 require_once('PPBootStrap.php');
 /********************************************
  #GetUserAgreement API

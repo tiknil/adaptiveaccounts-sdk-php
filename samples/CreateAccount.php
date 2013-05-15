@@ -1,4 +1,13 @@
 <?php
+use PayPal\Service\AdaptiveAccountsService;
+use PayPal\Types\AA\AddressType;
+use PayPal\Types\AA\BusinessInfoType;
+use PayPal\Types\AA\BusinessStakeholderType;
+use PayPal\Types\AA\CreateAccountRequest;
+use PayPal\Types\AA\CreateAccountWebOptionsType;
+use PayPal\Types\AA\NameType;
+use PayPal\Types\Common\ClientDetailsType;
+use PayPal\Types\Common\RequestEnvelope;
 /********************************************
 #CreateAccount API
 The CreateAccount API operation enables you to create a PayPal account on behalf of a third party.
