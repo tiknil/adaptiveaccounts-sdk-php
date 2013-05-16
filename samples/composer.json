@@ -1,8 +1,8 @@
 {
-    "name": "paypal/php-sdk-sample",
+    "name": "paypal/adaptiveaccounts-sdk-php-sample",
     "description": "PayPal adaptiveaccounts SDK for PHP",
     "keywords": ["paypal", "php", "sdk"],
-    "homepage": "https://www.x.com/developers/paypal",
+    "homepage": "https://developer.paypal.com",
     "license": "Apache2",
     "authors": [
         {
@@ -13,6 +13,10 @@
     "require": {
         "php": ">=5.2.0",
         "ext-curl": "*",
+<<<<<<< HEAD
         "paypal/adaptiveaccounts-sdk-php":"dev-namespace-php5.3"
+=======
+        "paypal/adaptiveaccounts-sdk-php":"dev-master"
+>>>>>>> origin/master
     }
 }
