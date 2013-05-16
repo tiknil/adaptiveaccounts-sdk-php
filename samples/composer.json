@@ -13,10 +13,6 @@
     "require": {
         "php": ">=5.2.0",
         "ext-curl": "*",
-<<<<<<< HEAD
         "paypal/adaptiveaccounts-sdk-php":"dev-namespace-php5.3"
-=======
-        "paypal/adaptiveaccounts-sdk-php":"dev-master"
->>>>>>> origin/master
     }
 }
