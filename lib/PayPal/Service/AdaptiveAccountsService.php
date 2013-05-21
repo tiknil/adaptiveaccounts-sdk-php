@@ -31,6 +31,10 @@ class AdaptiveAccountsService extends PPBaseService {
 	// SDK Version
 	protected static $SDK_VERSION = "sdkversion";
 
+    /**
+    * @param $config - Dynamic config map. This takes the higher precedence if config file is also present.
+    *
+    */
 	public function __construct($config = null) {
 		parent::__construct(self::$SERVICE_NAME, 'NV', array('PayPal\Handler\PPPlatformServiceHandler'), $config);
         parent::$SDK_NAME    = self::$SDK_NAME ;
@@ -44,7 +48,7 @@ class AdaptiveAccountsService extends PPBaseService {
 	 * @param mixed $apiCredential - Optional API credential - can either be
 	 * 		a username configured in sdk_config.ini or a ICredential object
 	 *      created dynamically 		
-	 * @return CreateAccountResponse
+	 * @return Types\AA\CreateAccountResponse
 	 * @throws APIException
 	 */
 	public function CreateAccount($createAccountRequest, $apiCredential = NULL) {
@@ -61,7 +65,7 @@ class AdaptiveAccountsService extends PPBaseService {
 	 * @param mixed $apiCredential - Optional API credential - can either be
 	 * 		a username configured in sdk_config.ini or a ICredential object
 	 *      created dynamically 		
-	 * @return GetUserAgreementResponse
+	 * @return Types\AA\GetUserAgreementResponse
 	 * @throws APIException
 	 */
 	public function GetUserAgreement($getUserAgreementRequest, $apiCredential = NULL) {
@@ -78,7 +82,7 @@ class AdaptiveAccountsService extends PPBaseService {
 	 * @param mixed $apiCredential - Optional API credential - can either be
 	 * 		a username configured in sdk_config.ini or a ICredential object
 	 *      created dynamically 		
-	 * @return GetVerifiedStatusResponse
+	 * @return Types\AA\GetVerifiedStatusResponse
 	 * @throws APIException
 	 */
 	public function GetVerifiedStatus($getVerifiedStatusRequest, $apiCredential = NULL) {
@@ -95,7 +99,7 @@ class AdaptiveAccountsService extends PPBaseService {
 	 * @param mixed $apiCredential - Optional API credential - can either be
 	 * 		a username configured in sdk_config.ini or a ICredential object
 	 *      created dynamically 		
-	 * @return AddBankAccountResponse
+	 * @return Types\AA\AddBankAccountResponse
 	 * @throws APIException
 	 */
 	public function AddBankAccount($addBankAccountRequest, $apiCredential = NULL) {
@@ -112,7 +116,7 @@ class AdaptiveAccountsService extends PPBaseService {
 	 * @param mixed $apiCredential - Optional API credential - can either be
 	 * 		a username configured in sdk_config.ini or a ICredential object
 	 *      created dynamically 		
-	 * @return AddPaymentCardResponse
+	 * @return Types\AA\AddPaymentCardResponse
 	 * @throws APIException
 	 */
 	public function AddPaymentCard($addPaymentCardRequest, $apiCredential = NULL) {
@@ -129,7 +133,7 @@ class AdaptiveAccountsService extends PPBaseService {
 	 * @param mixed $apiCredential - Optional API credential - can either be
 	 * 		a username configured in sdk_config.ini or a ICredential object
 	 *      created dynamically 		
-	 * @return SetFundingSourceConfirmedResponse
+	 * @return Types\AA\SetFundingSourceConfirmedResponse
 	 * @throws APIException
 	 */
 	public function SetFundingSourceConfirmed($setFundingSourceConfirmedRequest, $apiCredential = NULL) {
@@ -146,7 +150,7 @@ class AdaptiveAccountsService extends PPBaseService {
 	 * @param mixed $apiCredential - Optional API credential - can either be
 	 * 		a username configured in sdk_config.ini or a ICredential object
 	 *      created dynamically 		
-	 * @return CheckComplianceStatusResponse
+	 * @return Types\AA\CheckComplianceStatusResponse
 	 * @throws APIException
 	 */
 	public function CheckComplianceStatus($checkComplianceStatusRequest, $apiCredential = NULL) {
@@ -163,7 +167,7 @@ class AdaptiveAccountsService extends PPBaseService {
 	 * @param mixed $apiCredential - Optional API credential - can either be
 	 * 		a username configured in sdk_config.ini or a ICredential object
 	 *      created dynamically 		
-	 * @return AddPartnerFinancialProductResponse
+	 * @return Types\AA\AddPartnerFinancialProductResponse
 	 * @throws APIException
 	 */
 	public function AddPartnerFinancialProduct($addPartnerFinancialProductRequest, $apiCredential = NULL) {
@@ -180,7 +184,7 @@ class AdaptiveAccountsService extends PPBaseService {
 	 * @param mixed $apiCredential - Optional API credential - can either be
 	 * 		a username configured in sdk_config.ini or a ICredential object
 	 *      created dynamically 		
-	 * @return ActivateProductResponse
+	 * @return Types\AA\ActivateProductResponse
 	 * @throws APIException
 	 */
 	public function ActivateProduct($activateProductRequest, $apiCredential = NULL) {
@@ -197,7 +201,7 @@ class AdaptiveAccountsService extends PPBaseService {
 	 * @param mixed $apiCredential - Optional API credential - can either be
 	 * 		a username configured in sdk_config.ini or a ICredential object
 	 *      created dynamically 		
-	 * @return UpdateComplianceStatusResponse
+	 * @return Types\AA\UpdateComplianceStatusResponse
 	 * @throws APIException
 	 */
 	public function UpdateComplianceStatus($updateComplianceStatusRequest, $apiCredential = NULL) {
