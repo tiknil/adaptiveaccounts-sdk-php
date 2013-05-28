@@ -1,9 +1,7 @@
-# CHANGELOG
+### CHANGELOG
 
-## Version 3.4.102 - May 20, 2013
+#### Version 3.4.102 - May 20, 2013
 
     - Updating SDK to use NameSpaces
 
 You can see source code of this release in github under https://github.com/paypal/adaptiveaccounts-sdk-php/tree/v3.4.102
-
---------------------------------------------------------------------------------------------------   
