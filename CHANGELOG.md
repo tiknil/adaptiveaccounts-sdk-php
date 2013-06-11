@@ -1,5 +1,15 @@
 ### CHANGELOG
 
+#### Version 2.5.103 - June 11, 2013
+ 
+	- Removed deprecated methods like setAccessToken, getAccessToken from baseService in core.
+    - Added correct thirdparty auth header in core.
+	- Updated install script in samples to handle wildcard tag names. 
+	
+You can see source code of this release in github under https://github.com/paypal/adaptiveaccounts-sdk-php/tree/v2.5.103.
+
+--------------------------------------------------------------------------------------------------
+
 #### Version 2.4.102 - May 23, 2013
  
    - Updated stubs for 102 release.
