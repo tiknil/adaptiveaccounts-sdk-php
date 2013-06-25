@@ -115,7 +115,7 @@ dynamic configuration values can be set by passing a map of credential and confi
 Alternatively, credential and configuration can be loaded from a file. refer <https://github.com/paypal/adaptiveaccounts-sdk-php/wiki> for example
 ```php
     define('PP_CONFIG_PATH', '/directory/that/contains/sdk_config.ini');
-    $service  = new AdaptivePaymentsService();
+    $service  = new AdaptiveAccountsService();
 ```
 
 Please refer to the sample config file provided with this bundle.
