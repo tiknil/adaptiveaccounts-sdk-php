@@ -28,7 +28,9 @@ $getUserAgreement->languageCode = $_REQUEST['languageCode'];
 
 // ## Creating service wrapper object
 // Creating service wrapper object to make API call 
-$service  = new AdaptiveAccountsService();
+// Configuration::getSignatureConfig() returns array that contains credential and config parameters
+
+$service  = new AdaptiveAccountsService(Configuration::getSignatureConfig());
 try {
 	
 	// ## Making API call
