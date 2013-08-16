@@ -137,9 +137,9 @@ if($addPaymentCard->confirmationType == 'WEB') {
 
 // ## Creating service wrapper object
 // Creating service wrapper object to make API call 
-// Configuration::getSignatureConfig() returns array that contains credential and config parameters
+// Configuration::getAcctAndConfig() returns array that contains credential and config parameters
 
-$service  = new AdaptiveAccountsService(Configuration::getSignatureConfig());
+$service  = new AdaptiveAccountsService(Configuration::getAcctAndConfig());
 try {
 	
 	// ## Making API call
