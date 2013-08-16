@@ -33,7 +33,7 @@ Ex:
 Intiating IPN:
 --------------
 * Make a PayPal API call (eg: CreateAccount request), setting the IpnNotificationUrl field of API request   
-  class to the url of deployed IPNListener sample(eg:https://example.com/adaptivepayments-sdk-php/IPN/IPNListener.php)  
+  class to the url of deployed IPNListener sample(eg:https://example.com/adaptiveaccounts-sdk-php/IPN/IPNListener.php)  
 * The IpnNotificationUrl field is in 'CreateAccountRequestDetailsType' class under API request class  
  (Ex: 'CreateAccountRequestDetailsType->IpnNotificationUrl')  
 * You will receive IPN call back from PayPal , which will be logged in to log file in case of IPN sample.
