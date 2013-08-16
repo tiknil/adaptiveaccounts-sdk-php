@@ -2,16 +2,12 @@ IPN Overview :
 ------------
 
 * PayPal Instant Payment Notification is call back system that initiated once a tranction is completed  
-  (eg: When ExpressCheckout completed successfully).
+  (eg: When CreateAccount completed successfully).
 * you will receive the transaction related IPN variables on your call back url that you have specified in your request.
 * You have to send this IPN variable back to PayPal system for varification, Upon varification PayPal will send  
   a response string "VERIFIED" or "INVALID".
 * PayPal will continuously resend this IPN, if a wrong IPN is sent.
 
-IPN configuration :
------------------
-* Ipn endpoint url is specified in 'config/sdk_config.ini' as 'service.Endpoint.IPN'. This will be used for ipn post back
-    
 IPN How to use
 --------------
 * Include 'ipn/PPIPNMessage.php' in your IPN callback URL  
@@ -38,7 +34,7 @@ Ex:
 Intiating IPN:
 --------------
 * Make a PayPal API call (eg: CreateAccount request), setting the IpnNotificationUrl field of API request   
-  class to the url of deployed IPNListener sample(eg:https://example.com/adaptivepayments-sdk-php/IPN/IPNListener.php)  
+  class to the url of deployed IPNListener sample(eg:https://example.com/adaptiveaccounts-sdk-php/IPN/IPNListener.php)  
 * The IpnNotificationUrl field is in 'CreateAccountRequestDetailsType' class under API request class  
  (Ex: 'CreateAccountRequestDetailsType->IpnNotificationUrl')  
 * You will receive IPN call back from PayPal , which will be logged in to log file in case of IPN sample.
