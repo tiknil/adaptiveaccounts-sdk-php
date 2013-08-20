@@ -34,6 +34,9 @@ class Configuration
 				// Certificate path relative to config folder or absolute path in file system
 				// "acct1.CertPath" => "cert_key.pem",
 				// "acct1.AppId" => "APP-80W284485P519543T"
+		
+				// Sandbox Email Address
+				"service.SandboxEmailAddress" => "pp.devtools@gmail.com"
 				);
 		
 		return array_merge($config, self::getConfig());;
