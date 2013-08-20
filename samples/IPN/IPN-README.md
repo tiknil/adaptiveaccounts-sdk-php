@@ -1,10 +1,10 @@
 IPN Overview :
 ------------
 
-* PayPal Instant Payment Notification is call back system that initiated once a tranction is completed  
+* PayPal Instant Payment Notification is call back system that initiated once a transaction is completed  
   (eg: When CreateAccount completed successfully).
-* you will receive the transaction related IPN variables on your call back url that you have specified in your request.
-* You have to send this IPN variable back to PayPal system for varification, Upon varification PayPal will send  
+* You will receive the transaction related IPN variables on your call back url that you have specified in your request.
+* You have to send this IPN variable back to PayPal system for verification, Upon verification PayPal will send  
   a response string "VERIFIED" or "INVALID".
 * PayPal will continuously resend this IPN, if a wrong IPN is sent.
 
@@ -21,9 +21,7 @@ IPN How to use
 			
 			// These values are defaulted in SDK. If you want to override default values, uncomment it and add your value.
 			// "http.ConnectionTimeOut" => "5000",
-			// "http.Retry" => "2",
-			// "http.ReadTimeOut" => "30000",
-			// "http.MaxConnection" => "100"
+			// "http.Retry" => "2"
 		);
 		$ipnMessage = new PPIPNMessage(null, $config);   
 * 'validate()' method validates the IPN message and returns true if 'VERIFIED' or returns false if 'INVALID'  
