@@ -1,4 +1,3 @@
-
 # PayPal PHP Adaptive Accounts SDK
 
 ## Prerequisites
@@ -34,7 +33,7 @@ To use the SDK,
 {
     "name": "me/shopping-cart-app",
     "require": {
-        "paypal/adaptiveaccounts-sdk-php":"v2.4.103"
+        "paypal/adaptiveaccounts-sdk-php":"v2.6.106"
     }
 }
 ```
