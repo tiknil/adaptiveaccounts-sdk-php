@@ -1,5 +1,13 @@
 ### CHANGELOG
 
+#### Version 2.7.106 - October 17, 2014
+
+    - Update to Server SDK v1.5.*
+
+You can see source code of this release in github under https://github.com/paypal/adaptiveaccounts-sdk-php/tree/v2.7.106.
+
+--------------------------------------------------------------------------------------------------
+
 #### Version 2.6.106 - August 22, 2013
  
 	- Updated samples to showcase dynamic configuration. 
