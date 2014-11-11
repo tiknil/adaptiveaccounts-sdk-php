@@ -15,7 +15,7 @@ class AdaptiveAccountsService extends PPBaseService {
 	protected static $SDK_NAME = "adaptiveaccounts-php-sdk";
 	
 	// SDK Version
-	protected static $SDK_VERSION = "2.7.106";
+	protected static $SDK_VERSION = "2.7.107";
 
 	public function __construct($config = null) {
 		parent::__construct(self::$SERVICE_NAME, 'NV', $config);

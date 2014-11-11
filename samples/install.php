@@ -1,8 +1,8 @@
-<?php
+<?php 
 
 /**
  *  Downloads PayPal PHP SDK dependencies based on your composer.json file
-*/
+ */
 
 define('DS', DIRECTORY_SEPARATOR);
 
@@ -12,7 +12,7 @@ define('COMPOSER_FILE', 'composer.json');
 define('BOOTSTRAP_FILE', 'PPBootStrap.php');
 
 // URL from where the composer.json is downloaded if not present
-define('COMPOSER_URL', 'https://raw.github.com/paypal/adaptiveaccounts-sdk-php/stable/samples/composer.json');
+define('COMPOSER_URL', 'https://raw.github.com/paypal/merchant-sdk-php/stable/samples/composer.json');
 
 // Flag to control whether composer should be used for installation
 $useComposer = false;
@@ -64,7 +64,7 @@ function init($useComposer) {
 		$json_a = json_decode($json, true);
 		//array $processsed contains list of dependencies that have already been downloaded
 		$processed = array();
-		foreach (getDependency($json_a) as $dependency ) {
+		foreach (getDependency($json_a) as $dependency ) {		
 			customInstall($dependency, $dependency['group'], $processed);
 		}
 	}
@@ -212,8 +212,8 @@ function customInstall($dependency, $installDir, &$processed) {
 
 		curlExec($downloadUrl, $fp);
 		$processed[] = $downloadUrl;
-
-		// extract the downloaded zip
+		
+		// extract the downloaded zip		
 		$zip = new ZipArchive;
 		if($zip->open($fileZip) != "true") {
 			echo PHP_EOL . "Could not open $fileZip";
@@ -223,13 +223,13 @@ function customInstall($dependency, $installDir, &$processed) {
 		$zip->close();
 		fclose($fp);
 		unlink($fileZip);
-
+		
 		// scan extracted directory for nested dependency
-		foreach (glob("$dest/**/composer.json") as $composer) {
+		foreach (glob("$dest/**/composer.json") as $composer) {			
 			$json = file_get_contents($composer);
-			$json_a = json_decode($json, true);
+			$json_a = json_decode($json, true);			
 			$dependencies =  getDependency($json_a);
-			foreach ($dependencies as $dependency ) {
+			foreach ($dependencies as $dependency ) {										
 				customInstall($dependency, $dependency['group'], $processed);
 			}
 		}
@@ -250,11 +250,11 @@ function getDependency($json_a) {
 			$parts = explode('/', $key);
 			// Convert versions such as "dev-xyz" to "xyz"
 			$pos = strpos($val, '-');
-			if($pos == null || empty($pos)) {
-				$branch = $val;
-			} else {
-				$branch = substr($val, $pos+1);
-			}
+            if($pos == null || empty($pos)) {
+                $branch = $val;
+            } else {
+                $branch = substr($val, $pos+1);
+            }
 			$batch['group'] = $parts[0] ;
 			$batch['artifact'] = $parts[1];
 			$batch['branch'] = $branch;
@@ -277,7 +277,7 @@ function curlExec($targetUrl, $writeToFile = null) {
 	curl_setopt($ch, CURLOPT_HEADER, 0);
 	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
 	curl_setopt($ch, CURLOPT_AUTOREFERER, true);
-	curl_setopt($ch, CURLOPT_USERAGENT, 'curl/installScript');
+    curl_setopt($ch, CURLOPT_USERAGENT, 'curl/installScript');
 	curl_setopt($ch, CURLOPT_BINARYTRANSFER,true);
 	curl_setopt($ch, CURLOPT_TIMEOUT, 60);
 	curl_setopt ($ch, CURLOPT_SSL_VERIFYHOST, 0);
@@ -418,7 +418,7 @@ function createBootStrap($bootstrapFile) {
 		$script = <<< SCRIPT
 <?php
 /**
- * Include this file in your application. This file sets up the required classloader based on
+ * Include this file in your application. This file sets up the required classloader based on 
  * whether you used composer or the custom installer.
  */
 
