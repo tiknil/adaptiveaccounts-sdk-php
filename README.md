@@ -17,7 +17,7 @@ If using composer, run `composer update` from the samples folder. Otherwise, run
 ```bash
    
     cd samples   
-    curl  https://raw.github.com/paypal/adaptiveaccounts-sdk-php/stable/samples/install.php | php    
+    curl -L https://raw.github.com/paypal/adaptiveaccounts-sdk-php/stable/samples/install.php | php    
         OR        
     php install.php
 ```
