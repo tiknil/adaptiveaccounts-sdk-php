@@ -31,7 +31,7 @@ class AdaptiveAccountsService extends PPBaseService {
 	protected static $SDK_NAME = "adaptiveaccounts-php-sdk";
 
 	// SDK Version
-	protected static $SDK_VERSION = "3.8.106";
+	protected static $SDK_VERSION = "3.8.107";
 
     /**
     * @param $config - Dynamic config map. This takes the higher precedence if config file is also present.
