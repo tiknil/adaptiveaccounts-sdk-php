@@ -58,7 +58,7 @@ To use the SDK,
 {
     "name": "me/shopping-cart-app",
     "require": {
-        "paypal/adaptiveaccounts-sdk-php":"v3.6.106"
+        "paypal/adaptiveaccounts-sdk-php":"3.8.*"
     }
 }
 ```
