@@ -12,7 +12,6 @@ use PayPal\Types\AA\AddBankAccountResponse;
 use PayPal\Types\AA\AddPaymentCardResponse;
 use PayPal\Types\AA\SetFundingSourceConfirmedResponse;
 use PayPal\Types\AA\CheckComplianceStatusResponse;
-use PayPal\Types\AA\AddPartnerFinancialProductResponse;
 use PayPal\Types\AA\ActivateProductResponse;
 use PayPal\Types\AA\UpdateComplianceStatusResponse;
 
@@ -184,69 +183,6 @@ class AdaptiveAccountsService extends PPBaseService {
             new PPPlatformServiceHandler($apiCredential, self::$SDK_NAME, self::$SDK_VERSION),
         );
 		$resp = $this->call('AdaptiveAccounts', 'CheckComplianceStatus', $checkComplianceStatusRequest, $apiContext, $handlers);
-		$ret->init(PPUtils::nvpToMap($resp));
-		return $ret;
-	}
-
-
-	/**
-	 * Service Call: AddPartnerFinancialProduct
-	 * @param AddPartnerFinancialProductRequest $addPartnerFinancialProductRequest
-	 * @param mixed $apiCredential - Optional API credential - can either be
-	 * 		a username configured in sdk_config.ini or a ICredential object
-	 *      created dynamically
-	 * @return Types\AA\AddPartnerFinancialProductResponse
-	 * @throws APIException
-	 */
-	public function AddPartnerFinancialProduct($addPartnerFinancialProductRequest, $apiCredential = NULL) {
-		$ret = new AddPartnerFinancialProductResponse();
-		$apiContext = new PPApiContext($this->config);
-        $handlers = array(
-            new PPPlatformServiceHandler($apiCredential, self::$SDK_NAME, self::$SDK_VERSION),
-        );
-		$resp = $this->call('AdaptiveAccounts', 'AddPartnerFinancialProduct', $addPartnerFinancialProductRequest, $apiContext, $handlers);
-		$ret->init(PPUtils::nvpToMap($resp));
-		return $ret;
-	}
-
-
-	/**
-	 * Service Call: ActivateProduct
-	 * @param ActivateProductRequest $activateProductRequest
-	 * @param mixed $apiCredential - Optional API credential - can either be
-	 * 		a username configured in sdk_config.ini or a ICredential object
-	 *      created dynamically
-	 * @return Types\AA\ActivateProductResponse
-	 * @throws APIException
-	 */
-	public function ActivateProduct($activateProductRequest, $apiCredential = NULL) {
-		$ret = new ActivateProductResponse();
-		$apiContext = new PPApiContext($this->config);
-        $handlers = array(
-            new PPPlatformServiceHandler($apiCredential, self::$SDK_NAME, self::$SDK_VERSION),
-        );
-		$resp = $this->call('AdaptiveAccounts', 'ActivateProduct', $activateProductRequest, $apiContext, $handlers);
-		$ret->init(PPUtils::nvpToMap($resp));
-		return $ret;
-	}
-
-
-	/**
-	 * Service Call: UpdateComplianceStatus
-	 * @param UpdateComplianceStatusRequest $updateComplianceStatusRequest
-	 * @param mixed $apiCredential - Optional API credential - can either be
-	 * 		a username configured in sdk_config.ini or a ICredential object
-	 *      created dynamically
-	 * @return Types\AA\UpdateComplianceStatusResponse
-	 * @throws APIException
-	 */
-	public function UpdateComplianceStatus($updateComplianceStatusRequest, $apiCredential = NULL) {
-		$ret = new UpdateComplianceStatusResponse();
-		$apiContext = new PPApiContext($this->config);
-        $handlers = array(
-            new PPPlatformServiceHandler($apiCredential, self::$SDK_NAME, self::$SDK_VERSION),
-        );
-		$resp = $this->call('AdaptiveAccounts', 'UpdateComplianceStatus', $updateComplianceStatusRequest, $apiContext, $handlers);
 		$ret->init(PPUtils::nvpToMap($resp));
 		return $ret;
 	}
