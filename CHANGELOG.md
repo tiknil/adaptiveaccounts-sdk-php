@@ -1,5 +1,10 @@
 ### CHANGELOG
 
+
+####Version 3.10.2 - December 9, 2015
+
+    - Added TLSv1.2 Endpoint support
+
 ####Version 3.6.106 - August 22, 2013
 
 	- Updated samples to showcase dynamic configuration. 
