@@ -17,8 +17,8 @@
     },
     "autoload": {
         "psr-0": {
-            "PayPal\\Service": "lib/",
-            "PayPal\\Types": "lib/"
+            "PayPalAA\\Service": "lib/",
+            "PayPalAA\\Types": "lib/"
         }
     }    
 }
