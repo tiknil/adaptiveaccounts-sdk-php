@@ -16,9 +16,8 @@
         "paypal/sdk-core-php": "3.*"
     },
     "autoload": {
-        "psr-0": {
-            "PayPalAA\\Service": "lib/",
-            "PayPalAA\\Types": "lib/"
+        "psr-4": {
+            "AdaptiveAccounts\\": "lib/"
         }
     }    
 }
