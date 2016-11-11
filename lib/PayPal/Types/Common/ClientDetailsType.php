@@ -1,5 +1,5 @@
 <?php 
-namespace PayPal\Types\Common;
+namespace AdaptiveAccounts\Types\Common;
 use PayPal\Core\PPMessage;  
 /**
  * This elements in this type refers to the end user of the

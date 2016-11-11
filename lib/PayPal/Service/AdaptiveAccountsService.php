@@ -1,19 +1,20 @@
 <?php
-namespace PayPal\Service;
+namespace AdaptiveAccounts\Service;
+
 use PayPal\Common\PPApiContext;
 use PayPal\Core\PPMessage;
 use PayPal\Core\PPBaseService;
 use PayPal\Core\PPUtils;
 use PayPal\Handler\PPPlatformServiceHandler;
-use PayPal\Types\AA\CreateAccountResponse;
-use PayPal\Types\AA\GetUserAgreementResponse;
-use PayPal\Types\AA\GetVerifiedStatusResponse;
-use PayPal\Types\AA\AddBankAccountResponse;
-use PayPal\Types\AA\AddPaymentCardResponse;
-use PayPal\Types\AA\SetFundingSourceConfirmedResponse;
-use PayPal\Types\AA\CheckComplianceStatusResponse;
-use PayPal\Types\AA\ActivateProductResponse;
-use PayPal\Types\AA\UpdateComplianceStatusResponse;
+use AdaptiveAccounts\Types\AA\CreateAccountResponse;
+use AdaptiveAccounts\Types\AA\GetUserAgreementResponse;
+use AdaptiveAccounts\Types\AA\GetVerifiedStatusResponse;
+use AdaptiveAccounts\Types\AA\AddBankAccountResponse;
+use AdaptiveAccounts\Types\AA\AddPaymentCardResponse;
+use AdaptiveAccounts\Types\AA\SetFundingSourceConfirmedResponse;
+use AdaptiveAccounts\Types\AA\CheckComplianceStatusResponse;
+use AdaptiveAccounts\Types\AA\ActivateProductResponse;
+use AdaptiveAccounts\Types\AA\UpdateComplianceStatusResponse;
 
 /**
  * AUTO GENERATED code for AdaptiveAccounts

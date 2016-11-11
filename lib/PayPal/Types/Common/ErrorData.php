@@ -1,5 +1,5 @@
 <?php 
-namespace PayPal\Types\Common;
+namespace AdaptiveAccounts\Types\Common;
 use PayPal\Core\PPMessage;  
 /**
  * This type contains the detailed error information resulting

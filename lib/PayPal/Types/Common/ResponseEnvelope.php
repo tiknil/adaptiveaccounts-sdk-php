@@ -1,5 +1,5 @@
 <?php 
-namespace PayPal\Types\Common;
+namespace AdaptiveAccounts\Types\Common;
 use PayPal\Core\PPMessage;  
 /**
  * This specifies a list of parameters with every response from
