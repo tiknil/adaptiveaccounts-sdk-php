@@ -1,5 +1,5 @@
 {
-    "name": "paypal_forked_tiknil/adaptiveaccounts-sdk-php",
+    "name": "tiknil/adaptiveaccounts-sdk-php",
     "description": "PayPal adaptiveaccounts SDK for PHP",
     "keywords": ["paypal", "php", "sdk"],
     "homepage": "https://developer.paypal.com",
