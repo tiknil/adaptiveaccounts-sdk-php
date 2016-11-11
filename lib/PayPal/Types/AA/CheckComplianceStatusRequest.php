@@ -1,5 +1,5 @@
 <?php 
-namespace PayPal\Types\AA;
+namespace AdaptiveAccounts\Types\AA;
 use PayPal\Core\PPMessage;  
 /**
  * Identifies a PayPal account to which this request is

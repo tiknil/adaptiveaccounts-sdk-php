@@ -1,5 +1,5 @@
 <?php 
-namespace PayPal\Types\AA;
+namespace AdaptiveAccounts\Types\AA;
 use PayPal\Core\PPMessage;  
 /**
  * Ask end-user to also initiate confirmation of their mobile
